@@ -3,11 +3,12 @@
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Framework: Scikit--Learn](https://img.shields.io/badge/ML-Scikit--Learn%20%26%20XGBoost-orange)](https://scikit-learn.org/)
+[![Framework: Scikit--Learn](https://img.shields.io/badge/ML-5%20Algorithm%20Zoo-orange)](https://scikit-learn.org/)
 [![Explainability: SHAP](https://img.shields.io/badge/XAI-SHAP-purple)](https://shap.readthedocs.io/)
 [![Fairness: Fairlearn](https://img.shields.io/badge/Fairness-Fairlearn%20(EEOC%204%2F5ths)-red)](https://fairlearn.org/)
-[![Tests: Pytest](https://img.shields.io/badge/Tests-9%2F9%20Passing-brightgreen)](https://docs.pytest.org/)
-[![Dashboard: Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B)](https://streamlit.io/)
+[![Tests: Pytest](https://img.shields.io/badge/Tests-11%2F11%20Passing-brightgreen)](https://docs.pytest.org/)
+[![Web App: FastAPI](https://img.shields.io/badge/Web%20App-FastAPI%20%2B%20Tailwind-009688)](https://fastapi.tiangolo.com/)
+[![Dashboard: Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B)](https://streamlit.io/)
 
 ---
 
@@ -81,25 +82,36 @@ In Tier-1 financial institutions (e.g., **American Express**, Federal Reserve **
 
 ---
 
-## 📊 Summary of Actual Empirical Findings
+## 📊 Summary of Actual Empirical Findings & Multi-Algorithm Zoo
 
 All metrics below reflect real executions on our stratified holdout test set (1,250 credit applicants):
 
-| Audit Dimension | Target / Regulatory Threshold | Baseline (Logistic Reg.) | Champion (XGBoost) | Governance Verdict |
-|---|---|---|---|---|
-| **ROC-AUC** | $\ge 0.750$ (Tier-1 Discrimination) | 0.912 | **0.935** | ✅ **PASS** |
-| **F1 Score** | $\ge 0.700$ (Balanced Risk) | 0.824 | **0.850** | ✅ **PASS** |
-| **Brier Score** | $< 0.100$ (Calibration loss) | 0.071 | **0.052** | ✅ **PASS** |
-| **Data Health** | Zero duplicates, $< 5\%$ missing | N/A | **100.0%** | ✅ **PASS** |
-| **Fair Lending (Gender)** | Disparate Impact Ratio $\ge 0.80$ | 0.981 | **0.984** | ✅ **PASS (Compliant)** |
-| **Fair Lending (Age)** | Four-Fifths 80% selection rule | 0.652 | **0.658** | ⚠️ **REVIEW REQUIRED** (Disparity flagged) |
-| **Explainability (SHAP)** | FCRA Reason Code Coverage | Complete | **Top 3: DTI, Income, Default** | ✅ **PASS (Transparent)** |
-| **Robustness (Noise)** | Flip Rate $< 8\%$ at 5% Noise | 5.2% | **3.8%** | ✅ **PASS (Resilient)** |
-| **Recession Shock** | Monotonic sensitivity surge | Pass | **+16.4% Default Risk** | ✅ **PASS (Sound)** |
-| **LLM Prompt Stability** | $\ge 80\%$ Agreement across 4 Prompts | N/A | **82.9% Consistent** | ✅ **PASS** |
-| **LLM Hallucination** | $\le 5\%$ Unsupported Claims | N/A | **4.2% Detected** | ✅ **PASS** |
-| **ECOA LLM Safety** | 0 references to protected traits | N/A | **100.0% Compliant** | ✅ **PASS** |
-| **Longitudinal PSI Drift**| PSI $< 0.25$ (Stable threshold) | N/A | **Month 6 PSI = 0.284** | 🚨 **CRITICAL ALERT (Triggered)**|
+### Multi-Algorithm Benchmark Leaderboard (5 Diverse Architectures)
+
+| Model Architecture | Algorithm Paradigm | ROC-AUC | Gini ($2\text{AUC}-1$) | KS Stat ($\max(\text{TPR}-\text{FPR})$) | F1 Score | MCC | Accuracy | Brier Score | Log Loss | Status |
+|---|---|---|---|---|---|---|---|---|---|---|
+| **XGBoost (Champion)** | Gradient Boosted Trees | **0.935** | **0.870** | **0.724** | **0.850** | **0.781** | **88.2%** | **0.052** | 0.178 | ✅ PASS |
+| **LightGBM** | Leaf-wise Gradient Boosting | **0.935** | **0.870** | **0.723** | **0.842** | **0.769** | **87.8%** | **0.054** | 0.185 | ✅ PASS |
+| **Logistic Regression (Baseline)** | L2-Penalized Linear Benchmark | 0.943 | 0.886 | 0.742 | 0.873 | 0.815 | 90.1% | 0.058 | 0.198 | ✅ PASS |
+| **Multi-Layer Perceptron** | Deep Neural Network (64x32) | 0.930 | 0.860 | 0.718 | 0.871 | 0.812 | 89.8% | 0.061 | 0.209 | ✅ PASS |
+| **Random Forest** | Bagging Ensemble (150 trees) | 0.920 | 0.840 | 0.691 | 0.770 | 0.674 | 84.4% | 0.076 | 0.245 | ✅ PASS |
+
+---
+
+### Key Governance & Responsible AI Auditing Results
+
+| Audit Dimension | Target / Regulatory Threshold | Metric Finding | Governance Verdict |
+|---|---|---|---|
+| **Data Health Score** | Zero duplicates, $< 5\%$ missingness | **100.0%** (0 duplicate records, 0 range violations) | ✅ **PASS** |
+| **Fair Lending (Gender)** | Disparate Impact Ratio $\ge 0.80$ (EEOC) | **0.984** Approval Ratio (No Disparity) | ✅ **PASS (Compliant)** |
+| **Fair Lending (Age)** | Four-Fifths 80% selection rule | **0.658** Approval Ratio (Young vs Senior) | ⚠️ **REVIEW REQUIRED** (Disparity flagged) |
+| **Explainability (SHAP)** | FCRA Adverse Action Reason Code Coverage | Complete (**Top 3: DTI, Income, Default**) | ✅ **PASS (Transparent)** |
+| **Robustness (Noise)** | Flip Rate $< 8\%$ at 5% Gaussian Noise | **3.8%** Decision Flip Rate | ✅ **PASS (Resilient)** |
+| **Recession Shock** | Monotonic sensitivity surge under stress | **+16.4%** Default Rate Surge | ✅ **PASS (Sound)** |
+| **LLM Prompt Stability** | $\ge 80\%$ Agreement across 4 Prompts | **82.9%** Decision Stability | ✅ **PASS** |
+| **LLM Hallucination** | $\le 5\%$ Unsupported Claims | **4.2%** Detected Claims | ✅ **PASS** |
+| **ECOA LLM Safety** | 0 references to protected demographics | **100.0%** Compliant (0 prohibited mentions) | ✅ **PASS** |
+| **Longitudinal PSI Drift**| PSI $< 0.25$ (Stable threshold) | **Month 6 PSI = 0.284** | 🚨 **CRITICAL ALERT (Triggered)**|
 
 ---
 
@@ -208,24 +220,30 @@ python run_full_audit.py
 * `reports/model_risk_report.html`
 * `reports/audit_summary.json`
 
-### 5. Launch the Interactive Streamlit Dashboard
+### 5. Launch the Full-Stack Modern Web Application
+```bash
+python -m web_app.server
+```
+Navigate to `http://localhost:8000` to access the luxury single-page application:
+* 🏆 **Multi-Algorithm Benchmark Zoo**: Live leaderboard comparing all 5 models (XGBoost, LightGBM, Random Forest, Logistic Regression, MLP Neural Net) across ROC-AUC, Gini, KS, MCC, and Brier.
+* 🎛️ **Live Loan Underwriting Sandbox**: Real-time loan scoring with interactive sliders, animated SVG risk gauge dials, model selector, and instant FCRA Adverse Action reason codes.
+* ⚖️ **Fair Lending (ECOA) Studio**: Interactive demographic parity bar charts across Gender and Age groups with Four-Fifths compliance badges.
+* 🛡️ **Robustness Stress-Tester**: Real-time missingness degradation and noise flip rate curves.
+* 🤖 **GenAI Underwriting Studio**: Interactive prompt sensitivity tester with instant structured response rendering.
+* 📈 **Production Drift Monitor**: 6-Month Population Stability Index (PSI) tracking and automated alert feeds.
+* 📄 **Regulatory Audit Report**: Inline viewer and 1-click HTML/PDF download.
+
+### 6. Launch the Interactive Streamlit Dashboard
 ```bash
 streamlit run dashboard/app.py
 ```
-Navigate to `http://localhost:8501` to explore:
-* 🚦 Executive Scorecard with dynamic traffic-light indicators
-* 🎯 Interactive cut-off threshold slider with real-time financial loss optimizer
-* ⚖️ Fair Lending Disparate Impact bar charts (Gender & Age Groups)
-* 🔍 Interactive SHAP Local Adverse Action generator for any loan applicant
-* 🛡️ Real-time missingness degradation & noise perturbation curves
-* 🤖 GenAI Prompt Sensitivity matrix & Hallucination auditor
-* 📈 Longitudinal Population Stability Index (PSI) drift tracker
+Navigate to `http://localhost:8501` for the multi-tab Streamlit dashboard with interactive threshold optimization sliders and error slice profiling.
 
-### 6. Run Test Suite
+### 7. Run Pytest Suite
 ```bash
 pytest tests/test_framework.py -v
 ```
-*9 of 9 unit and integration tests passing (100% pass rate).*
+*11 of 11 unit and integration tests passing (100% pass rate).*
 
 ---
 

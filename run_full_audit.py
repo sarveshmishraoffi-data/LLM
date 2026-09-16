@@ -45,10 +45,13 @@ def run_full_audit():
     val_scorecard = validator.generate_quality_scorecard(clean_df)
     logger.info(f"Data Health Score: {val_scorecard['data_health_score']}% | Status: {val_scorecard['governance_status']}")
 
-    # Load Holdout Test Set & Models
+    # Load Holdout Test Set & All 5 Models
     test_df = pd.read_csv("data/processed/test_split.csv")
     champion_model = joblib.load("models/credit_model.joblib")
     baseline_model = joblib.load("models/baseline_model.joblib")
+    rf_model = joblib.load("models/random_forest.joblib")
+    lgb_model = joblib.load("models/lightgbm.joblib")
+    mlp_model = joblib.load("models/neural_net.joblib")
 
     feature_cols = [
         "annual_income", "loan_amount", "employment_length_years", "credit_history_years",
@@ -59,16 +62,38 @@ def run_full_audit():
     X_test = test_df[feature_cols]
     y_test = test_df["risk_label"].values
 
-    # Model Predictions
+    # Model Predictions across Algorithm Zoo
     champ_probs = champion_model.predict_proba(X_test)[:, 1]
     base_probs = baseline_model.predict_proba(X_test)[:, 1]
+    rf_probs = rf_model.predict_proba(X_test)[:, 1]
+    lgb_probs = lgb_model.predict_proba(X_test)[:, 1]
+    mlp_probs = mlp_model.predict_proba(X_test)[:, 1]
+
     test_df["pred_prob"] = champ_probs
+    test_df["prob_xgboost"] = champ_probs
+    test_df["prob_logistic"] = base_probs
+    test_df["prob_random_forest"] = rf_probs
+    test_df["prob_lightgbm"] = lgb_probs
+    test_df["prob_neural_net"] = mlp_probs
 
     # 2. Performance & Error Profiling
-    logger.info("[2/7] Evaluating Discrimination & Error Patterns...")
+    logger.info("[2/7] Evaluating Discrimination & Multi-Algorithm Leaderboard...")
     perf_eval = PerformanceEvaluator(default_threshold=0.5)
     champ_perf = perf_eval.evaluate_model(y_test, champ_probs)
     base_perf = perf_eval.evaluate_model(y_test, base_probs)
+    rf_perf = perf_eval.evaluate_model(y_test, rf_probs)
+    lgb_perf = perf_eval.evaluate_model(y_test, lgb_probs)
+    mlp_perf = perf_eval.evaluate_model(y_test, mlp_probs)
+
+    leaderboard_df = perf_eval.compare_models(y_test, {
+        "XGBoost (Champion)": champ_probs,
+        "LightGBM": lgb_probs,
+        "Random Forest": rf_probs,
+        "Multi-Layer Perceptron (Neural Net)": mlp_probs,
+        "Logistic Regression (Baseline)": base_probs
+    })
+    logger.info("Multi-Algorithm Leaderboard:\\n" + str(leaderboard_df[["Model", "ROC-AUC", "Gini", "KS Stat", "F1 Score", "MCC"]]))
+
     curves = perf_eval.compute_curves(y_test, champ_probs)
     opt_thresh = perf_eval.find_optimal_threshold(y_test, champ_probs)
 
@@ -146,11 +171,16 @@ def run_full_audit():
         model_metadata=metadata
     )
 
-    # Save summary dictionary for Streamlit Dashboard caching
+    # Save summary dictionary for Web App & Streamlit Dashboard caching
     summary_data = {
         "validation_scorecard": val_scorecard,
         "champion_performance": champ_perf,
         "baseline_performance": base_perf,
+        "random_forest_performance": rf_perf,
+        "lightgbm_performance": lgb_perf,
+        "neural_net_performance": mlp_perf,
+        "models_leaderboard": leaderboard_df.to_dict(orient="records"),
+        "curves": curves,
         "optimal_threshold": opt_thresh,
         "fairness_audit": {
             "overall_status": bias_audit["overall_status"],

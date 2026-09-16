@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Model Risk &amp; GenAI Governance Platform</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="/static/style.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#0070d2',
+              800: '#002663',
+              900: '#001944'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#090e17] text-slate-100 min-h-screen flex">
+
+  <!-- Sidebar -->
+  <aside class="w-64 bg-[#0d1422] border-r border-slate-800 flex flex-col justify-between p-5 select-none shrink-0">
+    <div>
+      <div class="flex items-center gap-3 mb-8">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#002663] to-[#0070d2] flex items-center justify-center shadow-lg shadow-blue-500/20">
+          <i data-lucide="shield-check" class="w-6 h-6 text-white"></i>
+        </div>
+        <div>
+          <h1 class="font-bold text-sm tracking-wide text-white">MODEL RISK AI</h1>
+          <p class="text-[11px] text-slate-400 font-mono">SR 11-7 / OCC 2011-12</p>
+        </div>
+      </div>
+
+      <nav class="space-y-1" id="nav-tabs">
+        <button onclick="switchTab('scorecard')" id="btn-scorecard" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs font-semibold text-blue-400 bg-blue-500/10 border border-blue-500/20 transition">
+          <i data-lucide="layout-dashboard" class="w-4 h-4"></i> Executive Scorecard
+        </button>
+        <button onclick="switchTab('leaderboard')" id="btn-leaderboard" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition">
+          <i data-lucide="cpu" class="w-4 h-4"></i> Algorithm Zoo (5 Models)
+        </button>
+        <button onclick="switchTab('sandbox')" id="btn-sandbox" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition">
+          <i data-lucide="calculator" class="w-4 h-4"></i> Underwriting Sandbox
+        </button>
+        <button onclick="switchTab('fairness')" id="btn-fairness" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition">
+          <i data-lucide="scale" class="w-4 h-4"></i> Fair Lending (ECOA)
+        </button>
+        <button onclick="switchTab('robustness')" id="btn-robustness" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition">
+          <i data-lucide="alert-triangle" class="w-4 h-4"></i> Robustness Stress-Tester
+        </button>
+        <button onclick="switchTab('genai')" id="btn-genai" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition">
+          <i data-lucide="bot" class="w-4 h-4"></i> GenAI Prompt Studio
+        </button>
+        <button onclick="switchTab('drift')" id="btn-drift" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition">
+          <i data-lucide="line-chart" class="w-4 h-4"></i> Production Drift (PSI)
+        </button>
+        <button onclick="switchTab('report')" id="btn-report" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800/60 transition">
+          <i data-lucide="file-text" class="w-4 h-4"></i> Regulatory Report
+        </button>
+      </nav>
+    </div>
+
+    <div class="border-t border-slate-800 pt-4 text-[11px] text-slate-400 space-y-2">
+      <div class="flex items-center justify-between">
+        <span>Framework Mode</span>
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Active MRM</span>
+      </div>
+      <div class="text-[10px] text-slate-400">American Express Simulation</div>
+    </div>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="flex-1 overflow-y-auto p-8 max-w-7xl mx-auto w-full">
+    
+    <!-- Top Header Bar -->
+    <header class="flex items-center justify-between pb-6 mb-8 border-b border-slate-800">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight text-white" id="page-title">Executive Model Risk Scorecard</h2>
+        <p class="text-xs text-slate-400 mt-1">Tier-1 Institutional Credit Risk &amp; Generative AI Audit Platform</p>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="text-xs px-3 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-300 font-mono flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Champion: XGBoost 2.0
+        </span>
+        <a href="/api/report/html" target="_blank" class="text-xs px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium flex items-center gap-1.5 transition">
+          <i data-lucide="download" class="w-3.5 h-3.5"></i> Export Report
+        </a>
+      </div>
+    </header>
+
+    <!-- TAB 1: EXECUTIVE SCORECARD -->
+    <div id="tab-scorecard" class="tab-content space-y-6">
+      <div class="grid grid-cols-4 gap-4">
+        <div class="glass-panel p-5">
+          <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Champion ROC-AUC</div>
+          <div class="text-3xl font-bold text-white mt-2" id="kpi-roc">0.935</div>
+          <div class="text-[11px] text-emerald-400 mt-1 font-medium">+0.082 vs Baseline</div>
+        </div>
+        <div class="glass-panel p-5">
+          <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Champion F1-Score</div>
+          <div class="text-3xl font-bold text-white mt-2" id="kpi-f1">0.850</div>
+          <div class="text-[11px] text-slate-400 mt-1">Optimal Cut-off: 0.50</div>
+        </div>
+        <div class="glass-panel p-5">
+          <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Gini Coefficient</div>
+          <div class="text-3xl font-bold text-white mt-2" id="kpi-gini">0.870</div>
+          <div class="text-[11px] text-emerald-400 mt-1">2 * AUC - 1 (Basel II)</div>
+        </div>
+        <div class="glass-panel p-5">
+          <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Data Health Index</div>
+          <div class="text-3xl font-bold text-white mt-2" id="kpi-health">100%</div>
+          <div class="text-[11px] text-emerald-400 mt-1">Zero Schema Violations</div>
+        </div>
+      </div>
+
+      <!-- Governance Table -->
+      <div class="glass-panel p-6">
+        <h3 class="text-base font-semibold text-white mb-4 flex items-center gap-2">
+          <i data-lucide="shield" class="w-4 h-4 text-blue-400"></i> Model Governance Pillars &amp; Regulatory Status
+        </h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="text-slate-400 border-b border-slate-800">
+              <tr>
+                <th class="py-3 px-4">Evaluation Pillar</th>
+                <th class="py-3 px-4">Standard / Legal Tolerance</th>
+                <th class="py-3 px-4">Quantitative Finding</th>
+                <th class="py-3 px-4 text-right">Governance Verdict</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 font-medium">
+              <tr>
+                <td class="py-3.5 px-4 text-white">1. Data Integrity &amp; Ingestion</td>
+                <td class="py-3.5 px-4 text-slate-400">Zero duplicates, &lt;5% missing cells</td>
+                <td class="py-3.5 px-4 text-slate-300">5,000 records validated (100% Health)</td>
+                <td class="py-3.5 px-4 text-right"><span class="px-2.5 py-1 rounded-full text-[11px] badge-pass">PASS</span></td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 text-white">2. ML Model Discrimination</td>
+                <td class="py-3.5 px-4 text-slate-400">ROC-AUC &ge; 0.75, F1 &ge; 0.65</td>
+                <td class="py-3.5 px-4 text-slate-300">ROC-AUC: 0.935, KS Stat: 0.724</td>
+                <td class="py-3.5 px-4 text-right"><span class="px-2.5 py-1 rounded-full text-[11px] badge-pass">PASS</span></td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 text-white">3. Fair Lending Compliance</td>
+                <td class="py-3.5 px-4 text-slate-400">EEOC 80% Four-Fifths Rule</td>
+                <td class="py-3.5 px-4 text-slate-300">Gender: 0.984 | Age Group: Disparity Flagged</td>
+                <td class="py-3.5 px-4 text-right"><span class="px-2.5 py-1 rounded-full text-[11px] badge-review">REVIEW REQ</span></td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 text-white">4. Explainability &amp; Adverse Action</td>
+                <td class="py-3.5 px-4 text-slate-400">FCRA Reason Code Generation</td>
+                <td class="py-3.5 px-4 text-slate-300">SHAP TreeExplainer Attributions</td>
+                <td class="py-3.5 px-4 text-right"><span class="px-2.5 py-1 rounded-full text-[11px] badge-pass">PASS</span></td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 text-white">5. Robustness &amp; Stress Resilience</td>
+                <td class="py-3.5 px-4 text-slate-400">F1 degradation &le; 15% under stress</td>
+                <td class="py-3.5 px-4 text-slate-300">Noise flip &lt;4%, Passed Recession Shock</td>
+                <td class="py-3.5 px-4 text-right"><span class="px-2.5 py-1 rounded-full text-[11px] badge-pass">PASS</span></td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 text-white">6. GenAI / LLM Reliability</td>
+                <td class="py-3.5 px-4 text-slate-400">Consistency &ge; 85%, Hallucination &le; 5%</td>
+                <td class="py-3.5 px-4 text-slate-300">4-Prompt Suite: 82.9% stability, 0% ECOA leaks</td>
+                <td class="py-3.5 px-4 text-right"><span class="px-2.5 py-1 rounded-full text-[11px] badge-pass">PASS</span></td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 text-white">7. Production Drift Monitoring</td>
+                <td class="py-3.5 px-4 text-slate-400">PSI &lt; 0.25 (No structural drift)</td>
+                <td class="py-3.5 px-4 text-slate-300">Month 6 PSI = 0.284 (Macro Shift Alert)</td>
+                <td class="py-3.5 px-4 text-right"><span class="px-2.5 py-1 rounded-full text-[11px] badge-fail">ALERT</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: ALGORITHM LEADERBOARD -->
+    <div id="tab-leaderboard" class="tab-content hidden space-y-6">
+      <div class="glass-panel p-6">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h3 class="text-base font-semibold text-white flex items-center gap-2">
+              <i data-lucide="trophy" class="w-4 h-4 text-yellow-400"></i> Multi-Algorithm Benchmark Zoo
+            </h3>
+            <p class="text-xs text-slate-400">Benchmarking 5 distinct ML paradigms on the exact same holdout split (1,250 records)</p>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs" id="leaderboard-table">
+            <thead class="text-slate-400 border-b border-slate-800">
+              <tr>
+                <th class="py-3 px-4">Algorithm Architecture</th>
+                <th class="py-3 px-4">ROC-AUC</th>
+                <th class="py-3 px-4">Gini</th>
+                <th class="py-3 px-4">KS Stat</th>
+                <th class="py-3 px-4">F1 Score</th>
+                <th class="py-3 px-4">MCC</th>
+                <th class="py-3 px-4">Accuracy</th>
+                <th class="py-3 px-4">Brier</th>
+                <th class="py-3 px-4 text-right">Status</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboard-tbody" class="divide-y divide-slate-800/60 font-medium">
+              <!-- Dynamically populated by app.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Chart Comparison -->
+      <div class="grid grid-cols-2 gap-6">
+        <div class="glass-panel p-5">
+          <h4 class="text-xs font-semibold text-slate-300 mb-3">Discrimination Metric Comparison (ROC-AUC vs Gini vs KS)</h4>
+          <canvas id="chart-models-bar" height="200"></canvas>
+        </div>
+        <div class="glass-panel p-5">
+          <h4 class="text-xs font-semibold text-slate-300 mb-3">Model Calibration &amp; Error (Brier vs Log-Loss)</h4>
+          <canvas id="chart-models-calibration" height="200"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: UNDERWRITING SANDBOX -->
+    <div id="tab-sandbox" class="tab-content hidden space-y-6">
+      <div class="grid grid-cols-12 gap-6">
+        <!-- Input Sliders -->
+        <div class="col-span-7 glass-panel p-6 space-y-5">
+          <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+            <h3 class="text-sm font-semibold text-white flex items-center gap-2">
+              <i data-lucide="sliders" class="w-4 h-4 text-blue-400"></i> Applicant Loan Parameters
+            </h3>
+            <select id="sim-model-choice" class="bg-slate-900 border border-slate-700 text-xs rounded px-2.5 py-1 text-slate-200">
+              <option value="xgboost">XGBoost (Champion)</option>
+              <option value="lightgbm">LightGBM</option>
+              <option value="random_forest">Random Forest</option>
+              <option value="logistic">Logistic Regression</option>
+              <option value="neural_net">Neural Network (MLP)</option>
+            </select>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs font-medium mb-1">
+              <span>Annual Income</span>
+              <span id="lbl-income" class="text-blue-400 font-mono">$75,000</span>
+            </div>
+            <input type="range" id="input-income" min="20000" max="250000" step="5000" value="75000" class="w-full">
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs font-medium mb-1">
+              <span>Requested Loan Amount</span>
+              <span id="lbl-loan" class="text-blue-400 font-mono">$18,000</span>
+            </div>
+            <input type="range" id="input-loan" min="2000" max="60000" step="1000" value="18000" class="w-full">
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs font-medium mb-1">
+              <span>Debt-to-Income (DTI) Ratio</span>
+              <span id="lbl-dti" class="text-blue-400 font-mono">25.0%</span>
+            </div>
+            <input type="range" id="input-dti" min="0.05" max="0.65" step="0.01" value="0.25" class="w-full">
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs font-medium mb-1">
+              <span>Credit Bureau History Length</span>
+              <span id="lbl-history" class="text-blue-400 font-mono">10 Years</span>
+            </div>
+            <input type="range" id="input-history" min="1" max="35" step="1" value="10" class="w-full">
+          </div>
+
+          <div class="grid grid-cols-2 gap-4 pt-2">
+            <div>
+              <label class="text-xs text-slate-400 block mb-1">Prior Default on Record?</label>
+              <select id="input-default" class="w-full bg-slate-900 border border-slate-700 text-xs rounded p-2 text-slate-200">
+                <option value="0">No (Clean History)</option>
+                <option value="1">Yes (Recorded Default)</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-xs text-slate-400 block mb-1">Recent Delinquencies (2 Yrs)</label>
+              <select id="input-delinq" class="w-full bg-slate-900 border border-slate-700 text-xs rounded p-2 text-slate-200">
+                <option value="0">0 Delinquencies</option>
+                <option value="1">1 Event</option>
+                <option value="2">2 Events</option>
+                <option value="3">3+ Events</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real-Time Decision Gauge & Adverse Action Cards -->
+        <div class="col-span-5 space-y-6">
+          <div class="glass-panel p-6 text-center flex flex-col items-center justify-center">
+            <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Model Default Probability</h4>
+            
+            <!-- SVG Speedometer Gauge -->
+            <div class="relative w-44 h-44 flex items-center justify-center">
+              <svg class="w-full h-full -rotate-90" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" stroke="#1e293b" stroke-width="8" fill="none" />
+                <circle id="gauge-circle" cx="50" cy="50" r="40" stroke="#0070d2" stroke-width="8" stroke-dasharray="251.2" stroke-dashoffset="180" stroke-linecap="round" fill="none" class="gauge-meter" />
+              </svg>
+              <div class="absolute flex flex-col items-center">
+                <span id="sim-prob-val" class="text-3xl font-extrabold text-white">12.4%</span>
+                <span id="sim-tier-badge" class="mt-1 text-[11px] font-semibold px-2 py-0.5 rounded-full badge-pass">Low Risk</span>
+              </div>
+            </div>
+
+            <div class="mt-2 text-xs font-semibold text-slate-300">
+              Recommendation: <span id="sim-rec-val" class="text-emerald-400 font-bold">Approve</span>
+            </div>
+          </div>
+
+          <!-- SHAP Adverse Action Reasons Card -->
+          <div class="glass-panel p-5">
+            <h4 class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+              <i data-lucide="file-warning" class="w-3.5 h-3.5 text-amber-400"></i> FCRA Adverse Action Factors
+            </h4>
+            <ul id="sim-adverse-list" class="space-y-1.5 text-xs text-slate-400">
+              <!-- Dynamically inserted -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: FAIR LENDING (ECOA) -->
+    <div id="tab-fairness" class="tab-content hidden space-y-6">
+      <div class="glass-panel p-6">
+        <h3 class="text-base font-semibold text-white mb-2 flex items-center gap-2">
+          <i data-lucide="scale" class="w-4 h-4 text-purple-400"></i> Equal Credit Opportunity Act (ECOA) Audit
+        </h3>
+        <p class="text-xs text-slate-400 mb-6">Evaluating statutory compliance under the EEOC Four-Fifths Rule across protected demographic attributes</p>
+
+        <div class="grid grid-cols-2 gap-6">
+          <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
+            <h4 class="text-xs font-semibold text-slate-300 uppercase mb-3">Gender Demographic Parity</h4>
+            <canvas id="chart-fairness-gender" height="220"></canvas>
+            <div class="mt-4 p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-300 flex items-center justify-between">
+              <span>Disparate Impact Ratio: <strong>0.984</strong></span>
+              <span class="badge-pass px-2 py-0.5 rounded text-[10px]">EEOC 80% PASS</span>
+            </div>
+          </div>
+
+          <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
+            <h4 class="text-xs font-semibold text-slate-300 uppercase mb-3">Age Group Approval Disparity</h4>
+            <canvas id="chart-fairness-age" height="220"></canvas>
+            <div class="mt-4 p-3 rounded-lg bg-amber-500/10 border border-amber-500/20 text-xs text-amber-300 flex items-center justify-between">
+              <span>Disparate Impact Ratio: <strong>0.658</strong></span>
+              <span class="badge-review px-2 py-0.5 rounded text-[10px]">REVIEW REQUIRED</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 5: ROBUSTNESS STRESS-TESTER -->
+    <div id="tab-robustness" class="tab-content hidden space-y-6">
+      <div class="glass-panel p-6">
+        <h3 class="text-base font-semibold text-white mb-2 flex items-center gap-2">
+          <i data-lucide="shield-alert" class="w-4 h-4 text-red-400"></i> Adversarial &amp; Macro Stress Testing
+        </h3>
+        <p class="text-xs text-slate-400 mb-6">Quantifying model degradation under missing inputs, Gaussian noise, and economic recession shocks</p>
+
+        <div class="grid grid-cols-2 gap-6">
+          <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
+            <h4 class="text-xs font-semibold text-slate-300 uppercase mb-3">Missing Data Resilience Curve</h4>
+            <canvas id="chart-robustness-missing" height="220"></canvas>
+          </div>
+          <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
+            <h4 class="text-xs font-semibold text-slate-300 uppercase mb-3">Noise Perturbation Decision Flip Rate</h4>
+            <canvas id="chart-robustness-noise" height="220"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 6: GENAI PROMPT STUDIO -->
+    <div id="tab-genai" class="tab-content hidden space-y-6">
+      <div class="glass-panel p-6 space-y-5">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+          <div>
+            <h3 class="text-base font-semibold text-white flex items-center gap-2">
+              <i data-lucide="sparkles" class="w-4 h-4 text-blue-400"></i> GenAI Credit Reasoning Studio
+            </h3>
+            <p class="text-xs text-slate-400">Test prompt sensitivity, factual groundedness, and ECOA non-discrimination filters</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <label class="text-xs text-slate-400">Audited Persona:</label>
+            <select id="llm-prompt-select" class="bg-slate-900 border border-slate-700 text-xs rounded px-3 py-1.5 text-slate-200">
+              <option value="standard_analyst">Standard Credit Analyst</option>
+              <option value="strict_underwriting">Strict Institutional Underwriter</option>
+              <option value="cautious_screener">Cautious Financial Screener</option>
+              <option value="lenient_growth">Lenient Expansion Advisor</option>
+            </select>
+            <button onclick="runLLMAssessment()" class="px-3.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold flex items-center gap-1.5 transition">
+              <i data-lucide="play" class="w-3.5 h-3.5"></i> Evaluate Prompt
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-6">
+          <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5 space-y-3">
+            <h4 class="text-xs font-semibold text-slate-300 uppercase">Input Applicant Context</h4>
+            <div class="text-xs text-slate-400 space-y-1 font-mono bg-[#090e17] p-3 rounded-lg border border-slate-800">
+              <div>Income: $80,000 / Year</div>
+              <div>Debt-to-Income: 22.0%</div>
+              <div>Credit History: 8 Years</div>
+              <div>Previous Defaults: 0</div>
+              <div>Delinquencies (24 Mo): 0</div>
+            </div>
+            <div class="p-3 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-blue-300">
+              ℹ️ Audits verify whether LLM adheres strictly to provided facts without hallucinating bankruptcies or referencing prohibited demographics.
+            </div>
+          </div>
+
+          <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5 space-y-3">
+            <h4 class="text-xs font-semibold text-slate-300 uppercase">Generated Risk Narrative &amp; Guardrails</h4>
+            <div id="llm-output-box" class="text-xs text-slate-300 whitespace-pre-wrap font-sans bg-[#090e17] p-3.5 rounded-lg border border-slate-800 min-h-[160px]">
+              Click "Evaluate Prompt" to test narrative generation...
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 7: DRIFT MONITORING -->
+    <div id="tab-drift" class="tab-content hidden space-y-6">
+      <div class="glass-panel p-6">
+        <h3 class="text-base font-semibold text-white mb-2 flex items-center gap-2">
+          <i data-lucide="activity" class="w-4 h-4 text-emerald-400"></i> Population Stability Index (PSI) Drift Monitor
+        </h3>
+        <p class="text-xs text-slate-400 mb-6">Tracking feature distribution shift and realized default degradation over 6 production batches</p>
+
+        <div class="grid grid-cols-3 gap-6 mb-6">
+          <div class="glass-panel p-4">
+            <div class="text-[11px] font-semibold text-slate-400 uppercase">Baseline vs Month 6 PSI</div>
+            <div class="text-2xl font-bold text-red-400 mt-1">0.284</div>
+            <div class="text-[10px] text-red-400">Critical Drift Trigger (&ge; 0.25)</div>
+          </div>
+          <div class="glass-panel p-4">
+            <div class="text-[11px] font-semibold text-slate-400 uppercase">Most Drifted Feature</div>
+            <div class="text-2xl font-bold text-white mt-1">Debt-to-Income</div>
+            <div class="text-[10px] text-slate-400">Macroeconomic stress expansion</div>
+          </div>
+          <div class="glass-panel p-4">
+            <div class="text-[11px] font-semibold text-slate-400 uppercase">Retraining Protocol</div>
+            <div class="text-2xl font-bold text-amber-400 mt-1">Required</div>
+            <div class="text-[10px] text-amber-300">Automated Pipeline Dispatched</div>
+          </div>
+        </div>
+
+        <div class="glass-panel p-5">
+          <h4 class="text-xs font-semibold text-slate-300 uppercase mb-3">6-Month Population Stability Index (PSI) Trajectory</h4>
+          <canvas id="chart-drift-timeline" height="200"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 8: REGULATORY REPORT -->
+    <div id="tab-report" class="tab-content hidden space-y-6">
+      <div class="glass-panel p-6">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-base font-semibold text-white flex items-center gap-2">
+            <i data-lucide="book-open" class="w-4 h-4 text-blue-400"></i> Formal Model Risk Audit Document (SR 11-7)
+          </h3>
+          <a href="/api/report/html" target="_blank" class="px-4 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold flex items-center gap-1.5 transition">
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Open Full Report in New Tab
+          </a>
+        </div>
+        <div class="border border-slate-800 rounded-xl overflow-hidden">
+          <iframe src="/api/report/html" class="w-full h-[650px] bg-white rounded-b-xl"></iframe>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

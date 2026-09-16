@@ -46,6 +46,7 @@ st.sidebar.caption("Tier-1 Financial Institution AI Audit Framework (SR 11-7 / O
 
 tabs = [
     "🚦 Executive Scorecard",
+    "🏆 Algorithm Zoo (5 Models)",
     "📋 Data Quality & Validation",
     "🎯 ML Discrimination & Errors",
     "⚖️ Fair Lending & Bias Audit",
@@ -58,10 +59,14 @@ tabs = [
 selected_tab = st.sidebar.radio("Audit Navigation", tabs)
 
 st.sidebar.markdown("---")
-st.sidebar.markdown("**Audited Systems**")
-st.sidebar.markdown("- **System A**: XGBoost Credit Scoring (Champion)")
-st.sidebar.markdown("- **System B**: GenAI Risk Assistant (LLM)")
-st.sidebar.markdown("**Regulatory Scope**: Credit Underwriting, ECOA, FCRA")
+st.sidebar.markdown("**Audited Algorithms Zoo**")
+st.sidebar.markdown("- **1. XGBoost** (Champion)")
+st.sidebar.markdown("- **2. LightGBM** (Boosting)")
+st.sidebar.markdown("- **3. Random Forest** (Bagging)")
+st.sidebar.markdown("- **4. Neural Network** (MLP)")
+st.sidebar.markdown("- **5. Logistic Regression** (Baseline)")
+st.sidebar.markdown("**Generative AI**: Underwriting Assistant")
+st.sidebar.markdown("**Regulatory Scope**: SR 11-7, ECOA, FCRA")
 
 
 # ==========================================
@@ -112,7 +117,48 @@ if selected_tab == "🚦 Executive Scorecard":
 
 
 # ==========================================
-# TAB 2: DATA QUALITY & VALIDATION
+# TAB 2: ALGORITHM ZOO (5 MODELS)
+# ==========================================
+elif selected_tab == "🏆 Algorithm Zoo (5 Models)":
+    st.title("🏆 Multi-Algorithm Benchmark Zoo")
+    st.markdown("Benchmarking 5 diverse algorithmic architectures (Linear, Bagging, Boosting, and Neural Network) on the exact same holdout split (1,250 records).")
+
+    leaderboard_data = summary.get("models_leaderboard", [])
+    if leaderboard_data:
+        df_lead = pd.DataFrame(leaderboard_data)
+        st.dataframe(df_lead, use_container_width=True, hide_index=True)
+
+        st.markdown("### Discrimination Metric Comparison (ROC-AUC vs Gini vs KS)")
+        chart_data = df_lead[["Model", "ROC-AUC", "Gini", "KS Stat"]].melt(id_vars=["Model"], var_name="Metric", value_name="Score")
+        chart = alt.Chart(chart_data).mark_bar().encode(
+            x=alt.X("Model:N", title=None),
+            y=alt.Y("Score:Q", title="Metric Score", scale=alt.Scale(domain=[0.5, 1.0])),
+            color=alt.Color("Metric:N", scale=alt.Scale(range=["#002663", "#0070d2", "#8b5cf6"])),
+            xOffset="Metric:N",
+            tooltip=["Model", "Metric", "Score"]
+        ).properties(height=320)
+        st.altair_chart(chart, use_container_width=True)
+
+        st.markdown("### Model Calibration & Error Loss (Brier vs Log-Loss)")
+        c1, c2 = st.columns(2)
+        with c1:
+            chart_brier = alt.Chart(df_lead).mark_bar(color="#f59e0b").encode(
+                x=alt.X("Model:N", sort="-y"),
+                y=alt.Y("Brier:Q", title="Brier Score (Lower is Better)")
+            ).properties(height=240)
+            st.altair_chart(chart_brier, use_container_width=True)
+        with c2:
+            chart_loss = alt.Chart(df_lead).mark_bar(color="#ef4444").encode(
+                x=alt.X("Model:N", sort="-y"),
+                y=alt.Y("Log Loss:Q", title="Log-Loss (Lower is Better)")
+            ).properties(height=240)
+            st.altair_chart(chart_loss, use_container_width=True)
+    else:
+        st.info("Leaderboard data refreshing...")
+
+
+# ==========================================
+# TAB 3: DATA QUALITY & VALIDATION
 # ==========================================
 elif selected_tab == "📋 Data Quality & Validation":
     st.title("📋 Data Integrity & Ingestion Validation")
@@ -145,27 +191,44 @@ elif selected_tab == "📋 Data Quality & Validation":
 
 
 # ==========================================
-# TAB 3: ML DISCRIMINATION & ERRORS
+# TAB 4: ML DISCRIMINATION & ERRORS
 # ==========================================
 elif selected_tab == "🎯 ML Discrimination & Errors":
-    st.title("🎯 Model Discrimination, Calibration & Error Diagnostics")
-    st.markdown("Benchmarking Champion (XGBoost) against Baseline (Logistic Regression) and analyzing error distributions.")
+    st.title("🎯 Model Discrimination, Calibration & Advanced Banking Metrics")
+    st.markdown("Analyze discrimination (ROC-AUC, Gini, KS Stat, MCC), calibration, and error distributions across candidate algorithms.")
 
-    champ = summary["champion_performance"]
-    base = summary["baseline_performance"]
+    # Algorithm Selector
+    model_choice = st.selectbox(
+        "Select Model Architecture to Inspect:",
+        ["XGBoost (Champion)", "LightGBM", "Random Forest", "Logistic Regression (Baseline)", "Neural Network (MLP)"]
+    )
 
-    col1, col2, col3, col4 = st.columns(4)
-    col1.metric("Champion ROC-AUC", f"{champ['roc_auc']:.3f}", f"{(champ['roc_auc'] - base['roc_auc']):+.3f} vs Baseline")
-    col2.metric("Champion F1-Score", f"{champ['f1_score']:.3f}", f"{(champ['f1_score'] - base['f1_score']):+.3f} vs Baseline")
-    col3.metric("Precision", f"{champ['precision']:.3f}")
-    col4.metric("Recall (Default Catch)", f"{champ['recall']:.3f}")
+    prob_map = {
+        "XGBoost (Champion)": "prob_xgboost",
+        "LightGBM": "prob_lightgbm",
+        "Random Forest": "prob_random_forest",
+        "Logistic Regression (Baseline)": "prob_logistic",
+        "Neural Network (MLP)": "prob_neural_net"
+    }
+    prob_col = prob_map.get(model_choice, "pred_prob")
+    y_prob = test_df[prob_col].values if prob_col in test_df.columns else test_df["pred_prob"].values
+    y_true = test_df["risk_label"].values
+
+    from src.performance import PerformanceEvaluator
+    perf_eval = PerformanceEvaluator()
+    m_metrics = perf_eval.evaluate_model(y_true, y_prob, threshold=0.50)
+
+    col1, col2, col3, col4, col5 = st.columns(5)
+    col1.metric("ROC-AUC", f"{m_metrics['roc_auc']:.3f}")
+    col2.metric("Gini Coeff", f"{m_metrics['gini_coefficient']:.3f}", "2*AUC - 1")
+    col3.metric("KS Statistic", f"{m_metrics['ks_statistic']:.3f}", f"Cut-off: {m_metrics['ks_optimal_cutoff']:.2f}")
+    col4.metric("F1-Score", f"{m_metrics['f1_score']:.3f}")
+    col5.metric("MCC", f"{m_metrics['mcc']:.3f}", "Matthews Corr")
 
     # Interactive Threshold Tuning Slider
     st.markdown("### Interactive Decision Cut-Off Threshold Optimizer")
     thresh_slider = st.slider("Select Approval / Denial Cut-Off Threshold", min_value=0.10, max_value=0.90, value=0.50, step=0.05)
     
-    y_true = test_df["risk_label"].values
-    y_prob = test_df["pred_prob"].values
     y_pred_dynamic = (y_prob >= thresh_slider).astype(int)
 
     from sklearn.metrics import confusion_matrix, f1_score, precision_score, recall_score, accuracy_score
@@ -192,7 +255,7 @@ elif selected_tab == "🎯 ML Discrimination & Errors":
         np.where((y_true == 1) & (y_pred_dynamic == 0), "False Negative", "Correct")
     )
     flagged = test_df_errors[test_df_errors["error_type"] != "Correct"][
-        ["customer_id", "annual_income", "debt_to_income_ratio", "credit_history_years", "pred_prob", "risk_label", "error_type"]
+        ["customer_id", "annual_income", "debt_to_income_ratio", "credit_history_years", prob_col, "risk_label", "error_type"]
     ].head(10)
     st.dataframe(flagged, use_container_width=True, hide_index=True)
 

@@ -1,6 +1,12 @@
 {
-  "model_type": "XGBClassifier",
-  "baseline_type": "LogisticRegression",
+  "champion_type": "XGBClassifier",
+  "models_available": [
+    "Logistic Regression",
+    "Random Forest",
+    "XGBoost",
+    "LightGBM",
+    "Multi-Layer Perceptron"
+  ],
   "features": {
     "numerical": [
       "annual_income",
@@ -22,11 +28,5 @@
   },
   "training_samples": 3750,
   "test_samples": 1250,
-  "target": "risk_label",
-  "champion_hyperparameters": {
-    "n_estimators": 150,
-    "max_depth": 4,
-    "learning_rate": 0.08,
-    "subsample": 0.85
-  }
+  "target": "risk_label"
 }

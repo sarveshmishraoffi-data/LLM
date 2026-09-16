@@ -22,7 +22,10 @@ from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.neural_network import MLPClassifier
 from xgboost import XGBClassifier
+from lightgbm import LGBMClassifier
 
 from src.utils import logger, NpEncoder
 
@@ -113,11 +116,11 @@ class CreditModelTrainer:
         }
 
     def train_models(self, data_splits: Dict[str, Any]) -> Dict[str, Pipeline]:
-        """Train both Logistic Regression (Baseline) and XGBoost (Champion)."""
+        """Train 5 distinct ML algorithms across linear, ensemble bagging, boosting, and neural architectures."""
         X_train = data_splits["X_train"]
         y_train = data_splits["y_train"]
 
-        # 1. Baseline: Logistic Regression
+        # 1. Baseline: Logistic Regression (Interpretable Linear)
         logger.info("Training Logistic Regression (Baseline)...")
         lr_pipeline = Pipeline(steps=[
             ("preprocessor", self.build_preprocessor()),
@@ -126,7 +129,18 @@ class CreditModelTrainer:
         lr_pipeline.fit(X_train, y_train)
         self.models["baseline_logistic"] = lr_pipeline
 
-        # 2. Champion: XGBoost Classifier
+        # 2. Ensemble Bagging: Random Forest
+        logger.info("Training Random Forest Classifier (Bagging Ensemble)...")
+        rf_pipeline = Pipeline(steps=[
+            ("preprocessor", self.build_preprocessor()),
+            ("classifier", RandomForestClassifier(
+                n_estimators=150, max_depth=8, min_samples_split=5, random_state=42, n_jobs=-1
+            ))
+        ])
+        rf_pipeline.fit(X_train, y_train)
+        self.models["random_forest"] = rf_pipeline
+
+        # 3. Champion: XGBoost Classifier (Gradient Boosted Trees)
         logger.info("Training XGBoost Classifier (Champion)...")
         xgb_pipeline = Pipeline(steps=[
             ("preprocessor", self.build_preprocessor()),
@@ -143,21 +157,67 @@ class CreditModelTrainer:
         xgb_pipeline.fit(X_train, y_train)
         self.models["champion_xgboost"] = xgb_pipeline
 
+        # 4. Gradient Boosting: LightGBM (Leaf-wise Optimization)
+        logger.info("Training LightGBM Classifier (High-Throughput Boosting)...")
+        lgb_pipeline = Pipeline(steps=[
+            ("preprocessor", self.build_preprocessor()),
+            ("classifier", LGBMClassifier(
+                n_estimators=150,
+                max_depth=5,
+                learning_rate=0.08,
+                num_leaves=31,
+                random_state=42,
+                verbose=-1
+            ))
+        ])
+        lgb_pipeline.fit(X_train, y_train)
+        self.models["lightgbm"] = lgb_pipeline
+
+        # 5. Deep Learning / Neural Network: Multi-Layer Perceptron
+        logger.info("Training Multi-Layer Perceptron (Neural Network)...")
+        mlp_pipeline = Pipeline(steps=[
+            ("preprocessor", self.build_preprocessor()),
+            ("classifier", MLPClassifier(
+                hidden_layer_sizes=(64, 32),
+                max_iter=350,
+                activation="relu",
+                alpha=0.01,
+                random_state=42
+            ))
+        ])
+        mlp_pipeline.fit(X_train, y_train)
+        self.models["neural_net"] = mlp_pipeline
+
         return self.models
 
     def save_artifacts(self, models_dir: str = "models", data_splits: Optional[Dict[str, Any]] = None):
-        """Persist trained pipelines, metadata, and holdout test set."""
+        """Persist all 5 trained pipelines, metadata, and holdout test set."""
         os.makedirs(models_dir, exist_ok=True)
         
-        # Save champion model
+        # Save champion model (XGBoost)
         champion_path = os.path.join(models_dir, "credit_model.joblib")
         joblib.dump(self.models["champion_xgboost"], champion_path)
-        logger.info(f"Saved Champion model to {champion_path}")
+        logger.info(f"Saved Champion XGBoost model to {champion_path}")
 
-        # Save baseline model
+        # Save baseline model (Logistic Regression)
         baseline_path = os.path.join(models_dir, "baseline_model.joblib")
         joblib.dump(self.models["baseline_logistic"], baseline_path)
-        logger.info(f"Saved Baseline model to {baseline_path}")
+        logger.info(f"Saved Baseline Logistic model to {baseline_path}")
+
+        # Save Random Forest
+        rf_path = os.path.join(models_dir, "random_forest.joblib")
+        joblib.dump(self.models["random_forest"], rf_path)
+        logger.info(f"Saved Random Forest model to {rf_path}")
+
+        # Save LightGBM
+        lgb_path = os.path.join(models_dir, "lightgbm.joblib")
+        joblib.dump(self.models["lightgbm"], lgb_path)
+        logger.info(f"Saved LightGBM model to {lgb_path}")
+
+        # Save Neural Net
+        mlp_path = os.path.join(models_dir, "neural_net.joblib")
+        joblib.dump(self.models["neural_net"], mlp_path)
+        logger.info(f"Saved Neural Network model to {mlp_path}")
 
         # Save holdout test split for audit & monitoring
         if data_splits is not None:
@@ -167,8 +227,10 @@ class CreditModelTrainer:
 
         # Save model metadata
         metadata = {
-            "model_type": "XGBClassifier",
-            "baseline_type": "LogisticRegression",
+            "champion_type": "XGBClassifier",
+            "models_available": [
+                "Logistic Regression", "Random Forest", "XGBoost", "LightGBM", "Multi-Layer Perceptron"
+            ],
             "features": {
                 "numerical": self.NUMERICAL_FEATURES,
                 "categorical": self.CATEGORICAL_FEATURES,
@@ -176,13 +238,7 @@ class CreditModelTrainer:
             },
             "training_samples": len(data_splits["X_train"]) if data_splits else None,
             "test_samples": len(data_splits["X_test"]) if data_splits else None,
-            "target": self.TARGET_COLUMN,
-            "champion_hyperparameters": {
-                "n_estimators": 150,
-                "max_depth": 4,
-                "learning_rate": 0.08,
-                "subsample": 0.85
-            }
+            "target": self.TARGET_COLUMN
         }
         meta_path = os.path.join(models_dir, "model_metadata.json")
         with open(meta_path, "w") as f:

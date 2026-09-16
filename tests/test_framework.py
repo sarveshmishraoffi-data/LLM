@@ -243,3 +243,41 @@ def test_drift_psi_calculation():
     actual_drifted = np.random.normal(75, 10, size=1000)
     psi_drifted = monitor.calculate_psi(expected, actual_drifted)
     assert psi_drifted >= 0.25  # Must trigger Critical Alert
+
+
+def test_advanced_banking_metrics():
+    """Verify Gini, KS statistic, Balanced Accuracy, MCC, and Calibration ECE."""
+    evaluator = PerformanceEvaluator()
+    y_true = np.array([0, 0, 0, 0, 1, 1, 1, 1])
+    y_prob = np.array([0.05, 0.15, 0.20, 0.25, 0.75, 0.80, 0.85, 0.95])
+
+    perf = evaluator.evaluate_model(y_true, y_prob)
+
+    assert "gini_coefficient" in perf
+    assert perf["gini_coefficient"] == 1.0  # Since AUC is 1.0, Gini = 2*1 - 1 = 1.0
+    assert "ks_statistic" in perf
+    assert perf["ks_statistic"] == 1.0
+    assert "balanced_accuracy" in perf
+    assert perf["balanced_accuracy"] == 1.0
+    assert "mcc" in perf
+    assert perf["mcc"] == 1.0
+    assert "expected_calibration_error" in perf
+    assert perf["expected_calibration_error"] >= 0.0
+
+
+def test_multi_model_zoo_training(sample_credit_data, tmp_path):
+    """Verify CreditModelTrainer trains and outputs predictions across all 5 algorithms."""
+    csv_path = str(tmp_path / "temp_credit_zoo.csv")
+    sample_credit_data.to_csv(csv_path, index=False)
+
+    trainer = CreditModelTrainer(data_path=csv_path)
+    splits = trainer.prepare_data(test_size=0.25, random_state=42)
+    models = trainer.train_models(splits)
+
+    expected_models = ["baseline_logistic", "random_forest", "champion_xgboost", "lightgbm", "neural_net"]
+    for m_name in expected_models:
+        assert m_name in models
+        pipeline = models[m_name]
+        preds = pipeline.predict_proba(splits["X_test"])[:, 1]
+        assert len(preds) == len(splits["X_test"])
+        assert np.all((preds >= 0.0) & (preds <= 1.0))

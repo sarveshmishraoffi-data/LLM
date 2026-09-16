@@ -1,0 +1,102 @@
+/* Glassmorphism & Modern Luxury Theme for Model Risk Platform */
+:root {
+  --bg-dark: #090e17;
+  --surface-dark: #111927;
+  --surface-card: rgba(17, 25, 39, 0.75);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-focus: rgba(0, 112, 210, 0.5);
+  --primary-accent: #0070d2;
+  --primary-gradient: linear-gradient(135deg, #002663 0%, #0070d2 100%);
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Cards */
+.glass-panel {
+  background: var(--surface-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.glass-panel:hover {
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+/* Glowing Badges */
+.badge-pass {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.badge-review {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.badge-fail {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Interactive SVG Gauge */
+.gauge-meter {
+  transform-origin: 50% 50%;
+  transition: stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom Range Input */
+input[type=range] {
+  -webkit-appearance: none;
+  background: #1e293b;
+  height: 6px;
+  border-radius: 3px;
+  outline: none;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #0070d2;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 112, 210, 0.7);
+  transition: transform 0.1s ease;
+}
+input[type=range]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
