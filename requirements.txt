@@ -1,0 +1,32 @@
+# AI Model Risk & GenAI Evaluation Framework
+# Core Dependencies
+
+# Data Manipulation & Computation
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+
+# Machine Learning & Modeling
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+joblib>=1.3.0
+
+# Model Fairness & Responsible AI
+fairlearn>=0.10.0
+
+# Model Explainability
+shap>=0.44.0
+
+# Visualization & Dashboard
+matplotlib>=3.7.0
+seaborn>=0.12.0
+streamlit>=1.30.0
+altair>=5.0.0
+
+# GenAI & LLM Integration
+pydantic>=2.0.0
+requests>=2.31.0
+python-dotenv>=1.0.0
+
+# Testing & Quality
+pytest>=7.4.0

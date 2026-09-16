@@ -1,0 +1,1251 @@
+annual_income,loan_amount,employment_length_years,credit_history_years,num_open_credit_lines,debt_to_income_ratio,has_previous_default,delinquent_2yrs,loan_purpose,gender,age_group,risk_label
+73400.0,23100,0,13,9,0.3969,0,2,credit_card,Male,Working Age (25-55),0
+38400.0,11500,1,9,6,0.174,0,1,credit_card,Male,Working Age (25-55),1
+51800.0,15600,4,10,3,0.0402,0,1,home_improvement,Female,Working Age (25-55),0
+161200.0,43000,0,12,6,0.3937,0,0,home_improvement,Female,Working Age (25-55),1
+52200.0,10200,4,12,5,0.3174,0,0,debt_consolidation,Male,Working Age (25-55),0
+44200.0,14700,10,17,11,0.1831,0,1,debt_consolidation,Female,Senior (>55),0
+155900.0,50000,5,22,7,0.1322,0,0,medical,Male,Senior (>55),0
+63600.0,6700,5,15,7,0.2034,0,0,small_business,Male,Working Age (25-55),0
+96300.0,34500,10,9,4,0.4946,1,0,debt_consolidation,Female,Working Age (25-55),1
+59300.0,15100,3,15,8,0.3502,0,0,debt_consolidation,Female,Working Age (25-55),1
+130900.0,24000,0,20,9,0.0682,0,0,debt_consolidation,Female,Senior (>55),0
+108200.0,12000,10,21,10,0.3216,0,1,debt_consolidation,Female,Senior (>55),0
+42300.0,16500,2,12,12,0.3605,0,0,debt_consolidation,Female,Working Age (25-55),1
+77600.0,23700,4,17,12,0.0583,0,1,debt_consolidation,Female,Working Age (25-55),1
+103200.0,21700,11,13,10,0.1195,0,1,debt_consolidation,Male,Working Age (25-55),0
+58700.0,6400,0,14,4,0.1125,1,3,debt_consolidation,Male,Working Age (25-55),0
+90900.0,28000,5,11,10,0.2728,0,0,debt_consolidation,Male,Working Age (25-55),0
+36400.0,15400,4,19,6,0.3026,0,0,debt_consolidation,Male,Working Age (25-55),0
+77800.0,11800,15,13,7,0.464,0,0,small_business,Female,Working Age (25-55),0
+43300.0,7500,0,16,5,0.2526,0,0,home_improvement,Male,Working Age (25-55),0
+32100.0,5700,19,12,5,0.4181,0,0,debt_consolidation,Female,Working Age (25-55),0
+42100.0,13700,10,11,6,0.0667,0,0,home_improvement,Male,Working Age (25-55),0
+42600.0,13800,14,10,8,0.1775,0,0,debt_consolidation,Female,Working Age (25-55),0
+105300.0,12300,0,13,6,0.3217,0,0,debt_consolidation,Male,Working Age (25-55),1
+51400.0,11300,13,18,4,0.3816,0,0,debt_consolidation,Male,Working Age (25-55),1
+53600.0,14300,5,12,7,0.1436,0,0,small_business,Male,Working Age (25-55),0
+70700.0,19300,2,12,6,0.3409,0,0,credit_card,Male,Working Age (25-55),1
+26200.0,10700,0,17,8,0.425,0,0,credit_card,Female,Working Age (25-55),1
+41000.0,8600,0,11,3,0.2186,0,0,debt_consolidation,Male,Working Age (25-55),0
+73800.0,8400,1,11,7,0.1472,0,1,credit_card,Male,Young (<25),0
+76500.0,23200,3,11,4,0.3093,1,0,small_business,Female,Working Age (25-55),1
+57700.0,8200,1,11,8,0.1487,0,2,credit_card,Female,Working Age (25-55),0
+27600.0,7900,6,12,4,0.1421,0,3,medical,Female,Working Age (25-55),0
+98600.0,15600,5,18,4,0.4064,0,0,debt_consolidation,Female,Senior (>55),0
+31800.0,5500,0,12,9,0.1803,0,0,home_improvement,Male,Working Age (25-55),0
+78300.0,15300,1,16,8,0.2568,0,0,debt_consolidation,Male,Working Age (25-55),0
+34000.0,3600,0,5,7,0.2037,1,0,debt_consolidation,Male,Working Age (25-55),1
+72800.0,12600,12,9,12,0.3005,0,1,debt_consolidation,Female,Working Age (25-55),0
+56300.0,14200,2,15,5,0.4559,0,0,debt_consolidation,Male,Working Age (25-55),0
+53100.0,16600,1,11,11,0.0756,0,0,debt_consolidation,Male,Working Age (25-55),0
+53800.0,21400,1,8,5,0.0483,0,1,major_purchase,Female,Working Age (25-55),0
+27300.0,11400,2,5,8,0.2484,0,0,small_business,Male,Young (<25),1
+89900.0,34300,1,3,5,0.1999,0,0,credit_card,Male,Young (<25),1
+67100.0,11500,0,6,11,0.3419,0,0,small_business,Female,Working Age (25-55),1
+90700.0,38100,4,12,2,0.2797,0,0,debt_consolidation,Female,Working Age (25-55),1
+25800.0,6000,6,10,6,0.18,0,0,debt_consolidation,Female,Working Age (25-55),0
+18000.0,2700,5,6,7,0.1395,0,0,major_purchase,Female,Working Age (25-55),0
+66400.0,20900,12,17,3,0.1716,0,0,home_improvement,Male,Working Age (25-55),0
+27200.0,7600,1,16,8,0.3715,0,0,debt_consolidation,Female,Working Age (25-55),1
+77400.0,19900,9,18,8,0.4357,0,0,debt_consolidation,Female,Working Age (25-55),1
+49400.0,15900,18,15,8,0.0794,0,2,debt_consolidation,Male,Working Age (25-55),0
+20300.0,2000,4,9,3,0.2712,0,0,debt_consolidation,Male,Working Age (25-55),0
+40600.0,13400,1,10,11,0.1979,0,2,credit_card,Male,Working Age (25-55),1
+18000.0,3200,1,12,6,0.1677,0,0,medical,Male,Working Age (25-55),0
+105800.0,44700,2,15,2,0.4109,1,1,debt_consolidation,Female,Working Age (25-55),1
+49300.0,18500,0,19,6,0.156,0,0,credit_card,Male,Senior (>55),0
+34600.0,15100,3,20,10,0.1286,1,0,credit_card,Female,Working Age (25-55),0
+45700.0,14600,9,8,5,0.213,0,1,credit_card,Female,Working Age (25-55),0
+57800.0,21000,6,6,7,0.2206,0,2,major_purchase,Female,Young (<25),1
+197200.0,50000,4,10,10,0.0783,0,0,debt_consolidation,Male,Working Age (25-55),0
+53500.0,15800,5,14,5,0.1725,0,0,small_business,Female,Working Age (25-55),0
+70600.0,28300,4,1,6,0.1077,0,1,major_purchase,Male,Young (<25),1
+104700.0,21400,1,12,8,0.2972,0,0,home_improvement,Male,Working Age (25-55),0
+58400.0,14500,24,15,8,0.3131,0,0,major_purchase,Male,Working Age (25-55),0
+57500.0,7700,7,8,10,0.1129,1,0,credit_card,Male,Working Age (25-55),0
+44700.0,11900,5,21,10,0.2526,0,1,major_purchase,Male,Senior (>55),0
+41400.0,7500,7,11,8,0.2484,0,0,small_business,Female,Working Age (25-55),0
+66600.0,22700,0,12,6,0.0936,0,0,debt_consolidation,Male,Working Age (25-55),0
+89200.0,17000,3,10,5,0.2502,1,1,debt_consolidation,Male,Working Age (25-55),1
+48300.0,9800,0,15,7,0.1712,0,1,small_business,Female,Working Age (25-55),0
+87300.0,31200,1,13,5,0.1612,0,1,debt_consolidation,Male,Working Age (25-55),0
+45700.0,12500,8,18,4,0.2698,1,2,credit_card,Female,Working Age (25-55),1
+136100.0,29200,9,13,5,0.3194,0,0,credit_card,Male,Working Age (25-55),0
+60300.0,13300,3,5,5,0.257,0,1,debt_consolidation,Male,Young (<25),1
+83000.0,27500,1,19,4,0.1981,0,0,credit_card,Male,Senior (>55),0
+208300.0,42700,3,13,8,0.3204,0,0,home_improvement,Male,Senior (>55),0
+57300.0,16900,6,14,8,0.0708,0,0,home_improvement,Female,Working Age (25-55),0
+60300.0,6200,3,14,11,0.1594,0,0,debt_consolidation,Female,Working Age (25-55),0
+56200.0,12200,11,12,10,0.0474,0,0,debt_consolidation,Male,Working Age (25-55),0
+47700.0,10200,4,8,9,0.2386,0,0,credit_card,Female,Young (<25),0
+160000.0,50000,9,17,4,0.04,0,0,small_business,Male,Working Age (25-55),0
+62100.0,9000,0,15,10,0.292,0,1,debt_consolidation,Male,Working Age (25-55),1
+75800.0,10000,5,21,11,0.103,0,0,debt_consolidation,Male,Senior (>55),0
+49600.0,22100,6,15,6,0.2245,0,0,debt_consolidation,Male,Working Age (25-55),0
+45300.0,13800,6,14,9,0.1996,0,0,debt_consolidation,Male,Working Age (25-55),0
+35600.0,12600,2,21,11,0.2115,0,0,debt_consolidation,Male,Working Age (25-55),0
+24700.0,5300,3,13,12,0.2269,0,0,credit_card,Male,Working Age (25-55),0
+106600.0,11200,0,13,6,0.1529,0,0,debt_consolidation,Female,Working Age (25-55),0
+90000.0,26400,5,12,6,0.2952,0,0,small_business,Female,Working Age (25-55),0
+78600.0,20900,14,13,6,0.4853,0,1,small_business,Male,Working Age (25-55),1
+47300.0,9500,1,19,8,0.2526,0,0,debt_consolidation,Female,Working Age (25-55),0
+65400.0,21200,4,10,7,0.3106,0,0,home_improvement,Female,Working Age (25-55),1
+61100.0,24800,6,15,3,0.2529,1,0,home_improvement,Female,Working Age (25-55),1
+23600.0,9800,1,3,9,0.1158,0,2,credit_card,Female,Young (<25),1
+46800.0,16900,6,16,11,0.2524,0,0,debt_consolidation,Male,Working Age (25-55),0
+98300.0,43200,1,13,6,0.2916,0,1,credit_card,Female,Working Age (25-55),1
+50900.0,12400,1,15,10,0.1209,0,1,debt_consolidation,Male,Working Age (25-55),0
+112600.0,42900,0,11,11,0.6155,1,0,debt_consolidation,Male,Working Age (25-55),0
+55000.0,17600,1,18,9,0.1704,0,0,debt_consolidation,Male,Working Age (25-55),0
+107000.0,31200,8,13,10,0.1372,1,0,debt_consolidation,Male,Working Age (25-55),0
+111200.0,12500,6,16,8,0.2141,0,0,debt_consolidation,Male,Working Age (25-55),0
+104300.0,31400,1,8,3,0.0905,1,0,small_business,Female,Working Age (25-55),0
+20000.0,3300,2,10,8,0.1974,0,0,credit_card,Female,Working Age (25-55),0
+58900.0,10200,4,14,5,0.3055,0,0,small_business,Female,Working Age (25-55),0
+69200.0,30200,14,19,6,0.283,1,0,home_improvement,Male,Working Age (25-55),1
+23400.0,2400,6,7,6,0.13,0,0,debt_consolidation,Female,Working Age (25-55),0
+37100.0,15400,8,9,4,0.1889,0,0,debt_consolidation,Male,Working Age (25-55),0
+51700.0,22000,0,13,5,0.2962,0,1,debt_consolidation,Male,Young (<25),1
+38300.0,6900,8,13,5,0.128,0,3,home_improvement,Male,Working Age (25-55),0
+66400.0,23200,4,9,9,0.2348,0,0,medical,Female,Working Age (25-55),0
+32700.0,12200,3,13,6,0.3644,0,0,debt_consolidation,Male,Working Age (25-55),1
+47200.0,6600,3,12,7,0.4149,0,0,small_business,Female,Working Age (25-55),1
+54700.0,21400,0,11,6,0.4241,0,0,debt_consolidation,Male,Working Age (25-55),1
+68500.0,11100,1,13,6,0.0654,0,0,debt_consolidation,Male,Young (<25),0
+68300.0,18600,8,7,6,0.2359,0,0,credit_card,Male,Working Age (25-55),0
+66200.0,24600,11,10,6,0.3203,0,0,debt_consolidation,Male,Working Age (25-55),1
+26900.0,11500,4,14,3,0.2036,0,1,debt_consolidation,Male,Working Age (25-55),1
+122300.0,40300,5,21,7,0.3495,0,0,credit_card,Female,Working Age (25-55),0
+40300.0,12500,8,24,3,0.2798,0,0,credit_card,Female,Senior (>55),0
+83100.0,12600,0,5,5,0.4647,0,0,home_improvement,Female,Young (<25),1
+126000.0,32400,0,5,11,0.1171,0,0,major_purchase,Male,Young (<25),0
+54800.0,15900,5,16,8,0.3114,0,0,credit_card,Female,Working Age (25-55),0
+56400.0,22300,7,13,6,0.1963,0,1,credit_card,Female,Working Age (25-55),0
+68100.0,28400,0,4,12,0.3388,0,0,major_purchase,Female,Young (<25),1
+57400.0,22800,10,6,10,0.081,0,1,debt_consolidation,Female,Working Age (25-55),0
+70100.0,25500,0,10,7,0.4333,1,0,small_business,Male,Working Age (25-55),1
+82500.0,13300,3,20,8,0.2303,0,2,small_business,Male,Working Age (25-55),0
+27100.0,6400,1,18,7,0.0945,0,3,medical,Male,Senior (>55),0
+55700.0,21600,10,19,7,0.218,0,1,medical,Female,Working Age (25-55),1
+41300.0,18300,3,19,7,0.1068,0,0,credit_card,Male,Working Age (25-55),0
+62800.0,24500,5,19,5,0.0521,0,0,debt_consolidation,Female,Senior (>55),0
+71500.0,12600,15,9,3,0.2184,0,0,debt_consolidation,Male,Working Age (25-55),0
+81100.0,8800,1,21,5,0.2855,0,1,debt_consolidation,Male,Senior (>55),0
+61500.0,13800,1,13,9,0.172,0,0,debt_consolidation,Female,Working Age (25-55),0
+20800.0,7500,8,15,8,0.1096,0,0,home_improvement,Female,Working Age (25-55),0
+56500.0,25300,11,17,3,0.2154,0,0,small_business,Female,Working Age (25-55),0
+77700.0,26300,14,25,7,0.1983,0,0,debt_consolidation,Male,Senior (>55),0
+91500.0,12500,1,14,7,0.3671,1,0,credit_card,Female,Working Age (25-55),1
+49200.0,15900,6,14,8,0.4248,0,0,debt_consolidation,Male,Working Age (25-55),1
+61800.0,11500,3,18,4,0.2652,0,0,home_improvement,Male,Working Age (25-55),0
+42600.0,13500,1,8,7,0.1996,0,0,major_purchase,Male,Working Age (25-55),0
+55400.0,14200,14,17,4,0.4105,0,0,credit_card,Male,Working Age (25-55),0
+55200.0,8000,1,16,9,0.0832,0,0,debt_consolidation,Female,Working Age (25-55),0
+95300.0,36300,1,9,8,0.2237,0,0,credit_card,Male,Working Age (25-55),1
+18000.0,2000,2,11,8,0.4355,1,0,credit_card,Female,Working Age (25-55),1
+42900.0,4900,0,11,7,0.1857,0,0,major_purchase,Female,Working Age (25-55),0
+20000.0,8100,12,17,7,0.2125,0,0,major_purchase,Male,Working Age (25-55),0
+48700.0,12300,0,21,6,0.1014,0,0,debt_consolidation,Male,Working Age (25-55),0
+71700.0,22600,1,9,7,0.2274,0,0,home_improvement,Female,Working Age (25-55),0
+26300.0,4800,4,16,8,0.1552,0,0,small_business,Male,Working Age (25-55),0
+49800.0,5500,3,7,3,0.2668,0,0,credit_card,Male,Young (<25),0
+121900.0,24200,0,8,3,0.3756,1,0,home_improvement,Male,Working Age (25-55),1
+113300.0,20600,1,10,8,0.2099,0,0,debt_consolidation,Female,Working Age (25-55),0
+63300.0,26800,5,24,9,0.197,0,0,home_improvement,Male,Working Age (25-55),0
+28200.0,10200,0,11,11,0.499,0,1,major_purchase,Female,Working Age (25-55),1
+74900.0,33700,5,12,6,0.0972,0,0,debt_consolidation,Female,Young (<25),0
+34500.0,4600,1,18,6,0.2097,0,0,debt_consolidation,Female,Working Age (25-55),0
+97200.0,29000,2,12,11,0.4398,0,0,small_business,Female,Working Age (25-55),1
+141400.0,50000,1,19,8,0.4051,0,0,small_business,Male,Working Age (25-55),1
+66800.0,21500,5,16,6,0.1707,0,0,debt_consolidation,Female,Working Age (25-55),0
+71300.0,29600,1,15,7,0.253,0,0,home_improvement,Female,Working Age (25-55),1
+30600.0,7300,8,10,4,0.5622,0,0,major_purchase,Female,Working Age (25-55),1
+83500.0,16000,1,9,7,0.3967,1,0,debt_consolidation,Male,Working Age (25-55),1
+49500.0,21600,0,11,12,0.1607,0,0,home_improvement,Male,Working Age (25-55),0
+59000.0,25100,4,16,8,0.1775,0,0,credit_card,Female,Working Age (25-55),0
+18000.0,7300,8,9,7,0.1646,0,0,debt_consolidation,Male,Working Age (25-55),0
+63300.0,26200,1,13,8,0.1712,0,0,major_purchase,Male,Working Age (25-55),0
+25900.0,8900,20,16,8,0.1929,0,1,credit_card,Female,Working Age (25-55),0
+56700.0,9000,0,22,9,0.2396,0,0,debt_consolidation,Male,Working Age (25-55),0
+69700.0,20700,4,15,6,0.3349,0,0,credit_card,Female,Working Age (25-55),1
+58800.0,13300,2,13,3,0.1107,0,0,debt_consolidation,Female,Working Age (25-55),0
+35400.0,4100,0,28,6,0.1611,0,0,credit_card,Female,Senior (>55),0
+25400.0,6000,9,12,6,0.4283,0,0,major_purchase,Female,Working Age (25-55),1
+99800.0,41200,3,14,2,0.4321,1,0,credit_card,Female,Working Age (25-55),1
+36000.0,4200,6,13,6,0.2504,0,2,major_purchase,Female,Working Age (25-55),0
+62600.0,9800,13,10,7,0.2839,0,1,major_purchase,Female,Working Age (25-55),0
+70500.0,13800,0,10,8,0.1835,0,1,credit_card,Female,Working Age (25-55),0
+56500.0,17500,15,15,7,0.1623,0,0,credit_card,Female,Working Age (25-55),0
+97700.0,32200,2,12,8,0.1413,0,0,debt_consolidation,Female,Working Age (25-55),0
+71600.0,11800,6,8,6,0.2374,0,0,credit_card,Male,Working Age (25-55),0
+68800.0,12700,5,17,9,0.1088,0,2,credit_card,Female,Working Age (25-55),0
+35200.0,10000,15,10,5,0.3213,0,0,credit_card,Male,Working Age (25-55),0
+55800.0,12400,5,17,3,0.3052,1,0,home_improvement,Female,Working Age (25-55),1
+106200.0,44800,6,16,7,0.1613,0,2,debt_consolidation,Male,Senior (>55),1
+96900.0,40900,7,11,7,0.0668,0,1,debt_consolidation,Female,Working Age (25-55),0
+36900.0,15700,0,27,2,0.3271,0,1,home_improvement,Female,Senior (>55),1
+32600.0,4000,0,10,9,0.0633,0,0,debt_consolidation,Male,Working Age (25-55),0
+53300.0,13000,8,15,9,0.3088,0,0,debt_consolidation,Male,Working Age (25-55),0
+23700.0,9000,8,24,7,0.2114,1,0,debt_consolidation,Male,Senior (>55),0
+50000.0,19600,6,16,12,0.0784,0,0,credit_card,Male,Working Age (25-55),0
+67800.0,17400,10,12,7,0.3136,0,0,debt_consolidation,Female,Working Age (25-55),0
+42300.0,10900,2,14,7,0.3239,0,0,credit_card,Male,Working Age (25-55),1
+18000.0,3300,2,13,8,0.0618,0,0,major_purchase,Male,Working Age (25-55),0
+133900.0,50000,5,7,6,0.1536,0,0,major_purchase,Female,Working Age (25-55),0
+112900.0,15600,1,21,1,0.1243,0,0,debt_consolidation,Male,Working Age (25-55),0
+43700.0,6600,2,14,8,0.2173,0,0,debt_consolidation,Female,Working Age (25-55),0
+31500.0,4300,8,22,5,0.1044,0,0,home_improvement,Male,Senior (>55),0
+126800.0,14500,0,20,10,0.2632,0,0,major_purchase,Female,Working Age (25-55),0
+50600.0,22100,3,11,3,0.1748,1,0,home_improvement,Male,Working Age (25-55),1
+46800.0,13500,5,17,5,0.2999,0,0,debt_consolidation,Male,Working Age (25-55),0
+129100.0,33900,1,15,12,0.1372,0,0,debt_consolidation,Male,Working Age (25-55),0
+24300.0,4500,7,12,9,0.2436,0,0,debt_consolidation,Male,Working Age (25-55),0
+69900.0,18900,1,5,6,0.0978,0,0,debt_consolidation,Female,Young (<25),0
+108000.0,34800,6,21,6,0.3697,0,0,debt_consolidation,Female,Working Age (25-55),0
+43400.0,18800,6,17,6,0.2512,0,0,debt_consolidation,Male,Working Age (25-55),0
+52700.0,16900,2,12,9,0.1416,0,0,major_purchase,Female,Working Age (25-55),0
+18000.0,3200,4,11,10,0.1015,0,0,debt_consolidation,Male,Working Age (25-55),0
+40700.0,14500,6,18,6,0.1705,0,0,credit_card,Female,Working Age (25-55),0
+119500.0,23200,3,7,4,0.0743,0,0,debt_consolidation,Female,Working Age (25-55),0
+20400.0,4100,3,26,11,0.088,0,1,major_purchase,Male,Senior (>55),0
+27600.0,12300,1,27,11,0.1081,0,0,medical,Female,Senior (>55),0
+51600.0,17700,0,17,13,0.4626,1,3,credit_card,Female,Working Age (25-55),1
+30700.0,10700,2,8,5,0.0969,0,0,debt_consolidation,Female,Working Age (25-55),0
+36700.0,7300,0,16,8,0.3053,0,0,debt_consolidation,Male,Working Age (25-55),0
+75800.0,14900,5,9,3,0.2686,0,0,debt_consolidation,Male,Working Age (25-55),0
+66600.0,21400,2,10,5,0.307,0,1,home_improvement,Female,Working Age (25-55),1
+49600.0,5600,12,8,6,0.2902,0,0,credit_card,Male,Working Age (25-55),0
+43800.0,6400,3,10,10,0.2493,0,0,debt_consolidation,Female,Young (<25),0
+67600.0,14200,0,8,8,0.2437,0,0,debt_consolidation,Female,Working Age (25-55),0
+64900.0,6800,1,16,12,0.19,0,0,credit_card,Male,Working Age (25-55),0
+51200.0,12400,5,23,7,0.0406,0,0,medical,Female,Senior (>55),0
+89700.0,37100,0,12,3,0.2995,0,0,major_purchase,Male,Working Age (25-55),1
+185400.0,50000,1,12,5,0.2522,0,2,credit_card,Female,Working Age (25-55),0
+35200.0,14200,0,12,10,0.2929,0,0,major_purchase,Female,Working Age (25-55),1
+34400.0,12100,1,7,5,0.4045,0,0,debt_consolidation,Male,Young (<25),1
+41200.0,10400,4,12,3,0.0664,1,1,debt_consolidation,Female,Working Age (25-55),1
+58000.0,6500,3,14,11,0.192,0,0,small_business,Female,Working Age (25-55),0
+43000.0,15700,1,16,3,0.2337,0,0,credit_card,Male,Working Age (25-55),0
+26400.0,3100,5,10,12,0.1091,0,0,credit_card,Male,Young (<25),0
+21300.0,5900,2,18,3,0.1064,0,0,medical,Male,Working Age (25-55),0
+98300.0,22500,9,13,9,0.0936,0,0,debt_consolidation,Male,Working Age (25-55),0
+29100.0,8300,0,17,3,0.2072,0,0,credit_card,Female,Working Age (25-55),0
+31300.0,4400,5,10,9,0.1716,0,2,debt_consolidation,Male,Working Age (25-55),0
+37200.0,8700,3,16,6,0.1913,0,3,credit_card,Male,Working Age (25-55),0
+97700.0,20700,2,17,12,0.288,0,1,home_improvement,Female,Working Age (25-55),0
+59500.0,9200,1,12,10,0.209,0,0,debt_consolidation,Male,Working Age (25-55),0
+21200.0,9300,0,11,2,0.2422,0,0,debt_consolidation,Female,Young (<25),1
+41400.0,12500,2,15,7,0.3069,0,0,credit_card,Male,Senior (>55),1
+144300.0,50000,7,7,8,0.04,1,1,debt_consolidation,Female,Working Age (25-55),1
+59400.0,8100,3,17,9,0.2132,0,1,small_business,Male,Working Age (25-55),0
+101600.0,24400,3,20,6,0.4557,0,0,debt_consolidation,Male,Working Age (25-55),1
+60600.0,18700,6,13,7,0.3227,0,3,small_business,Male,Working Age (25-55),1
+71200.0,26000,13,19,4,0.0605,0,0,debt_consolidation,Male,Working Age (25-55),0
+108900.0,38900,10,14,5,0.1321,0,0,debt_consolidation,Male,Working Age (25-55),0
+100200.0,14600,7,11,8,0.13,0,0,debt_consolidation,Female,Working Age (25-55),0
+41700.0,11100,3,5,6,0.2156,0,0,debt_consolidation,Female,Young (<25),0
+63400.0,20800,4,11,5,0.3326,0,0,credit_card,Male,Working Age (25-55),1
+54600.0,17700,3,21,7,0.1,1,1,debt_consolidation,Female,Senior (>55),0
+92100.0,38900,17,12,8,0.2609,1,0,credit_card,Male,Working Age (25-55),1
+54100.0,9700,11,11,9,0.1069,0,1,medical,Male,Working Age (25-55),0
+30000.0,8600,11,19,6,0.1268,0,0,major_purchase,Male,Working Age (25-55),0
+67900.0,24200,2,1,11,0.2828,0,0,debt_consolidation,Female,Young (<25),1
+49700.0,11100,1,5,5,0.1244,0,1,debt_consolidation,Male,Young (<25),0
+161500.0,42200,1,9,3,0.4739,0,1,debt_consolidation,Female,Working Age (25-55),1
+51200.0,13100,2,16,2,0.0553,0,1,credit_card,Male,Working Age (25-55),0
+23300.0,4500,1,11,10,0.2049,0,0,debt_consolidation,Female,Working Age (25-55),0
+68000.0,25600,9,7,9,0.1372,0,3,medical,Male,Working Age (25-55),0
+85200.0,20400,3,17,8,0.2196,1,2,debt_consolidation,Male,Working Age (25-55),1
+61400.0,9800,1,10,7,0.18,1,0,credit_card,Male,Working Age (25-55),1
+38300.0,5100,1,12,9,0.1395,1,0,credit_card,Female,Young (<25),0
+71400.0,14600,0,9,5,0.3598,0,0,debt_consolidation,Male,Working Age (25-55),1
+84900.0,21800,0,12,7,0.0841,0,0,credit_card,Male,Working Age (25-55),0
+41700.0,4500,1,8,7,0.1472,0,0,debt_consolidation,Male,Working Age (25-55),0
+32100.0,4000,1,14,3,0.2235,0,0,debt_consolidation,Male,Working Age (25-55),1
+131500.0,48300,8,14,4,0.2703,0,3,debt_consolidation,Female,Working Age (25-55),1
+131700.0,50000,6,9,7,0.1022,0,0,debt_consolidation,Female,Working Age (25-55),0
+167700.0,50000,2,18,3,0.1942,0,0,debt_consolidation,Female,Senior (>55),0
+103300.0,39600,1,12,8,0.2906,0,1,credit_card,Female,Young (<25),1
+58600.0,8400,0,12,5,0.1534,0,0,medical,Male,Working Age (25-55),0
+62500.0,23800,3,19,6,0.1274,0,0,debt_consolidation,Male,Working Age (25-55),0
+53900.0,11300,5,16,6,0.4267,1,0,home_improvement,Male,Working Age (25-55),1
+111600.0,21900,3,27,5,0.2972,0,1,debt_consolidation,Male,Senior (>55),0
+18700.0,5300,8,17,9,0.2398,0,0,small_business,Male,Senior (>55),0
+35500.0,15100,0,19,10,0.1486,0,0,debt_consolidation,Female,Working Age (25-55),0
+36400.0,14100,4,14,8,0.2367,0,2,debt_consolidation,Male,Working Age (25-55),1
+47900.0,21400,1,17,9,0.0937,0,0,small_business,Male,Working Age (25-55),0
+49400.0,9900,3,6,8,0.4014,0,0,debt_consolidation,Male,Young (<25),1
+86600.0,13300,2,8,4,0.1708,0,1,small_business,Female,Working Age (25-55),0
+18000.0,6000,3,15,6,0.3535,1,0,debt_consolidation,Female,Working Age (25-55),1
+61400.0,17600,10,21,7,0.3302,0,1,home_improvement,Female,Working Age (25-55),0
+85000.0,11100,3,8,4,0.1736,0,0,credit_card,Female,Working Age (25-55),0
+79800.0,31100,4,15,12,0.2624,0,0,debt_consolidation,Male,Working Age (25-55),0
+48400.0,11300,5,17,8,0.3059,0,0,credit_card,Male,Working Age (25-55),0
+91800.0,17500,0,3,10,0.2869,0,0,credit_card,Female,Young (<25),0
+30100.0,5500,7,7,12,0.1888,1,0,major_purchase,Female,Working Age (25-55),1
+28500.0,8400,1,14,5,0.3177,0,0,credit_card,Female,Working Age (25-55),1
+36200.0,12800,0,21,5,0.2465,0,0,credit_card,Male,Working Age (25-55),0
+39100.0,12300,0,18,6,0.1499,0,0,credit_card,Male,Working Age (25-55),0
+85700.0,25400,2,7,4,0.0547,1,1,medical,Female,Young (<25),1
+58000.0,13200,8,10,11,0.1486,0,0,debt_consolidation,Female,Working Age (25-55),0
+25000.0,5200,3,16,6,0.3905,0,0,debt_consolidation,Female,Working Age (25-55),1
+77400.0,20200,9,24,6,0.1827,0,0,credit_card,Male,Senior (>55),0
+26300.0,5200,2,10,6,0.4754,0,1,debt_consolidation,Male,Working Age (25-55),1
+127700.0,15200,12,23,8,0.1251,0,0,debt_consolidation,Female,Senior (>55),0
+25300.0,3000,5,23,4,0.1109,0,0,credit_card,Female,Working Age (25-55),0
+50900.0,9200,8,14,7,0.2717,0,1,credit_card,Male,Working Age (25-55),0
+28600.0,12100,4,16,12,0.0853,0,0,credit_card,Female,Working Age (25-55),0
+68500.0,22900,6,15,7,0.2526,0,0,major_purchase,Male,Working Age (25-55),0
+37600.0,10800,3,3,11,0.1701,0,0,credit_card,Male,Working Age (25-55),0
+59200.0,18300,5,20,5,0.2298,0,0,credit_card,Female,Senior (>55),0
+47300.0,6400,19,13,5,0.0712,1,0,credit_card,Female,Working Age (25-55),0
+140900.0,44300,4,9,8,0.3998,1,0,credit_card,Female,Working Age (25-55),1
+48800.0,19800,4,15,9,0.1354,0,0,debt_consolidation,Female,Working Age (25-55),0
+84500.0,17200,4,5,6,0.165,0,0,home_improvement,Female,Young (<25),0
+45900.0,13700,22,22,9,0.3489,1,0,small_business,Female,Senior (>55),0
+86500.0,15400,13,7,6,0.2932,0,0,debt_consolidation,Female,Working Age (25-55),0
+140200.0,50000,1,9,7,0.1622,1,0,home_improvement,Female,Working Age (25-55),1
+18000.0,6000,1,5,5,0.3082,0,0,debt_consolidation,Male,Young (<25),0
+55100.0,23300,2,9,3,0.3522,0,0,debt_consolidation,Female,Working Age (25-55),1
+34700.0,5100,2,19,9,0.0633,0,1,home_improvement,Male,Working Age (25-55),0
+54800.0,20300,0,5,7,0.183,0,1,credit_card,Male,Working Age (25-55),1
+21200.0,6500,4,24,7,0.2245,0,0,debt_consolidation,Male,Senior (>55),0
+57900.0,8600,2,3,8,0.369,0,0,debt_consolidation,Male,Young (<25),1
+31100.0,6900,5,6,8,0.04,0,0,credit_card,Male,Working Age (25-55),1
+62500.0,17300,0,16,6,0.3731,0,0,major_purchase,Female,Working Age (25-55),1
+31600.0,8200,7,20,8,0.3307,0,0,home_improvement,Female,Senior (>55),1
+25200.0,7600,1,4,6,0.0571,1,0,major_purchase,Male,Young (<25),1
+26800.0,9700,3,11,9,0.0489,0,0,credit_card,Female,Working Age (25-55),0
+241100.0,41800,3,10,10,0.0856,1,0,home_improvement,Female,Working Age (25-55),0
+102100.0,39800,1,12,7,0.2612,0,0,home_improvement,Male,Young (<25),1
+64200.0,10100,7,9,6,0.2952,0,0,major_purchase,Male,Working Age (25-55),0
+100100.0,42300,17,12,6,0.1017,1,1,small_business,Female,Working Age (25-55),1
+66500.0,24600,1,13,6,0.3287,0,2,debt_consolidation,Female,Working Age (25-55),1
+49600.0,13400,5,22,6,0.1776,0,0,debt_consolidation,Male,Senior (>55),0
+74700.0,13100,5,11,5,0.1964,0,0,small_business,Female,Working Age (25-55),0
+18000.0,4900,2,11,6,0.2061,0,1,debt_consolidation,Male,Working Age (25-55),1
+36800.0,8400,2,15,6,0.1903,0,0,medical,Female,Working Age (25-55),0
+66500.0,11500,6,8,9,0.5066,0,0,credit_card,Female,Working Age (25-55),1
+54400.0,24300,9,12,6,0.3099,0,0,debt_consolidation,Male,Working Age (25-55),1
+89700.0,26800,11,15,7,0.3829,0,0,major_purchase,Female,Working Age (25-55),0
+71700.0,10000,6,19,6,0.3246,0,0,credit_card,Male,Working Age (25-55),0
+49900.0,17100,6,9,9,0.1293,1,2,major_purchase,Female,Working Age (25-55),1
+40000.0,5200,0,16,7,0.1779,0,0,credit_card,Female,Working Age (25-55),0
+117400.0,24300,4,15,4,0.1696,0,3,medical,Female,Working Age (25-55),0
+54600.0,12000,23,19,6,0.04,0,1,medical,Female,Working Age (25-55),1
+55200.0,22000,5,12,7,0.252,0,2,debt_consolidation,Male,Working Age (25-55),1
+33700.0,14300,8,18,9,0.0627,0,1,debt_consolidation,Male,Senior (>55),0
+57900.0,16200,20,17,4,0.2148,0,2,debt_consolidation,Male,Working Age (25-55),0
+72500.0,29600,7,16,7,0.0761,0,1,debt_consolidation,Male,Working Age (25-55),0
+127100.0,50000,3,19,7,0.1408,0,0,debt_consolidation,Male,Senior (>55),0
+18000.0,7500,7,15,10,0.2575,0,0,debt_consolidation,Male,Working Age (25-55),0
+30500.0,5200,1,11,6,0.2812,0,1,debt_consolidation,Male,Young (<25),1
+44200.0,16800,3,17,6,0.2719,0,0,debt_consolidation,Male,Working Age (25-55),1
+76100.0,21800,2,10,6,0.0464,0,2,major_purchase,Male,Young (<25),0
+20600.0,2200,0,9,5,0.1507,0,1,credit_card,Female,Young (<25),0
+36600.0,6000,1,9,6,0.2034,0,0,debt_consolidation,Female,Young (<25),0
+52600.0,18800,4,16,7,0.184,0,0,debt_consolidation,Male,Working Age (25-55),0
+48900.0,19900,10,20,8,0.2933,0,1,debt_consolidation,Female,Working Age (25-55),1
+38900.0,10600,7,12,10,0.2086,0,3,debt_consolidation,Male,Working Age (25-55),0
+43000.0,15800,1,6,10,0.213,0,0,debt_consolidation,Male,Young (<25),1
+26400.0,8400,3,23,9,0.239,0,0,debt_consolidation,Female,Working Age (25-55),0
+47000.0,14600,8,16,6,0.1948,0,0,debt_consolidation,Female,Senior (>55),0
+69800.0,18400,0,12,8,0.178,0,0,debt_consolidation,Female,Young (<25),0
+31300.0,13600,2,7,4,0.1939,0,0,debt_consolidation,Male,Working Age (25-55),0
+144400.0,27400,0,13,6,0.2847,0,3,small_business,Female,Working Age (25-55),0
+32600.0,11700,4,18,7,0.3546,0,0,debt_consolidation,Male,Working Age (25-55),1
+19700.0,8300,1,8,6,0.2353,0,0,debt_consolidation,Male,Working Age (25-55),1
+50000.0,6400,0,11,9,0.1641,0,0,credit_card,Male,Working Age (25-55),0
+105300.0,28100,0,24,10,0.2559,0,0,debt_consolidation,Female,Working Age (25-55),0
+31800.0,6000,4,18,4,0.1681,0,0,medical,Male,Working Age (25-55),0
+92300.0,41100,6,12,8,0.1488,0,0,medical,Male,Working Age (25-55),0
+89200.0,34700,8,18,2,0.3895,0,1,major_purchase,Female,Working Age (25-55),1
+61300.0,16800,0,20,9,0.0773,0,0,credit_card,Male,Working Age (25-55),0
+158600.0,19200,3,8,9,0.2536,0,1,debt_consolidation,Male,Working Age (25-55),0
+53700.0,13300,12,19,6,0.3759,0,1,debt_consolidation,Female,Working Age (25-55),1
+32000.0,12200,1,2,10,0.3488,0,1,medical,Female,Young (<25),1
+85300.0,23400,11,10,1,0.1059,0,0,home_improvement,Male,Working Age (25-55),0
+51300.0,20500,2,15,10,0.1721,0,0,home_improvement,Female,Working Age (25-55),0
+73000.0,27400,4,7,8,0.1793,0,1,debt_consolidation,Female,Working Age (25-55),1
+55200.0,10700,1,11,7,0.0511,0,0,debt_consolidation,Male,Working Age (25-55),0
+39300.0,5600,3,8,8,0.2479,0,0,debt_consolidation,Male,Working Age (25-55),0
+23700.0,9700,7,13,10,0.1874,0,0,debt_consolidation,Male,Working Age (25-55),0
+178400.0,28800,3,12,10,0.1443,0,0,debt_consolidation,Male,Working Age (25-55),0
+47000.0,20000,10,16,8,0.1618,1,0,major_purchase,Female,Working Age (25-55),0
+31500.0,9100,1,7,10,0.253,0,0,debt_consolidation,Female,Young (<25),1
+45900.0,9900,1,10,9,0.2184,0,0,credit_card,Male,Working Age (25-55),0
+86600.0,12500,9,12,8,0.1843,0,0,home_improvement,Female,Working Age (25-55),0
+62300.0,14000,16,20,9,0.1545,0,0,home_improvement,Male,Working Age (25-55),0
+53100.0,7300,5,9,7,0.1937,0,1,debt_consolidation,Female,Working Age (25-55),0
+110500.0,44400,9,13,5,0.3284,0,3,medical,Female,Working Age (25-55),1
+23900.0,2700,1,4,7,0.2671,0,0,debt_consolidation,Male,Young (<25),1
+58700.0,20300,4,14,2,0.1444,1,0,home_improvement,Male,Working Age (25-55),1
+118300.0,24000,14,15,5,0.5028,0,0,credit_card,Female,Working Age (25-55),0
+76200.0,32100,0,18,9,0.2934,0,1,small_business,Female,Working Age (25-55),1
+32600.0,14300,0,10,5,0.1831,0,0,debt_consolidation,Male,Working Age (25-55),0
+62400.0,14100,2,10,15,0.2708,0,1,medical,Male,Working Age (25-55),1
+65300.0,23200,5,21,4,0.129,0,0,debt_consolidation,Female,Senior (>55),0
+29300.0,3500,0,11,4,0.265,0,0,credit_card,Male,Working Age (25-55),0
+37500.0,10300,5,12,5,0.4153,0,0,home_improvement,Female,Working Age (25-55),1
+51900.0,17000,6,11,1,0.236,0,3,small_business,Male,Working Age (25-55),1
+45900.0,11400,1,14,5,0.3302,1,0,credit_card,Male,Working Age (25-55),1
+38900.0,16400,0,16,11,0.0686,0,0,debt_consolidation,Female,Working Age (25-55),0
+45000.0,9000,1,6,10,0.245,0,1,home_improvement,Female,Working Age (25-55),1
+48600.0,9400,14,11,7,0.3348,0,0,debt_consolidation,Male,Working Age (25-55),0
+41900.0,7200,0,19,8,0.2997,0,0,debt_consolidation,Male,Senior (>55),0
+73300.0,12100,22,19,6,0.3816,1,1,debt_consolidation,Male,Working Age (25-55),1
+33900.0,12700,3,21,4,0.4158,0,0,major_purchase,Female,Working Age (25-55),1
+39200.0,14200,4,17,8,0.4281,1,0,debt_consolidation,Male,Working Age (25-55),0
+18000.0,2700,6,16,8,0.2991,0,0,debt_consolidation,Male,Working Age (25-55),0
+67500.0,27800,1,15,9,0.2258,0,0,major_purchase,Female,Working Age (25-55),0
+135600.0,40700,2,13,8,0.3009,1,0,major_purchase,Female,Working Age (25-55),1
+26700.0,10200,2,15,4,0.0454,1,0,medical,Female,Working Age (25-55),0
+44400.0,15300,3,7,13,0.2167,0,2,debt_consolidation,Male,Young (<25),1
+70500.0,28300,1,11,7,0.202,1,0,debt_consolidation,Female,Working Age (25-55),1
+98700.0,15900,5,8,3,0.5183,1,0,credit_card,Male,Working Age (25-55),1
+47900.0,11100,6,12,4,0.3158,0,0,credit_card,Male,Working Age (25-55),0
+63900.0,20600,2,16,5,0.129,0,1,debt_consolidation,Male,Working Age (25-55),0
+49200.0,15000,3,10,5,0.1043,0,0,small_business,Female,Young (<25),0
+79500.0,30300,14,16,7,0.3424,0,1,debt_consolidation,Male,Working Age (25-55),0
+62800.0,28200,7,8,8,0.0731,1,0,credit_card,Male,Working Age (25-55),1
+33500.0,11100,27,14,6,0.2552,0,1,credit_card,Female,Working Age (25-55),0
+167400.0,50000,7,10,2,0.2374,0,0,debt_consolidation,Female,Working Age (25-55),0
+32700.0,8100,1,2,5,0.3116,1,0,debt_consolidation,Male,Young (<25),1
+42600.0,8300,12,22,9,0.3178,0,2,debt_consolidation,Male,Senior (>55),0
+74100.0,28400,6,11,13,0.1542,0,0,debt_consolidation,Male,Working Age (25-55),0
+65800.0,9200,0,16,7,0.2471,0,0,small_business,Male,Working Age (25-55),0
+34000.0,6800,1,7,4,0.3473,0,0,debt_consolidation,Female,Working Age (25-55),1
+91700.0,23000,4,18,11,0.0723,0,0,credit_card,Male,Working Age (25-55),0
+41600.0,17700,7,11,4,0.1033,0,2,small_business,Male,Working Age (25-55),0
+67400.0,11300,2,23,8,0.4816,0,0,major_purchase,Male,Senior (>55),1
+122100.0,30800,2,14,3,0.0518,1,1,major_purchase,Male,Young (<25),0
+39200.0,12500,2,13,7,0.2339,0,0,debt_consolidation,Male,Working Age (25-55),0
+69000.0,12000,0,20,8,0.1435,0,0,medical,Female,Senior (>55),0
+27900.0,8700,0,14,7,0.165,0,0,debt_consolidation,Female,Working Age (25-55),0
+90100.0,14000,6,5,10,0.2714,0,0,home_improvement,Female,Working Age (25-55),0
+54500.0,20300,6,18,7,0.3043,0,1,major_purchase,Female,Working Age (25-55),1
+19700.0,4100,1,10,8,0.0682,0,0,debt_consolidation,Male,Young (<25),0
+30800.0,6100,2,16,4,0.2425,0,1,small_business,Female,Working Age (25-55),1
+48500.0,6800,3,10,12,0.0903,0,0,debt_consolidation,Female,Working Age (25-55),0
+57300.0,24000,3,14,6,0.2759,1,0,home_improvement,Female,Working Age (25-55),1
+40700.0,18200,1,17,7,0.4537,0,0,debt_consolidation,Male,Working Age (25-55),1
+48700.0,15400,4,10,6,0.0416,1,0,credit_card,Female,Working Age (25-55),0
+91200.0,12300,1,8,9,0.2776,0,0,debt_consolidation,Female,Working Age (25-55),0
+109200.0,20200,0,10,10,0.1528,0,0,credit_card,Female,Working Age (25-55),0
+42900.0,9700,0,16,8,0.1517,0,2,debt_consolidation,Female,Working Age (25-55),0
+47100.0,9000,1,17,5,0.0555,0,0,debt_consolidation,Female,Working Age (25-55),0
+23700.0,5800,2,13,7,0.1374,0,0,debt_consolidation,Male,Young (<25),0
+96200.0,30800,4,19,9,0.1856,0,1,debt_consolidation,Female,Working Age (25-55),0
+61100.0,13700,0,14,6,0.0732,0,0,debt_consolidation,Male,Working Age (25-55),0
+38400.0,16100,1,20,6,0.109,0,1,debt_consolidation,Male,Working Age (25-55),0
+77400.0,14100,13,20,4,0.3391,0,0,credit_card,Male,Senior (>55),0
+48900.0,13200,6,9,4,0.2018,0,1,small_business,Male,Young (<25),0
+30500.0,3200,0,14,6,0.2752,0,0,debt_consolidation,Female,Working Age (25-55),0
+122500.0,43000,1,1,4,0.1679,0,1,credit_card,Male,Young (<25),1
+108900.0,21000,0,15,8,0.1801,0,0,home_improvement,Female,Working Age (25-55),0
+48700.0,19800,6,20,8,0.1675,1,0,debt_consolidation,Male,Working Age (25-55),0
+70000.0,26000,0,15,5,0.2688,0,0,credit_card,Female,Working Age (25-55),1
+31500.0,6900,0,18,8,0.1422,0,0,major_purchase,Male,Working Age (25-55),1
+37700.0,7600,1,9,6,0.15,0,1,credit_card,Male,Young (<25),0
+90400.0,38000,4,9,9,0.3333,0,1,credit_card,Male,Working Age (25-55),1
+104200.0,10900,5,12,10,0.2975,0,0,debt_consolidation,Male,Working Age (25-55),0
+26300.0,6200,5,18,7,0.0745,0,2,debt_consolidation,Male,Working Age (25-55),0
+31200.0,3100,1,4,9,0.499,0,0,credit_card,Female,Young (<25),1
+119600.0,40000,7,25,4,0.1053,1,0,debt_consolidation,Female,Senior (>55),1
+50900.0,10700,0,14,7,0.1698,0,0,home_improvement,Male,Working Age (25-55),0
+42400.0,7500,1,8,7,0.1642,0,1,debt_consolidation,Male,Young (<25),0
+45800.0,12300,0,17,9,0.1811,0,2,credit_card,Male,Working Age (25-55),0
+24700.0,3100,1,15,6,0.4598,0,0,debt_consolidation,Male,Working Age (25-55),1
+50800.0,13400,2,8,4,0.1975,0,0,debt_consolidation,Female,Working Age (25-55),0
+77300.0,9900,14,11,11,0.2239,1,1,credit_card,Male,Working Age (25-55),0
+37600.0,6500,18,15,6,0.2148,0,0,major_purchase,Female,Working Age (25-55),0
+45300.0,5000,6,10,9,0.2798,0,0,debt_consolidation,Male,Working Age (25-55),0
+93600.0,14600,3,16,6,0.1338,0,0,debt_consolidation,Female,Working Age (25-55),0
+51300.0,14700,3,19,7,0.0805,0,1,debt_consolidation,Female,Working Age (25-55),0
+83700.0,34400,3,13,3,0.1249,0,1,debt_consolidation,Male,Working Age (25-55),0
+29900.0,8200,6,9,8,0.2269,0,0,debt_consolidation,Female,Working Age (25-55),0
+38800.0,12800,1,19,13,0.2932,0,1,credit_card,Female,Working Age (25-55),1
+66100.0,23500,0,12,6,0.2084,0,0,debt_consolidation,Female,Working Age (25-55),0
+36200.0,15700,1,20,12,0.1658,1,0,debt_consolidation,Male,Senior (>55),1
+91300.0,37400,2,24,2,0.1498,1,0,debt_consolidation,Female,Senior (>55),0
+30900.0,13400,5,19,3,0.0951,0,0,debt_consolidation,Male,Working Age (25-55),0
+32300.0,13600,0,20,6,0.0673,0,0,home_improvement,Male,Working Age (25-55),0
+41400.0,6500,2,12,8,0.2567,0,0,credit_card,Female,Young (<25),0
+67300.0,9200,1,9,9,0.1219,0,0,debt_consolidation,Male,Young (<25),0
+112100.0,35300,9,12,4,0.2736,0,0,home_improvement,Male,Working Age (25-55),0
+160300.0,50000,1,12,6,0.2514,0,1,small_business,Female,Young (<25),1
+36600.0,12600,2,15,4,0.434,0,0,debt_consolidation,Female,Working Age (25-55),1
+79700.0,19600,12,13,8,0.1938,0,1,debt_consolidation,Female,Working Age (25-55),0
+45700.0,6100,5,16,11,0.2528,0,2,credit_card,Female,Working Age (25-55),0
+111700.0,20700,13,19,8,0.1292,0,0,debt_consolidation,Male,Working Age (25-55),0
+44600.0,7000,0,16,7,0.3274,0,0,credit_card,Female,Senior (>55),0
+58800.0,23200,11,15,11,0.2827,0,0,debt_consolidation,Female,Working Age (25-55),0
+78500.0,24900,1,19,6,0.2982,0,3,debt_consolidation,Female,Working Age (25-55),1
+84100.0,31100,3,17,6,0.2436,0,0,debt_consolidation,Female,Working Age (25-55),0
+32300.0,6300,2,14,3,0.2822,0,0,debt_consolidation,Male,Working Age (25-55),0
+40500.0,5000,6,15,10,0.2413,0,1,debt_consolidation,Male,Working Age (25-55),0
+25000.0,7400,0,15,9,0.189,0,1,debt_consolidation,Female,Working Age (25-55),0
+29300.0,8200,1,13,9,0.1914,0,0,debt_consolidation,Female,Working Age (25-55),0
+54000.0,16400,0,16,2,0.4277,0,0,credit_card,Male,Working Age (25-55),1
+34600.0,13100,9,20,3,0.5273,1,0,credit_card,Male,Working Age (25-55),1
+41600.0,5400,2,15,7,0.341,0,0,debt_consolidation,Male,Working Age (25-55),0
+71400.0,24300,6,10,6,0.229,1,2,debt_consolidation,Male,Working Age (25-55),1
+163200.0,50000,7,21,8,0.2038,0,0,debt_consolidation,Male,Working Age (25-55),0
+60000.0,24500,5,3,8,0.3957,0,0,debt_consolidation,Female,Young (<25),1
+64400.0,24700,5,16,9,0.4101,0,0,debt_consolidation,Male,Working Age (25-55),1
+60200.0,17800,0,1,6,0.1487,0,0,medical,Male,Young (<25),0
+45400.0,9700,1,15,8,0.2598,0,0,debt_consolidation,Male,Working Age (25-55),1
+18000.0,2500,4,14,7,0.1684,0,0,debt_consolidation,Female,Working Age (25-55),0
+50600.0,5300,5,10,6,0.1892,0,0,credit_card,Female,Working Age (25-55),0
+29900.0,12400,0,20,4,0.1101,0,3,home_improvement,Male,Working Age (25-55),0
+124000.0,29400,5,19,6,0.3267,0,0,major_purchase,Female,Working Age (25-55),0
+65000.0,7100,4,18,1,0.165,0,0,credit_card,Female,Working Age (25-55),0
+32600.0,6500,15,10,7,0.4082,0,0,debt_consolidation,Female,Working Age (25-55),1
+38500.0,11500,0,20,2,0.1424,0,1,major_purchase,Male,Working Age (25-55),0
+36600.0,12700,18,10,7,0.2128,0,0,small_business,Female,Working Age (25-55),0
+18900.0,7300,10,15,5,0.0983,0,0,debt_consolidation,Female,Senior (>55),0
+47100.0,17400,12,16,8,0.223,0,2,debt_consolidation,Female,Senior (>55),0
+55800.0,12000,2,18,5,0.2977,0,1,debt_consolidation,Male,Working Age (25-55),1
+59000.0,20200,1,10,6,0.1553,0,1,small_business,Male,Young (<25),0
+73300.0,15600,4,15,13,0.2473,0,2,debt_consolidation,Male,Working Age (25-55),0
+89000.0,20000,2,20,10,0.3757,0,0,credit_card,Female,Working Age (25-55),0
+144500.0,26400,3,18,6,0.1782,0,1,debt_consolidation,Male,Working Age (25-55),0
+38400.0,10600,1,19,7,0.2917,0,0,home_improvement,Male,Working Age (25-55),0
+66800.0,19400,4,20,4,0.04,0,0,credit_card,Male,Senior (>55),0
+70300.0,8100,2,10,4,0.2992,0,0,debt_consolidation,Male,Working Age (25-55),0
+78000.0,28200,0,7,9,0.1388,1,1,debt_consolidation,Female,Working Age (25-55),1
+26900.0,7500,12,16,9,0.3557,0,0,credit_card,Female,Working Age (25-55),0
+41600.0,4800,6,22,4,0.419,1,0,credit_card,Male,Working Age (25-55),1
+35500.0,13400,10,16,8,0.3403,0,1,debt_consolidation,Male,Working Age (25-55),1
+156300.0,23700,3,19,7,0.3616,0,0,debt_consolidation,Male,Working Age (25-55),0
+52300.0,17100,1,17,6,0.2221,0,1,small_business,Male,Working Age (25-55),1
+117600.0,46700,5,19,7,0.337,1,0,credit_card,Male,Working Age (25-55),0
+72700.0,21700,0,12,10,0.2965,0,3,debt_consolidation,Male,Working Age (25-55),1
+78800.0,34700,11,12,7,0.1877,0,1,debt_consolidation,Male,Working Age (25-55),0
+64800.0,27800,3,9,4,0.298,0,0,debt_consolidation,Female,Working Age (25-55),1
+42100.0,11600,0,14,4,0.0691,0,0,debt_consolidation,Male,Working Age (25-55),0
+59700.0,10900,0,10,3,0.063,0,0,debt_consolidation,Female,Working Age (25-55),0
+135700.0,50000,5,27,8,0.126,0,0,debt_consolidation,Male,Senior (>55),0
+55500.0,11400,3,12,6,0.2066,0,0,debt_consolidation,Male,Working Age (25-55),0
+50700.0,17900,4,22,8,0.0925,0,0,debt_consolidation,Male,Senior (>55),0
+56500.0,14900,13,13,6,0.1271,0,0,home_improvement,Male,Working Age (25-55),0
+28000.0,4300,3,11,9,0.104,1,1,debt_consolidation,Male,Working Age (25-55),1
+41800.0,6300,4,13,6,0.2439,0,1,debt_consolidation,Female,Working Age (25-55),0
+142300.0,37200,0,17,3,0.6157,0,0,debt_consolidation,Male,Working Age (25-55),1
+60200.0,12600,0,2,4,0.0611,0,0,debt_consolidation,Female,Young (<25),0
+54000.0,22500,2,20,9,0.293,1,0,debt_consolidation,Female,Working Age (25-55),1
+18000.0,7300,3,14,8,0.198,1,0,major_purchase,Male,Working Age (25-55),1
+66000.0,14600,3,16,7,0.3514,0,0,debt_consolidation,Male,Working Age (25-55),0
+78400.0,10500,1,18,3,0.2164,1,1,major_purchase,Male,Working Age (25-55),1
+22800.0,10200,21,21,5,0.1237,0,0,credit_card,Male,Working Age (25-55),0
+42200.0,9800,2,19,5,0.1281,0,0,debt_consolidation,Male,Senior (>55),0
+32100.0,10600,0,11,11,0.3238,1,1,debt_consolidation,Male,Working Age (25-55),1
+33900.0,6000,7,15,4,0.3843,1,0,credit_card,Female,Working Age (25-55),1
+45500.0,16900,1,13,5,0.3412,0,0,small_business,Male,Working Age (25-55),1
+59900.0,24300,10,12,6,0.0979,0,0,small_business,Female,Working Age (25-55),0
+29500.0,10600,1,13,5,0.3109,0,2,major_purchase,Female,Working Age (25-55),1
+45100.0,14400,2,11,9,0.0795,1,0,credit_card,Male,Working Age (25-55),0
+71400.0,25800,2,19,9,0.3155,0,0,debt_consolidation,Female,Working Age (25-55),1
+23400.0,6600,3,15,7,0.2179,0,0,debt_consolidation,Female,Working Age (25-55),0
+40500.0,13400,1,11,6,0.2969,0,0,debt_consolidation,Male,Working Age (25-55),1
+82500.0,15500,0,11,5,0.2816,1,0,debt_consolidation,Female,Working Age (25-55),1
+74500.0,10500,2,19,7,0.112,0,0,debt_consolidation,Female,Senior (>55),0
+67800.0,14600,3,8,8,0.3793,1,0,home_improvement,Female,Working Age (25-55),1
+45200.0,17000,0,12,6,0.2342,0,1,debt_consolidation,Male,Working Age (25-55),1
+25900.0,4800,1,9,4,0.1051,0,2,credit_card,Male,Working Age (25-55),0
+44400.0,10000,6,9,2,0.1741,0,0,debt_consolidation,Female,Young (<25),0
+73800.0,9100,10,24,5,0.2662,0,2,credit_card,Female,Senior (>55),0
+34800.0,11800,0,22,10,0.124,0,0,debt_consolidation,Male,Working Age (25-55),0
+66600.0,15600,2,17,10,0.0879,0,0,debt_consolidation,Female,Working Age (25-55),0
+35800.0,8100,12,7,6,0.1963,0,1,debt_consolidation,Female,Working Age (25-55),0
+45700.0,13800,3,11,12,0.0715,0,1,credit_card,Male,Working Age (25-55),0
+20900.0,5800,2,12,8,0.456,1,0,credit_card,Male,Working Age (25-55),1
+260000.0,50000,7,10,6,0.1893,0,1,home_improvement,Male,Working Age (25-55),0
+55100.0,19000,2,20,7,0.1607,0,1,debt_consolidation,Female,Working Age (25-55),0
+93000.0,21200,0,17,7,0.137,0,0,small_business,Male,Working Age (25-55),0
+43600.0,5100,2,12,14,0.2307,0,0,debt_consolidation,Male,Working Age (25-55),1
+18900.0,2600,14,20,8,0.252,0,0,debt_consolidation,Male,Working Age (25-55),0
+48300.0,6500,2,8,6,0.4187,0,0,home_improvement,Female,Working Age (25-55),1
+23900.0,6800,4,10,8,0.1344,0,0,debt_consolidation,Female,Working Age (25-55),0
+21300.0,5500,5,4,4,0.1736,0,0,debt_consolidation,Male,Working Age (25-55),0
+29900.0,7900,7,15,7,0.2676,0,0,debt_consolidation,Male,Working Age (25-55),0
+120600.0,50000,4,23,5,0.4033,0,0,credit_card,Male,Working Age (25-55),1
+44600.0,15300,7,16,4,0.4247,0,2,debt_consolidation,Male,Working Age (25-55),1
+93600.0,25300,6,14,9,0.1308,0,0,credit_card,Female,Working Age (25-55),0
+207500.0,50000,1,6,6,0.277,0,0,debt_consolidation,Female,Young (<25),0
+68800.0,7000,3,11,9,0.1917,1,1,debt_consolidation,Female,Working Age (25-55),1
+31400.0,12200,0,16,4,0.1703,0,1,small_business,Female,Working Age (25-55),0
+41900.0,12500,1,13,6,0.1801,0,2,home_improvement,Male,Working Age (25-55),0
+88100.0,37800,27,21,10,0.2433,0,3,debt_consolidation,Female,Working Age (25-55),0
+32800.0,8200,4,11,8,0.2439,0,0,credit_card,Male,Young (<25),1
+124400.0,40200,17,9,11,0.1375,0,0,credit_card,Female,Working Age (25-55),0
+43000.0,6100,8,20,6,0.4325,0,0,credit_card,Female,Working Age (25-55),0
+27700.0,5600,10,10,8,0.3586,0,0,major_purchase,Female,Working Age (25-55),1
+79700.0,20000,3,12,7,0.2715,0,0,credit_card,Male,Working Age (25-55),0
+61900.0,15800,6,22,6,0.2131,0,1,credit_card,Male,Senior (>55),0
+33800.0,4600,21,15,7,0.2241,0,0,credit_card,Female,Working Age (25-55),0
+119200.0,12600,1,16,9,0.1999,0,0,credit_card,Male,Working Age (25-55),0
+54200.0,8700,3,11,3,0.1648,0,0,major_purchase,Female,Working Age (25-55),1
+51000.0,11600,4,16,10,0.1631,0,3,debt_consolidation,Male,Working Age (25-55),0
+104700.0,34600,0,15,13,0.1622,0,0,debt_consolidation,Female,Working Age (25-55),0
+79800.0,22800,3,19,6,0.2613,0,0,debt_consolidation,Female,Working Age (25-55),0
+61900.0,6900,8,10,7,0.0724,0,0,home_improvement,Female,Working Age (25-55),0
+28300.0,4900,4,18,8,0.25,0,0,debt_consolidation,Female,Young (<25),0
+34800.0,5700,1,5,9,0.0677,1,2,credit_card,Female,Young (<25),1
+49700.0,14700,5,11,7,0.2043,0,0,credit_card,Female,Working Age (25-55),0
+41600.0,14500,1,11,8,0.2704,0,0,debt_consolidation,Male,Working Age (25-55),1
+82500.0,15700,3,8,8,0.2732,0,0,home_improvement,Female,Working Age (25-55),1
+145900.0,38500,3,14,3,0.2065,0,0,debt_consolidation,Female,Working Age (25-55),0
+40000.0,10100,0,15,8,0.0623,0,0,major_purchase,Female,Working Age (25-55),0
+44100.0,7200,1,9,5,0.2694,1,0,debt_consolidation,Male,Young (<25),1
+111800.0,40400,2,9,5,0.3473,0,0,small_business,Female,Working Age (25-55),1
+121400.0,49100,1,6,10,0.2668,0,2,medical,Male,Working Age (25-55),1
+30400.0,5100,2,16,11,0.3742,0,0,credit_card,Male,Working Age (25-55),1
+236500.0,50000,5,11,9,0.0467,0,1,debt_consolidation,Female,Working Age (25-55),0
+141600.0,50000,0,20,9,0.1088,0,0,debt_consolidation,Male,Working Age (25-55),0
+33100.0,5500,5,20,8,0.2962,0,0,credit_card,Female,Senior (>55),1
+117700.0,46700,8,21,6,0.0877,1,0,debt_consolidation,Male,Senior (>55),0
+39200.0,9600,11,20,4,0.2294,0,0,home_improvement,Male,Working Age (25-55),0
+64900.0,26600,0,16,9,0.4052,0,0,credit_card,Female,Working Age (25-55),1
+76100.0,24700,2,7,9,0.3188,0,0,debt_consolidation,Female,Young (<25),1
+31900.0,4800,2,19,6,0.1376,0,1,home_improvement,Male,Senior (>55),0
+43700.0,6000,0,9,9,0.2423,0,0,debt_consolidation,Male,Working Age (25-55),0
+18000.0,5300,16,11,8,0.3269,0,1,credit_card,Female,Working Age (25-55),1
+117600.0,48900,0,10,8,0.1189,0,0,debt_consolidation,Female,Working Age (25-55),0
+43900.0,14000,6,19,7,0.1611,0,0,debt_consolidation,Male,Working Age (25-55),0
+52200.0,14200,2,12,4,0.1884,0,0,credit_card,Female,Working Age (25-55),0
+37600.0,6700,0,11,7,0.4156,1,0,small_business,Female,Young (<25),1
+66900.0,8400,11,11,6,0.2486,0,0,home_improvement,Female,Working Age (25-55),0
+80000.0,27300,0,10,7,0.0626,0,0,debt_consolidation,Female,Working Age (25-55),0
+41100.0,8500,6,8,5,0.2914,0,0,debt_consolidation,Female,Working Age (25-55),0
+53000.0,22400,1,11,5,0.4789,0,0,medical,Female,Working Age (25-55),1
+59700.0,25000,1,10,4,0.2533,0,0,home_improvement,Male,Young (<25),1
+58000.0,13000,6,18,8,0.04,0,0,credit_card,Female,Working Age (25-55),0
+68700.0,26800,0,16,4,0.171,0,1,debt_consolidation,Male,Working Age (25-55),0
+41400.0,11600,2,4,7,0.0929,0,0,debt_consolidation,Male,Young (<25),0
+21000.0,3600,0,13,10,0.1503,0,0,credit_card,Female,Working Age (25-55),0
+42800.0,5300,8,18,6,0.1672,0,0,home_improvement,Female,Working Age (25-55),0
+136200.0,36800,0,20,3,0.1203,1,0,home_improvement,Female,Working Age (25-55),0
+119200.0,25600,20,18,6,0.374,1,0,credit_card,Male,Working Age (25-55),0
+141400.0,50000,2,17,7,0.0556,0,0,credit_card,Female,Working Age (25-55),0
+57700.0,25900,7,12,6,0.2182,0,0,debt_consolidation,Female,Working Age (25-55),0
+80800.0,32900,1,9,8,0.0981,0,0,debt_consolidation,Female,Young (<25),0
+40000.0,8500,1,13,2,0.1326,0,0,home_improvement,Female,Working Age (25-55),0
+29800.0,13000,14,11,8,0.1048,0,0,debt_consolidation,Female,Working Age (25-55),0
+136200.0,50000,3,15,7,0.0757,0,0,debt_consolidation,Male,Working Age (25-55),0
+18000.0,3400,4,23,5,0.1903,0,0,home_improvement,Female,Senior (>55),0
+62700.0,19100,2,13,11,0.2534,0,0,credit_card,Female,Working Age (25-55),1
+61000.0,6900,3,15,6,0.1935,0,3,debt_consolidation,Female,Working Age (25-55),0
+41700.0,10700,7,11,14,0.3709,0,0,credit_card,Female,Working Age (25-55),0
+81400.0,19200,12,19,6,0.3834,1,2,debt_consolidation,Male,Working Age (25-55),1
+27200.0,6600,3,16,5,0.1981,0,0,small_business,Male,Working Age (25-55),0
+59600.0,13200,1,21,4,0.1726,0,0,home_improvement,Male,Working Age (25-55),0
+28700.0,8700,4,18,7,0.04,0,0,debt_consolidation,Male,Working Age (25-55),0
+67600.0,30200,2,21,6,0.349,0,0,home_improvement,Male,Senior (>55),1
+67500.0,17100,0,10,3,0.2316,0,2,debt_consolidation,Male,Working Age (25-55),1
+48500.0,21100,0,3,6,0.2982,0,1,debt_consolidation,Female,Young (<25),1
+83500.0,15600,2,11,7,0.2405,0,0,home_improvement,Male,Working Age (25-55),0
+76600.0,28600,3,15,6,0.1618,0,0,debt_consolidation,Female,Working Age (25-55),0
+162000.0,24700,1,21,2,0.3298,0,0,debt_consolidation,Male,Senior (>55),0
+40400.0,15700,2,12,6,0.3045,0,1,major_purchase,Female,Working Age (25-55),0
+99500.0,31900,0,12,7,0.159,0,0,home_improvement,Male,Working Age (25-55),0
+94100.0,25800,1,12,8,0.5052,1,1,credit_card,Female,Working Age (25-55),1
+37900.0,8200,0,16,7,0.2882,0,0,debt_consolidation,Female,Working Age (25-55),0
+125500.0,46900,7,16,5,0.2125,1,0,debt_consolidation,Male,Working Age (25-55),1
+38500.0,16800,4,13,7,0.2081,0,3,debt_consolidation,Female,Working Age (25-55),1
+45200.0,14200,2,11,12,0.4387,0,0,debt_consolidation,Male,Working Age (25-55),1
+70900.0,17300,0,16,10,0.1128,0,2,debt_consolidation,Female,Working Age (25-55),0
+43700.0,11900,2,16,10,0.0876,0,0,debt_consolidation,Male,Working Age (25-55),0
+26500.0,5100,3,14,4,0.2773,0,0,debt_consolidation,Female,Working Age (25-55),0
+42600.0,15500,0,1,2,0.3258,0,0,debt_consolidation,Female,Young (<25),1
+63000.0,22800,0,12,6,0.1989,0,0,debt_consolidation,Female,Working Age (25-55),0
+46900.0,5700,3,13,10,0.2512,0,0,debt_consolidation,Male,Working Age (25-55),0
+48200.0,13300,5,10,5,0.1465,0,0,home_improvement,Female,Working Age (25-55),1
+70700.0,23100,14,28,5,0.247,0,0,debt_consolidation,Male,Senior (>55),0
+34500.0,11200,4,11,10,0.1659,0,0,major_purchase,Male,Working Age (25-55),0
+28200.0,9400,1,7,6,0.1948,0,0,debt_consolidation,Male,Young (<25),0
+44300.0,17800,7,15,11,0.1333,1,0,major_purchase,Female,Working Age (25-55),0
+36700.0,16000,1,4,4,0.0776,0,0,small_business,Female,Young (<25),0
+55900.0,15400,5,7,9,0.1435,0,0,medical,Female,Working Age (25-55),0
+28100.0,10600,4,23,4,0.2148,0,0,home_improvement,Male,Senior (>55),0
+43100.0,9500,1,16,7,0.5362,0,0,credit_card,Female,Working Age (25-55),1
+101500.0,34100,4,16,11,0.282,0,0,home_improvement,Female,Working Age (25-55),0
+38800.0,5700,0,19,3,0.1992,1,0,credit_card,Female,Working Age (25-55),1
+42600.0,10400,3,12,4,0.2193,0,0,debt_consolidation,Male,Working Age (25-55),0
+35000.0,5600,1,5,11,0.1301,0,0,small_business,Male,Working Age (25-55),0
+40400.0,16800,6,13,4,0.2296,0,1,credit_card,Female,Working Age (25-55),1
+45700.0,6800,1,13,8,0.1159,0,0,debt_consolidation,Female,Working Age (25-55),0
+83500.0,37600,2,14,8,0.0418,0,3,debt_consolidation,Female,Working Age (25-55),0
+50100.0,18200,1,15,8,0.2597,0,0,debt_consolidation,Female,Working Age (25-55),0
+28500.0,7800,3,15,8,0.1796,0,0,credit_card,Male,Working Age (25-55),0
+48300.0,14600,20,19,11,0.0839,0,0,debt_consolidation,Male,Working Age (25-55),0
+60000.0,20300,3,7,8,0.1456,0,0,debt_consolidation,Female,Working Age (25-55),0
+30100.0,3100,9,17,6,0.1592,1,0,home_improvement,Male,Working Age (25-55),0
+74000.0,26900,0,24,5,0.2098,1,0,debt_consolidation,Male,Senior (>55),1
+83700.0,33500,4,19,7,0.3082,0,0,credit_card,Female,Working Age (25-55),1
+43900.0,18400,1,20,7,0.333,0,0,debt_consolidation,Female,Working Age (25-55),1
+40300.0,8200,0,18,5,0.327,0,1,medical,Male,Working Age (25-55),1
+26900.0,11000,8,8,4,0.3621,0,1,medical,Male,Working Age (25-55),1
+49900.0,9000,2,17,5,0.1089,0,0,debt_consolidation,Female,Working Age (25-55),0
+38200.0,5400,14,17,8,0.1014,0,0,credit_card,Female,Senior (>55),0
+83200.0,29200,1,11,10,0.051,0,0,debt_consolidation,Female,Working Age (25-55),0
+57400.0,19600,2,16,7,0.2181,0,3,major_purchase,Male,Working Age (25-55),1
+56400.0,7700,8,18,4,0.1411,0,0,credit_card,Female,Working Age (25-55),0
+58200.0,19400,9,11,12,0.1142,1,0,debt_consolidation,Female,Working Age (25-55),1
+90800.0,30000,0,13,8,0.307,1,0,major_purchase,Male,Working Age (25-55),1
+50300.0,14800,3,12,7,0.1903,0,0,medical,Male,Working Age (25-55),0
+50200.0,14300,2,16,9,0.1904,0,2,small_business,Female,Working Age (25-55),0
+67700.0,26600,2,17,8,0.2704,0,0,debt_consolidation,Male,Working Age (25-55),0
+88400.0,21900,0,17,6,0.3449,0,0,credit_card,Male,Working Age (25-55),0
+39100.0,4200,0,21,5,0.0743,0,0,debt_consolidation,Male,Working Age (25-55),0
+140700.0,39600,2,14,5,0.2026,0,0,major_purchase,Male,Working Age (25-55),0
+126700.0,29600,3,17,8,0.4628,0,0,small_business,Female,Working Age (25-55),1
+22800.0,4600,2,19,10,0.1825,0,0,debt_consolidation,Male,Working Age (25-55),0
+55300.0,22700,3,9,8,0.18,0,1,home_improvement,Male,Working Age (25-55),1
+73000.0,20100,10,5,11,0.1787,1,1,home_improvement,Male,Working Age (25-55),1
+18000.0,4400,1,9,9,0.0964,0,0,debt_consolidation,Female,Young (<25),1
+78600.0,26000,12,19,6,0.2572,0,0,debt_consolidation,Female,Senior (>55),0
+172900.0,50000,0,14,8,0.2465,0,2,small_business,Female,Working Age (25-55),0
+57400.0,22300,6,17,8,0.1264,0,1,major_purchase,Male,Working Age (25-55),0
+46800.0,14000,6,6,4,0.045,0,2,home_improvement,Female,Working Age (25-55),0
+25000.0,5100,3,21,10,0.2427,0,3,small_business,Male,Working Age (25-55),0
+40300.0,10000,0,4,9,0.1369,0,1,debt_consolidation,Male,Young (<25),1
+105600.0,38400,9,10,6,0.1331,0,0,credit_card,Female,Working Age (25-55),0
+58400.0,21100,5,13,2,0.1926,0,0,debt_consolidation,Female,Working Age (25-55),0
+94100.0,16800,7,10,5,0.2997,0,0,debt_consolidation,Female,Working Age (25-55),0
+46700.0,7900,0,10,6,0.2837,0,0,home_improvement,Male,Working Age (25-55),0
+66100.0,9600,1,6,4,0.2125,0,0,debt_consolidation,Female,Young (<25),0
+28300.0,11600,2,12,5,0.0537,0,0,credit_card,Female,Working Age (25-55),0
+54700.0,7400,5,9,8,0.3617,1,0,home_improvement,Female,Working Age (25-55),1
+21200.0,5700,1,7,7,0.1991,0,0,debt_consolidation,Male,Working Age (25-55),0
+19900.0,2700,2,14,9,0.0562,0,1,credit_card,Female,Working Age (25-55),0
+66800.0,10800,6,6,4,0.2281,0,1,credit_card,Female,Working Age (25-55),0
+26300.0,7400,2,8,5,0.2499,0,0,medical,Male,Young (<25),1
+19400.0,2500,3,13,7,0.0904,1,0,small_business,Male,Working Age (25-55),0
+109400.0,43900,2,10,4,0.302,0,1,credit_card,Male,Working Age (25-55),0
+45900.0,18800,2,14,6,0.1659,0,0,medical,Male,Working Age (25-55),0
+192100.0,50000,1,13,4,0.1203,0,0,major_purchase,Female,Young (<25),0
+33300.0,7900,6,18,9,0.1714,0,1,debt_consolidation,Female,Working Age (25-55),0
+60500.0,18600,1,7,7,0.2584,0,0,medical,Female,Young (<25),1
+211000.0,50000,3,21,6,0.2057,0,0,debt_consolidation,Male,Working Age (25-55),0
+96400.0,30300,3,15,4,0.4865,0,0,home_improvement,Female,Working Age (25-55),1
+39200.0,6000,7,5,1,0.3155,0,0,credit_card,Male,Working Age (25-55),1
+40200.0,12500,1,9,6,0.2744,0,0,major_purchase,Female,Young (<25),1
+83900.0,29800,4,18,8,0.2316,0,0,medical,Male,Working Age (25-55),0
+42000.0,16500,5,20,3,0.183,0,0,debt_consolidation,Female,Working Age (25-55),0
+74900.0,28700,0,13,7,0.1887,0,0,debt_consolidation,Male,Working Age (25-55),0
+23400.0,10100,9,13,9,0.3088,0,0,debt_consolidation,Male,Working Age (25-55),0
+136700.0,50000,4,8,7,0.3997,0,0,debt_consolidation,Male,Working Age (25-55),1
+44900.0,11500,0,15,5,0.0537,0,0,debt_consolidation,Female,Working Age (25-55),0
+106900.0,18900,0,11,5,0.0756,0,0,debt_consolidation,Female,Working Age (25-55),0
+28900.0,11300,6,9,10,0.0695,1,0,credit_card,Male,Working Age (25-55),0
+27700.0,2900,4,9,8,0.3453,0,0,small_business,Male,Working Age (25-55),1
+19800.0,7100,2,22,7,0.3737,1,1,debt_consolidation,Male,Working Age (25-55),1
+60300.0,14100,5,12,15,0.1773,1,0,debt_consolidation,Male,Working Age (25-55),1
+47100.0,13400,7,11,5,0.119,0,0,debt_consolidation,Female,Working Age (25-55),1
+66400.0,20100,0,11,11,0.2714,0,0,debt_consolidation,Male,Working Age (25-55),1
+37400.0,13400,1,10,4,0.3391,0,0,small_business,Male,Young (<25),1
+51800.0,8200,9,20,9,0.166,0,2,debt_consolidation,Female,Working Age (25-55),0
+123300.0,43700,0,10,9,0.1252,0,1,major_purchase,Male,Working Age (25-55),0
+83900.0,11400,1,6,8,0.3515,0,0,debt_consolidation,Female,Young (<25),1
+92900.0,16200,4,15,12,0.228,0,0,credit_card,Female,Working Age (25-55),0
+79000.0,10100,1,8,8,0.1862,0,0,credit_card,Female,Working Age (25-55),0
+54800.0,13600,11,22,10,0.3012,0,2,debt_consolidation,Female,Senior (>55),0
+97300.0,22700,0,25,8,0.1905,1,2,credit_card,Female,Working Age (25-55),0
+18000.0,7600,0,13,10,0.4551,0,1,debt_consolidation,Male,Working Age (25-55),1
+31200.0,9500,6,8,6,0.1426,0,0,credit_card,Female,Working Age (25-55),0
+37000.0,15300,3,9,4,0.3194,0,0,medical,Female,Working Age (25-55),1
+52100.0,21300,3,15,8,0.367,0,1,debt_consolidation,Female,Working Age (25-55),1
+131500.0,48000,7,21,4,0.0908,0,0,small_business,Female,Working Age (25-55),0
+57000.0,22800,1,21,11,0.1981,0,0,home_improvement,Female,Senior (>55),0
+75600.0,12700,13,14,12,0.2361,0,0,home_improvement,Male,Working Age (25-55),0
+48700.0,10300,16,13,5,0.1459,1,0,debt_consolidation,Female,Working Age (25-55),0
+50500.0,19400,4,10,5,0.3203,0,0,major_purchase,Male,Working Age (25-55),1
+65200.0,24400,0,12,9,0.3227,1,0,major_purchase,Male,Working Age (25-55),1
+73200.0,29900,5,5,5,0.0417,0,0,credit_card,Female,Young (<25),0
+55500.0,8300,9,14,8,0.0762,0,0,debt_consolidation,Male,Working Age (25-55),0
+52400.0,16400,3,20,3,0.1354,0,1,debt_consolidation,Female,Working Age (25-55),0
+58400.0,9700,1,21,7,0.3481,0,0,small_business,Female,Senior (>55),0
+31700.0,7500,1,18,12,0.4382,0,1,credit_card,Female,Working Age (25-55),1
+42100.0,16100,4,6,8,0.2089,0,1,small_business,Male,Working Age (25-55),1
+40100.0,5100,6,6,1,0.1127,1,0,debt_consolidation,Male,Young (<25),0
+24400.0,7400,1,18,9,0.1446,0,0,debt_consolidation,Male,Working Age (25-55),0
+30400.0,12200,1,13,9,0.2597,0,0,debt_consolidation,Female,Working Age (25-55),1
+18000.0,2500,0,5,12,0.1292,0,0,credit_card,Male,Working Age (25-55),0
+95600.0,29100,4,14,3,0.0825,0,0,credit_card,Male,Working Age (25-55),0
+50400.0,18400,5,13,7,0.3778,0,0,small_business,Male,Working Age (25-55),1
+84100.0,33900,9,11,7,0.3422,0,3,debt_consolidation,Female,Working Age (25-55),1
+24900.0,8800,5,9,7,0.0436,0,0,debt_consolidation,Male,Working Age (25-55),0
+64400.0,9500,15,21,9,0.2049,0,0,debt_consolidation,Female,Working Age (25-55),0
+110600.0,44400,4,10,7,0.481,0,0,debt_consolidation,Male,Working Age (25-55),1
+82700.0,27800,4,19,8,0.2921,0,0,credit_card,Male,Working Age (25-55),0
+18000.0,6500,0,10,10,0.4184,0,1,credit_card,Male,Working Age (25-55),1
+28400.0,5500,6,8,8,0.1555,0,0,debt_consolidation,Female,Working Age (25-55),0
+88700.0,32700,8,15,7,0.48,0,0,debt_consolidation,Male,Working Age (25-55),1
+82600.0,30100,4,7,5,0.2827,0,0,debt_consolidation,Female,Working Age (25-55),1
+133100.0,37600,4,12,10,0.2701,0,1,credit_card,Female,Working Age (25-55),0
+18000.0,2200,5,17,2,0.2044,0,0,debt_consolidation,Male,Working Age (25-55),0
+40400.0,6200,8,14,9,0.2731,1,0,debt_consolidation,Male,Working Age (25-55),0
+56100.0,12300,11,16,5,0.3522,0,0,debt_consolidation,Male,Working Age (25-55),0
+80400.0,25300,4,24,5,0.1062,0,0,credit_card,Male,Senior (>55),0
+51500.0,21700,4,17,3,0.1112,0,0,small_business,Female,Working Age (25-55),0
+99900.0,42700,2,7,5,0.3216,0,0,credit_card,Male,Young (<25),1
+36300.0,15400,0,9,5,0.2227,0,0,debt_consolidation,Male,Working Age (25-55),1
+115600.0,23800,1,5,6,0.0922,0,0,debt_consolidation,Female,Working Age (25-55),0
+37700.0,14500,2,14,4,0.5306,0,1,debt_consolidation,Male,Working Age (25-55),1
+29800.0,7700,0,14,4,0.1311,0,0,debt_consolidation,Male,Working Age (25-55),0
+101800.0,45300,0,12,8,0.2852,0,0,credit_card,Female,Working Age (25-55),1
+52700.0,6000,1,1,8,0.2004,0,0,small_business,Male,Young (<25),0
+64500.0,18600,2,13,9,0.2276,0,0,debt_consolidation,Male,Working Age (25-55),0
+113800.0,14800,2,15,4,0.1988,0,1,debt_consolidation,Male,Working Age (25-55),0
+151000.0,25400,10,15,4,0.1621,0,0,major_purchase,Female,Working Age (25-55),0
+50400.0,19900,3,11,8,0.2868,0,0,debt_consolidation,Male,Working Age (25-55),1
+115400.0,46000,1,8,6,0.172,0,0,home_improvement,Male,Working Age (25-55),0
+18000.0,2500,1,17,6,0.0675,0,0,credit_card,Male,Working Age (25-55),0
+71900.0,10200,4,5,5,0.3136,0,0,credit_card,Female,Working Age (25-55),0
+35900.0,14200,1,16,8,0.2731,0,0,debt_consolidation,Male,Working Age (25-55),1
+44400.0,19300,1,17,7,0.0542,0,0,debt_consolidation,Male,Senior (>55),1
+66500.0,8900,2,7,9,0.3423,0,0,debt_consolidation,Female,Working Age (25-55),1
+114600.0,16600,6,18,2,0.1258,0,0,credit_card,Male,Working Age (25-55),0
+73200.0,29900,2,21,5,0.2218,0,0,debt_consolidation,Male,Working Age (25-55),0
+50100.0,21700,13,8,6,0.189,1,1,major_purchase,Female,Working Age (25-55),1
+30900.0,4900,3,11,4,0.3459,0,0,home_improvement,Female,Working Age (25-55),1
+75700.0,32300,1,12,8,0.3293,0,3,debt_consolidation,Female,Young (<25),1
+144300.0,34600,5,14,6,0.1041,0,1,credit_card,Female,Working Age (25-55),0
+69800.0,26900,5,12,5,0.5359,0,0,debt_consolidation,Female,Working Age (25-55),1
+53900.0,21700,2,14,4,0.1339,0,2,small_business,Female,Working Age (25-55),0
+35800.0,11700,6,8,9,0.1339,0,0,major_purchase,Male,Working Age (25-55),0
+78900.0,34900,6,7,5,0.3358,0,2,credit_card,Female,Young (<25),1
+162200.0,16500,11,8,6,0.256,0,0,credit_card,Female,Working Age (25-55),0
+36300.0,7600,3,4,3,0.3668,1,0,small_business,Male,Young (<25),1
+64900.0,16300,23,12,1,0.1881,0,0,major_purchase,Female,Working Age (25-55),0
+112900.0,44600,0,11,8,0.3765,0,0,debt_consolidation,Male,Working Age (25-55),1
+61400.0,17500,9,13,8,0.3005,0,0,debt_consolidation,Female,Working Age (25-55),0
+75800.0,27600,0,12,12,0.4244,0,0,debt_consolidation,Male,Working Age (25-55),1
+75000.0,33600,3,13,7,0.2234,0,0,debt_consolidation,Female,Working Age (25-55),0
+34400.0,13900,0,12,2,0.3043,0,0,debt_consolidation,Female,Working Age (25-55),1
+18000.0,3300,2,21,9,0.2219,0,0,debt_consolidation,Female,Senior (>55),1
+31600.0,6000,13,13,6,0.1123,1,0,debt_consolidation,Male,Working Age (25-55),1
+111400.0,47000,12,20,4,0.1478,0,2,debt_consolidation,Female,Working Age (25-55),0
+37700.0,16900,4,13,11,0.4014,0,0,debt_consolidation,Female,Working Age (25-55),1
+62700.0,21400,1,13,8,0.1853,0,0,credit_card,Female,Working Age (25-55),0
+51100.0,11500,0,14,13,0.213,0,0,credit_card,Male,Working Age (25-55),0
+56600.0,8100,5,11,8,0.4921,0,0,credit_card,Male,Young (<25),0
+100700.0,25000,12,19,4,0.3374,1,0,debt_consolidation,Male,Working Age (25-55),1
+72300.0,16500,0,10,7,0.2064,0,0,home_improvement,Male,Working Age (25-55),0
+23800.0,9500,4,8,6,0.1388,0,0,debt_consolidation,Female,Young (<25),0
+111100.0,40400,0,12,9,0.0906,0,1,credit_card,Female,Working Age (25-55),0
+87400.0,15500,2,13,3,0.4531,0,0,small_business,Female,Working Age (25-55),1
+25100.0,7300,4,10,3,0.1959,0,1,credit_card,Female,Young (<25),1
+53400.0,10400,1,10,12,0.0862,0,1,major_purchase,Male,Working Age (25-55),0
+20200.0,4900,2,9,9,0.2825,1,1,debt_consolidation,Male,Young (<25),1
+76900.0,25900,4,10,6,0.1671,0,1,home_improvement,Male,Working Age (25-55),0
+42000.0,16000,0,8,5,0.2195,0,0,small_business,Female,Working Age (25-55),1
+32300.0,5600,0,18,8,0.1057,0,0,small_business,Female,Working Age (25-55),0
+127600.0,34600,2,12,8,0.1638,0,0,debt_consolidation,Female,Working Age (25-55),0
+72300.0,19200,0,16,7,0.2424,0,0,debt_consolidation,Male,Working Age (25-55),0
+49000.0,6900,2,1,8,0.22,0,0,debt_consolidation,Female,Working Age (25-55),0
+32600.0,8900,7,25,7,0.3981,0,1,credit_card,Female,Senior (>55),1
+54600.0,12800,4,25,10,0.255,0,0,credit_card,Male,Senior (>55),0
+45200.0,14500,2,9,10,0.2902,0,1,small_business,Male,Working Age (25-55),1
+59300.0,9100,3,13,4,0.2402,0,2,credit_card,Male,Working Age (25-55),0
+59200.0,19900,7,12,7,0.067,0,0,debt_consolidation,Female,Working Age (25-55),0
+49900.0,15400,2,12,2,0.2437,0,0,debt_consolidation,Female,Working Age (25-55),0
+34700.0,12500,0,12,7,0.5969,0,0,debt_consolidation,Male,Working Age (25-55),1
+35700.0,7300,4,4,5,0.0513,0,0,credit_card,Male,Young (<25),0
+132300.0,44000,12,13,10,0.2025,0,0,medical,Male,Working Age (25-55),0
+19000.0,5800,1,6,7,0.1893,0,0,home_improvement,Male,Young (<25),0
+32200.0,8700,2,14,7,0.2033,0,0,credit_card,Female,Working Age (25-55),0
+85500.0,28700,4,10,6,0.0509,0,0,home_improvement,Female,Working Age (25-55),0
+42800.0,15600,2,11,4,0.2493,0,0,credit_card,Female,Working Age (25-55),0
+117400.0,28600,7,8,4,0.254,0,1,debt_consolidation,Male,Working Age (25-55),0
+61300.0,13800,4,17,9,0.2989,0,0,credit_card,Female,Working Age (25-55),0
+37700.0,16100,6,6,7,0.3706,0,0,major_purchase,Male,Working Age (25-55),1
+68600.0,10000,21,15,10,0.1572,0,0,small_business,Male,Working Age (25-55),0
+70200.0,24400,3,9,5,0.1466,0,0,home_improvement,Male,Working Age (25-55),0
+160000.0,50000,5,9,6,0.2758,0,0,debt_consolidation,Female,Young (<25),0
+63000.0,26600,7,13,9,0.0634,0,0,debt_consolidation,Female,Working Age (25-55),0
+59400.0,19000,3,15,8,0.229,0,0,home_improvement,Female,Working Age (25-55),0
+40900.0,8000,7,17,11,0.2797,0,0,debt_consolidation,Male,Working Age (25-55),0
+32100.0,7200,1,21,7,0.2767,0,0,small_business,Male,Working Age (25-55),0
+58900.0,25500,0,10,9,0.4019,1,3,debt_consolidation,Female,Working Age (25-55),1
+60000.0,25600,0,7,6,0.3248,0,0,debt_consolidation,Male,Working Age (25-55),1
+34500.0,15300,4,12,9,0.1916,0,0,debt_consolidation,Male,Working Age (25-55),0
+102700.0,40400,6,13,7,0.1137,1,2,home_improvement,Male,Working Age (25-55),1
+92200.0,32100,17,17,7,0.2462,0,2,credit_card,Male,Working Age (25-55),0
+64100.0,21800,0,14,8,0.145,1,0,credit_card,Male,Working Age (25-55),1
+58800.0,20500,7,14,7,0.247,0,1,credit_card,Male,Working Age (25-55),1
+79800.0,24100,10,16,9,0.2374,0,2,credit_card,Male,Working Age (25-55),0
+88600.0,13800,2,16,14,0.3633,0,0,credit_card,Male,Working Age (25-55),0
+50000.0,10900,4,13,9,0.153,0,0,major_purchase,Female,Working Age (25-55),0
+88200.0,26100,10,10,8,0.1416,0,0,medical,Male,Working Age (25-55),0
+55000.0,24000,0,21,7,0.2235,0,1,credit_card,Female,Working Age (25-55),1
+37700.0,8700,5,14,10,0.1424,0,0,home_improvement,Male,Working Age (25-55),0
+33100.0,4400,1,14,6,0.1884,0,0,credit_card,Male,Working Age (25-55),0
+79500.0,25900,7,6,5,0.2043,0,0,major_purchase,Male,Working Age (25-55),0
+79900.0,25500,0,13,6,0.2325,0,0,home_improvement,Male,Working Age (25-55),0
+28200.0,8000,14,14,5,0.3101,1,1,debt_consolidation,Female,Working Age (25-55),1
+86900.0,13600,8,5,7,0.4098,1,0,debt_consolidation,Male,Working Age (25-55),1
+34800.0,10700,2,16,3,0.0974,0,0,credit_card,Male,Working Age (25-55),0
+60300.0,17100,1,13,3,0.2829,0,0,home_improvement,Female,Working Age (25-55),0
+49200.0,10500,1,14,3,0.04,0,0,debt_consolidation,Male,Working Age (25-55),0
+48700.0,20800,2,15,8,0.22,0,0,credit_card,Female,Working Age (25-55),0
+80400.0,26100,5,9,8,0.056,0,1,credit_card,Female,Working Age (25-55),1
+60000.0,16600,3,14,10,0.1992,1,0,debt_consolidation,Male,Working Age (25-55),1
+65700.0,7000,1,21,2,0.1288,0,2,credit_card,Male,Working Age (25-55),0
+29600.0,9800,10,14,12,0.1687,1,1,credit_card,Female,Working Age (25-55),1
+18000.0,6700,3,12,10,0.155,0,1,credit_card,Male,Working Age (25-55),0
+31900.0,9700,3,16,10,0.1956,0,1,debt_consolidation,Female,Working Age (25-55),0
+24700.0,4200,4,17,4,0.2123,0,0,debt_consolidation,Male,Working Age (25-55),0
+26800.0,2700,5,13,8,0.0819,0,0,debt_consolidation,Male,Working Age (25-55),0
+58300.0,12200,1,7,7,0.1514,0,0,home_improvement,Female,Working Age (25-55),0
+124700.0,50000,0,15,5,0.2907,0,1,debt_consolidation,Female,Working Age (25-55),1
+18000.0,3200,5,18,6,0.2915,0,0,debt_consolidation,Female,Senior (>55),1
+67300.0,19200,4,21,7,0.1938,0,0,debt_consolidation,Female,Senior (>55),0
+110500.0,31500,0,6,7,0.0729,1,0,home_improvement,Male,Working Age (25-55),0
+38500.0,9400,5,11,7,0.471,0,0,small_business,Female,Young (<25),1
+69700.0,28400,4,17,8,0.1785,0,0,debt_consolidation,Female,Working Age (25-55),0
+46800.0,13000,0,14,7,0.3631,0,0,credit_card,Male,Working Age (25-55),1
+89000.0,21000,1,12,5,0.1216,0,2,debt_consolidation,Female,Working Age (25-55),0
+106700.0,22400,3,21,11,0.1263,0,1,debt_consolidation,Female,Working Age (25-55),0
+44200.0,17200,10,17,6,0.0805,0,2,debt_consolidation,Female,Working Age (25-55),0
+44100.0,18700,0,7,7,0.1753,0,0,debt_consolidation,Female,Working Age (25-55),0
+77200.0,31000,3,3,14,0.0693,0,1,debt_consolidation,Male,Young (<25),0
+45200.0,6900,0,16,9,0.1776,0,0,credit_card,Female,Working Age (25-55),0
+92700.0,33200,3,15,10,0.1781,0,0,small_business,Female,Working Age (25-55),0
+99400.0,23200,2,12,1,0.1263,0,0,debt_consolidation,Male,Working Age (25-55),0
+77600.0,27500,0,14,2,0.2404,0,0,credit_card,Female,Working Age (25-55),0
+27000.0,3100,12,16,8,0.0668,0,1,credit_card,Male,Working Age (25-55),0
+24800.0,7500,0,10,8,0.1886,0,1,debt_consolidation,Male,Young (<25),1
+44700.0,19200,1,19,2,0.1786,0,0,debt_consolidation,Female,Working Age (25-55),0
+111700.0,48200,0,13,10,0.1656,0,0,credit_card,Female,Working Age (25-55),0
+47200.0,15300,3,23,9,0.118,0,2,credit_card,Female,Senior (>55),0
+36700.0,15100,9,6,11,0.3376,0,1,credit_card,Female,Working Age (25-55),1
+107300.0,36600,0,6,3,0.1152,0,0,debt_consolidation,Male,Young (<25),0
+46800.0,16800,5,18,8,0.2294,0,0,credit_card,Female,Senior (>55),0
+37100.0,14100,8,18,4,0.0879,1,1,home_improvement,Male,Working Age (25-55),0
+94200.0,12400,5,17,5,0.2605,0,1,home_improvement,Female,Working Age (25-55),0
+101500.0,24500,8,22,8,0.2212,0,2,debt_consolidation,Male,Working Age (25-55),0
+89300.0,37600,4,13,8,0.3305,0,0,home_improvement,Male,Working Age (25-55),1
+121200.0,48500,2,16,3,0.0854,0,1,credit_card,Male,Working Age (25-55),0
+43500.0,7100,15,9,6,0.3688,1,0,debt_consolidation,Female,Working Age (25-55),1
+40300.0,6400,4,1,9,0.203,0,0,credit_card,Female,Young (<25),0
+70200.0,9300,0,20,10,0.3858,1,0,debt_consolidation,Male,Working Age (25-55),1
+49000.0,11500,2,10,9,0.2607,0,0,debt_consolidation,Male,Working Age (25-55),0
+54800.0,16400,0,12,6,0.1495,0,2,debt_consolidation,Male,Working Age (25-55),0
+109400.0,26000,3,18,13,0.1059,0,0,debt_consolidation,Female,Working Age (25-55),0
+121700.0,26300,11,14,2,0.1558,1,0,debt_consolidation,Male,Working Age (25-55),0
+72000.0,15000,0,12,5,0.3513,0,0,medical,Female,Working Age (25-55),1
+94900.0,40700,4,12,10,0.3511,0,0,home_improvement,Male,Working Age (25-55),1
+62300.0,6300,9,16,7,0.3482,0,0,debt_consolidation,Male,Working Age (25-55),0
+30600.0,7500,0,17,11,0.1092,1,0,credit_card,Female,Working Age (25-55),0
+34200.0,7600,2,17,7,0.2496,0,0,debt_consolidation,Female,Working Age (25-55),0
+48200.0,19100,3,7,12,0.1953,0,0,major_purchase,Female,Working Age (25-55),0
+119400.0,17800,2,17,4,0.2109,0,0,home_improvement,Female,Working Age (25-55),0
+81200.0,28500,0,8,10,0.3676,0,0,small_business,Male,Working Age (25-55),1
+56200.0,10400,4,9,7,0.1745,0,0,debt_consolidation,Male,Working Age (25-55),0
+25000.0,11200,11,12,7,0.1197,0,2,debt_consolidation,Male,Working Age (25-55),0
+39100.0,12400,2,15,10,0.2388,0,0,small_business,Female,Senior (>55),0
+55800.0,20300,2,13,9,0.2227,1,1,debt_consolidation,Female,Working Age (25-55),1
+47600.0,11900,1,5,4,0.1048,0,3,debt_consolidation,Male,Young (<25),0
+50500.0,9700,1,14,7,0.3735,1,0,credit_card,Male,Working Age (25-55),1
+61500.0,13600,0,25,11,0.1884,0,0,credit_card,Male,Senior (>55),0
+74700.0,30300,23,16,6,0.0638,1,0,debt_consolidation,Male,Working Age (25-55),0
+77900.0,31100,0,13,4,0.0935,0,0,small_business,Female,Working Age (25-55),0
+47900.0,10900,1,13,6,0.171,0,0,debt_consolidation,Female,Working Age (25-55),0
+58600.0,19200,4,4,6,0.2118,0,1,credit_card,Male,Working Age (25-55),1
+44800.0,16500,1,4,8,0.3095,0,0,debt_consolidation,Male,Working Age (25-55),1
+24400.0,7400,3,12,3,0.3473,0,1,small_business,Female,Working Age (25-55),1
+46900.0,16400,4,18,7,0.283,0,0,debt_consolidation,Female,Working Age (25-55),0
+32300.0,10600,4,14,7,0.2922,0,1,credit_card,Female,Working Age (25-55),1
+40600.0,5200,3,10,7,0.2601,0,0,home_improvement,Female,Working Age (25-55),0
+71700.0,28000,4,9,2,0.2485,0,2,debt_consolidation,Male,Working Age (25-55),0
+49400.0,17600,2,17,8,0.3964,0,0,debt_consolidation,Female,Senior (>55),1
+100900.0,14100,2,8,8,0.1725,0,0,debt_consolidation,Male,Young (<25),0
+116700.0,18700,14,17,8,0.1379,1,3,home_improvement,Male,Working Age (25-55),0
+45700.0,8200,1,7,3,0.0775,0,0,credit_card,Male,Young (<25),0
+23600.0,7000,5,13,7,0.3945,0,0,credit_card,Female,Working Age (25-55),1
+62400.0,17300,3,23,7,0.3145,0,0,debt_consolidation,Male,Senior (>55),0
+37100.0,5000,9,14,7,0.0688,0,0,debt_consolidation,Female,Working Age (25-55),0
+37700.0,5200,2,12,7,0.0655,1,0,credit_card,Male,Working Age (25-55),0
+59300.0,8300,1,11,14,0.3109,0,0,credit_card,Male,Working Age (25-55),0
+192500.0,46700,1,13,1,0.3239,0,0,debt_consolidation,Male,Working Age (25-55),0
+27000.0,11000,6,12,6,0.3197,0,2,debt_consolidation,Female,Working Age (25-55),0
+62000.0,23300,0,17,7,0.2501,0,2,small_business,Male,Working Age (25-55),1
+66800.0,26200,5,18,5,0.4145,0,0,major_purchase,Female,Senior (>55),1
+40000.0,17600,9,20,5,0.2964,0,1,credit_card,Male,Working Age (25-55),1
+41700.0,7700,7,22,9,0.3049,0,1,major_purchase,Male,Senior (>55),0
+28500.0,9000,0,2,7,0.2164,1,0,debt_consolidation,Female,Young (<25),1
+45000.0,14400,4,19,11,0.2038,0,1,debt_consolidation,Female,Working Age (25-55),0
+73800.0,22900,2,8,9,0.4294,1,0,debt_consolidation,Male,Young (<25),1
+52700.0,21000,1,3,10,0.2677,0,0,debt_consolidation,Male,Young (<25),1
+47400.0,8300,0,14,6,0.1039,0,0,credit_card,Female,Working Age (25-55),0
+38600.0,9200,0,14,8,0.3091,0,0,debt_consolidation,Female,Working Age (25-55),1
+49200.0,21700,3,18,6,0.3414,0,0,credit_card,Female,Working Age (25-55),1
+55200.0,21200,0,11,16,0.2164,1,0,credit_card,Male,Working Age (25-55),1
+36500.0,14100,1,15,13,0.2734,1,0,debt_consolidation,Female,Working Age (25-55),1
+69000.0,29900,0,8,8,0.2206,1,0,debt_consolidation,Male,Working Age (25-55),1
+31000.0,11100,2,14,4,0.0631,0,1,major_purchase,Male,Working Age (25-55),0
+54100.0,15500,13,17,6,0.1611,0,0,debt_consolidation,Male,Working Age (25-55),0
+23800.0,3500,2,17,4,0.0629,1,0,debt_consolidation,Male,Working Age (25-55),0
+67700.0,20500,0,20,10,0.1345,0,0,debt_consolidation,Male,Senior (>55),0
+160300.0,43000,6,13,7,0.3636,0,0,debt_consolidation,Male,Working Age (25-55),0
+35800.0,15000,14,19,9,0.2399,0,0,major_purchase,Female,Senior (>55),0
+43500.0,13700,3,15,6,0.0562,0,0,home_improvement,Male,Working Age (25-55),0
+34000.0,11400,7,21,3,0.4173,0,1,credit_card,Male,Working Age (25-55),1
+58600.0,12500,5,7,4,0.1213,0,0,credit_card,Male,Working Age (25-55),0
+51300.0,18900,0,9,8,0.2741,0,0,small_business,Female,Young (<25),1
+60200.0,22300,0,11,8,0.1438,0,0,medical,Male,Working Age (25-55),0
+36800.0,15300,2,15,14,0.2135,0,0,medical,Male,Working Age (25-55),0
+80400.0,34000,9,13,8,0.1238,0,0,debt_consolidation,Male,Working Age (25-55),0
+99800.0,22800,1,18,5,0.1859,0,0,debt_consolidation,Male,Working Age (25-55),0
+70000.0,14700,16,18,7,0.1539,0,1,major_purchase,Male,Working Age (25-55),0
+24300.0,5200,0,19,4,0.1387,0,0,small_business,Male,Working Age (25-55),0
+86100.0,17700,0,8,10,0.2287,0,1,major_purchase,Male,Working Age (25-55),0
+97800.0,39100,3,10,7,0.0867,0,1,debt_consolidation,Female,Young (<25),0
+179400.0,50000,1,12,3,0.2504,0,1,debt_consolidation,Female,Working Age (25-55),0
+126700.0,21400,5,10,4,0.1999,0,1,credit_card,Female,Working Age (25-55),0
+49900.0,21200,16,13,3,0.1739,0,1,debt_consolidation,Male,Working Age (25-55),0
+109000.0,20500,5,16,4,0.3235,0,0,debt_consolidation,Female,Working Age (25-55),0
+108300.0,12800,0,12,7,0.1721,0,3,credit_card,Male,Working Age (25-55),0
+106000.0,37400,9,9,10,0.3203,0,0,credit_card,Female,Working Age (25-55),1
+57000.0,6100,6,16,9,0.1258,1,0,credit_card,Male,Working Age (25-55),0
+54100.0,14600,0,14,6,0.4092,0,0,credit_card,Male,Working Age (25-55),1
+57300.0,23900,1,11,8,0.2682,0,1,credit_card,Male,Working Age (25-55),1
+53100.0,13100,6,11,4,0.3716,0,0,debt_consolidation,Male,Working Age (25-55),1
+33800.0,15100,5,8,9,0.2082,0,0,debt_consolidation,Male,Working Age (25-55),0
+29400.0,3600,16,27,8,0.04,0,0,credit_card,Female,Senior (>55),0
+192800.0,50000,1,15,5,0.3286,0,1,small_business,Female,Working Age (25-55),0
+28100.0,9300,1,8,9,0.2658,0,0,credit_card,Female,Young (<25),1
+98000.0,23700,3,18,10,0.1852,0,0,debt_consolidation,Female,Working Age (25-55),0
+53500.0,17400,4,20,3,0.11,0,0,debt_consolidation,Male,Senior (>55),0
+28500.0,9500,8,19,4,0.1227,0,0,credit_card,Male,Working Age (25-55),0
+25700.0,5800,1,13,7,0.3681,0,0,small_business,Male,Working Age (25-55),1
+78400.0,29500,4,20,10,0.0733,0,2,small_business,Female,Working Age (25-55),0
+20600.0,6600,8,24,13,0.2617,1,1,debt_consolidation,Female,Senior (>55),1
+25600.0,2800,0,15,5,0.2253,0,0,home_improvement,Female,Working Age (25-55),0
+66900.0,20400,0,17,4,0.1802,0,1,home_improvement,Male,Working Age (25-55),0
+54300.0,22000,2,30,9,0.1689,0,0,debt_consolidation,Female,Senior (>55),0
+80300.0,35200,0,2,10,0.1616,0,0,debt_consolidation,Male,Young (<25),1
+19900.0,4100,0,11,6,0.1597,0,0,home_improvement,Male,Working Age (25-55),0
+24600.0,6800,2,15,2,0.2119,0,0,credit_card,Male,Working Age (25-55),1
+74200.0,31800,2,11,13,0.279,0,0,major_purchase,Female,Working Age (25-55),1
+26300.0,11100,5,15,13,0.2552,0,1,credit_card,Male,Working Age (25-55),1
+57700.0,12600,1,10,6,0.3404,0,0,debt_consolidation,Male,Young (<25),1
+191900.0,34800,5,20,5,0.2565,0,0,medical,Male,Working Age (25-55),0
+80700.0,15600,6,14,7,0.049,0,0,small_business,Male,Working Age (25-55),0
+67600.0,26300,0,11,10,0.2061,0,2,home_improvement,Female,Working Age (25-55),1
+36400.0,7400,8,10,9,0.2439,0,0,home_improvement,Male,Working Age (25-55),0
+61100.0,23100,3,14,5,0.1806,0,0,debt_consolidation,Female,Working Age (25-55),0
+54100.0,20000,0,9,8,0.1298,0,0,debt_consolidation,Female,Young (<25),0
+29700.0,6300,1,7,9,0.1263,0,0,debt_consolidation,Male,Young (<25),0
+81100.0,17700,0,15,7,0.2408,0,1,credit_card,Male,Working Age (25-55),0
+39700.0,4700,1,20,3,0.1612,1,2,major_purchase,Male,Working Age (25-55),1
+22900.0,7200,4,15,5,0.3358,0,0,credit_card,Female,Working Age (25-55),1
+252900.0,50000,1,17,4,0.2064,0,0,medical,Female,Working Age (25-55),0
+33000.0,8200,5,23,4,0.3488,0,0,debt_consolidation,Female,Senior (>55),0
+78400.0,23500,0,16,8,0.061,0,0,credit_card,Female,Working Age (25-55),0
+23000.0,10100,5,15,10,0.2555,0,0,debt_consolidation,Female,Working Age (25-55),0
+38300.0,13200,6,13,9,0.1813,0,0,home_improvement,Female,Working Age (25-55),0
+54800.0,6400,4,11,7,0.3185,0,0,debt_consolidation,Female,Working Age (25-55),0
+42000.0,11000,8,14,8,0.1202,0,0,credit_card,Female,Working Age (25-55),0
+34800.0,13500,1,4,7,0.2535,0,0,debt_consolidation,Male,Young (<25),1
+45900.0,17900,0,10,11,0.1133,0,1,credit_card,Female,Working Age (25-55),0
+49600.0,5000,8,17,6,0.4867,0,0,debt_consolidation,Male,Senior (>55),1
+76400.0,26800,0,7,10,0.3667,1,0,debt_consolidation,Male,Working Age (25-55),1
+37700.0,10200,10,20,4,0.2173,0,0,debt_consolidation,Female,Senior (>55),0
+226700.0,50000,2,12,6,0.3503,0,0,credit_card,Male,Working Age (25-55),0
+38100.0,8400,6,13,7,0.317,0,0,debt_consolidation,Male,Working Age (25-55),0
+34800.0,13200,5,17,4,0.243,0,0,credit_card,Male,Working Age (25-55),0
+28400.0,3500,0,11,5,0.2236,0,0,debt_consolidation,Male,Working Age (25-55),0
+53900.0,10100,0,20,6,0.1626,1,0,debt_consolidation,Female,Senior (>55),0
+59700.0,18800,2,18,9,0.1227,0,0,debt_consolidation,Female,Working Age (25-55),0
+18000.0,3100,2,14,4,0.2601,0,0,credit_card,Female,Working Age (25-55),0
+66100.0,9600,4,20,6,0.1178,0,0,credit_card,Male,Working Age (25-55),0
+26400.0,11000,2,15,12,0.1049,0,0,medical,Female,Working Age (25-55),0
+40700.0,4200,3,14,5,0.4108,0,0,home_improvement,Female,Working Age (25-55),0
+70300.0,11500,0,14,4,0.0572,0,1,debt_consolidation,Female,Working Age (25-55),0
+56300.0,24800,8,8,5,0.2148,0,0,debt_consolidation,Female,Working Age (25-55),0
+46500.0,20400,0,12,4,0.3485,0,0,major_purchase,Female,Working Age (25-55),1
+20800.0,2100,1,11,10,0.084,0,1,debt_consolidation,Male,Working Age (25-55),1
+106900.0,47700,2,17,3,0.2939,0,0,small_business,Male,Working Age (25-55),1
+48500.0,17100,1,3,12,0.0812,0,0,debt_consolidation,Male,Young (<25),0
+29700.0,7500,8,16,6,0.2611,0,0,home_improvement,Male,Working Age (25-55),0
+44900.0,12200,4,25,7,0.4013,0,1,medical,Male,Senior (>55),1
+62600.0,16000,12,8,6,0.0669,1,1,major_purchase,Female,Working Age (25-55),0
+29300.0,7300,1,6,5,0.383,1,0,debt_consolidation,Male,Young (<25),1
+35000.0,13200,0,8,7,0.1355,0,0,debt_consolidation,Male,Working Age (25-55),0
+72200.0,27000,4,21,8,0.1838,0,0,debt_consolidation,Male,Working Age (25-55),0
+116200.0,42200,2,11,7,0.0841,0,1,credit_card,Female,Working Age (25-55),0
+69200.0,8400,9,14,8,0.2843,0,1,debt_consolidation,Male,Working Age (25-55),0
+132300.0,49800,2,18,6,0.102,0,0,debt_consolidation,Female,Working Age (25-55),0
+35800.0,5400,6,11,7,0.2052,0,2,major_purchase,Male,Working Age (25-55),0
+39300.0,9500,1,7,9,0.247,0,0,medical,Male,Young (<25),0
+20300.0,6900,12,16,4,0.0471,0,0,major_purchase,Female,Working Age (25-55),0
+32100.0,6900,0,23,7,0.0864,0,0,debt_consolidation,Male,Senior (>55),0
+23600.0,9600,1,12,8,0.4456,0,0,debt_consolidation,Male,Working Age (25-55),0
+33600.0,13600,4,12,4,0.1615,0,0,debt_consolidation,Male,Working Age (25-55),1
+64800.0,24600,1,5,4,0.2308,0,2,debt_consolidation,Male,Young (<25),1
+31700.0,5400,7,14,6,0.3769,1,0,home_improvement,Male,Working Age (25-55),1
+64900.0,11400,0,12,11,0.1822,0,0,home_improvement,Male,Working Age (25-55),0
+52900.0,23500,5,21,6,0.2322,0,0,debt_consolidation,Male,Working Age (25-55),0
+215300.0,50000,1,18,11,0.17,0,0,credit_card,Female,Working Age (25-55),0
+61400.0,24900,0,3,7,0.3758,0,1,credit_card,Male,Young (<25),1
+41800.0,17800,0,13,6,0.3206,0,0,credit_card,Male,Working Age (25-55),1
+64100.0,8400,3,9,11,0.1697,0,0,credit_card,Male,Working Age (25-55),0
+68800.0,23000,1,6,4,0.1665,0,0,debt_consolidation,Female,Young (<25),0
+34300.0,6400,5,11,6,0.2794,0,0,major_purchase,Female,Working Age (25-55),0
+32000.0,9400,0,11,5,0.1978,0,0,credit_card,Male,Working Age (25-55),0
+110000.0,15100,5,18,9,0.1073,0,0,debt_consolidation,Male,Working Age (25-55),0
+85500.0,34900,1,12,5,0.0872,0,0,debt_consolidation,Male,Working Age (25-55),0
+46300.0,15200,6,15,5,0.1631,0,0,home_improvement,Male,Working Age (25-55),0
+25900.0,10200,3,14,6,0.0445,0,0,debt_consolidation,Female,Working Age (25-55),0
+63700.0,23200,6,16,5,0.3292,0,0,debt_consolidation,Male,Working Age (25-55),1
+85400.0,12800,5,9,8,0.2813,0,2,debt_consolidation,Male,Working Age (25-55),0
+40000.0,14400,4,9,10,0.1941,0,0,debt_consolidation,Female,Working Age (25-55),0
+62200.0,16600,1,21,12,0.324,0,1,small_business,Male,Senior (>55),1
+50300.0,6200,3,12,7,0.0996,0,0,small_business,Male,Working Age (25-55),0
+26500.0,8800,5,6,7,0.1456,1,1,credit_card,Male,Working Age (25-55),1
+25300.0,8400,1,3,11,0.4771,0,0,debt_consolidation,Male,Young (<25),1
+28900.0,4700,1,18,6,0.1984,0,0,credit_card,Male,Working Age (25-55),0
+68300.0,28100,6,8,5,0.3183,0,0,debt_consolidation,Female,Working Age (25-55),1
+130200.0,13300,1,13,9,0.1552,0,0,credit_card,Male,Working Age (25-55),0
+50100.0,16900,5,17,9,0.2382,0,1,major_purchase,Male,Working Age (25-55),0
+35000.0,4800,7,7,4,0.3322,0,0,small_business,Male,Working Age (25-55),1
+38300.0,13200,1,19,4,0.2835,0,0,major_purchase,Male,Senior (>55),0
+70300.0,19800,8,17,9,0.3166,0,1,major_purchase,Female,Senior (>55),1
+59800.0,11600,0,8,6,0.2232,0,1,debt_consolidation,Male,Working Age (25-55),1
+74300.0,10900,2,10,5,0.1963,0,0,debt_consolidation,Male,Working Age (25-55),0
+36900.0,9400,1,7,9,0.3059,1,1,debt_consolidation,Female,Working Age (25-55),1
+178300.0,50000,0,8,13,0.3956,1,0,debt_consolidation,Male,Working Age (25-55),1
+109100.0,39400,3,15,7,0.0815,0,0,debt_consolidation,Male,Working Age (25-55),0
+65900.0,21600,5,10,10,0.1744,0,2,debt_consolidation,Male,Working Age (25-55),0
+47400.0,15100,2,14,8,0.2206,0,0,debt_consolidation,Male,Working Age (25-55),0
+66400.0,28100,2,16,7,0.2593,0,0,debt_consolidation,Male,Working Age (25-55),0
+31300.0,12900,3,15,7,0.0652,0,0,credit_card,Male,Working Age (25-55),0
+46900.0,15400,9,14,6,0.1188,0,0,credit_card,Male,Working Age (25-55),0
+39200.0,10200,10,10,11,0.1903,1,0,credit_card,Male,Working Age (25-55),1
+42000.0,10800,0,13,7,0.313,0,0,debt_consolidation,Female,Working Age (25-55),1
+84500.0,12500,14,15,10,0.1863,0,0,debt_consolidation,Female,Working Age (25-55),0
+148300.0,50000,6,17,8,0.28,0,0,credit_card,Female,Working Age (25-55),0
+51400.0,8600,5,15,11,0.0476,0,0,debt_consolidation,Female,Working Age (25-55),0
+47500.0,20200,3,5,9,0.06,0,0,home_improvement,Female,Young (<25),0
+31100.0,13400,0,11,10,0.1867,0,0,credit_card,Male,Working Age (25-55),0
+42700.0,16500,9,16,6,0.2526,0,0,debt_consolidation,Female,Working Age (25-55),0
+64900.0,22100,3,15,5,0.2805,0,3,credit_card,Male,Senior (>55),1
+31400.0,3600,5,9,8,0.1573,0,1,debt_consolidation,Male,Working Age (25-55),0
+50200.0,9700,0,15,6,0.2994,0,0,debt_consolidation,Female,Working Age (25-55),0
+26600.0,3600,4,16,7,0.3579,0,0,debt_consolidation,Male,Working Age (25-55),1
+69500.0,14900,4,7,6,0.23,0,0,debt_consolidation,Female,Working Age (25-55),1
+38200.0,10700,13,14,7,0.2618,0,0,credit_card,Male,Working Age (25-55),0
+54600.0,23400,0,11,10,0.2293,0,3,credit_card,Male,Working Age (25-55),1
+67700.0,10500,8,12,6,0.1079,0,0,debt_consolidation,Male,Working Age (25-55),0
+79800.0,29100,3,12,3,0.0922,0,1,debt_consolidation,Female,Working Age (25-55),0
+173600.0,50000,4,12,11,0.2362,0,0,credit_card,Male,Working Age (25-55),0
+84300.0,17100,3,18,2,0.1407,0,0,debt_consolidation,Female,Working Age (25-55),0
+26800.0,4800,12,21,6,0.24,0,0,debt_consolidation,Female,Senior (>55),0
+48100.0,18700,1,11,11,0.2312,0,0,credit_card,Male,Working Age (25-55),0
+22200.0,3300,9,7,3,0.2133,0,0,home_improvement,Female,Working Age (25-55),0
+50900.0,8300,0,14,4,0.433,0,0,credit_card,Female,Working Age (25-55),0
+75000.0,15900,5,9,6,0.1638,0,1,small_business,Male,Working Age (25-55),0
+58400.0,15900,3,12,7,0.2202,0,0,home_improvement,Female,Working Age (25-55),0
+39600.0,17200,1,6,3,0.2608,0,0,debt_consolidation,Male,Working Age (25-55),1
+57100.0,12100,7,18,5,0.1117,1,0,major_purchase,Female,Working Age (25-55),0
+56800.0,15400,1,6,8,0.3211,1,0,debt_consolidation,Male,Young (<25),1
+58600.0,9200,2,14,4,0.3138,0,1,debt_consolidation,Male,Working Age (25-55),1
+43200.0,16600,3,14,7,0.1963,0,0,debt_consolidation,Male,Working Age (25-55),0
+27600.0,5800,7,14,6,0.2661,0,0,credit_card,Male,Working Age (25-55),0
+41800.0,7500,11,18,11,0.206,1,0,debt_consolidation,Female,Working Age (25-55),0
+47500.0,14600,4,11,6,0.294,0,0,home_improvement,Male,Working Age (25-55),1
+45700.0,12600,5,16,6,0.2657,0,0,debt_consolidation,Female,Working Age (25-55),0
+60700.0,21900,1,27,6,0.2571,0,1,debt_consolidation,Female,Senior (>55),0
+30300.0,12600,3,9,4,0.1428,0,0,debt_consolidation,Male,Working Age (25-55),0
+64200.0,6600,0,14,6,0.4712,1,2,credit_card,Female,Working Age (25-55),1
+80000.0,8500,12,10,4,0.1151,0,0,debt_consolidation,Male,Working Age (25-55),0
+71700.0,23700,13,16,9,0.1661,0,1,debt_consolidation,Male,Working Age (25-55),0
+98800.0,22300,12,7,8,0.3314,0,0,debt_consolidation,Female,Working Age (25-55),0
+154700.0,42800,4,8,7,0.1641,1,0,debt_consolidation,Female,Young (<25),0
+18000.0,8000,0,18,5,0.2775,0,0,home_improvement,Male,Working Age (25-55),1
+75300.0,11600,1,16,8,0.1453,0,0,debt_consolidation,Male,Working Age (25-55),0
+55400.0,11200,1,2,7,0.04,0,1,credit_card,Female,Young (<25),0
+82500.0,26500,4,17,6,0.1715,1,2,debt_consolidation,Male,Working Age (25-55),1
+108500.0,20100,7,18,9,0.4999,0,0,home_improvement,Female,Working Age (25-55),1
+20000.0,3600,14,17,8,0.1356,0,2,debt_consolidation,Male,Senior (>55),0
+88500.0,20500,3,16,6,0.0693,1,0,home_improvement,Female,Working Age (25-55),0
+82700.0,30900,4,5,4,0.1037,0,0,major_purchase,Female,Working Age (25-55),0
+63000.0,23600,3,18,4,0.0405,0,0,home_improvement,Female,Working Age (25-55),0
+71900.0,26200,3,5,6,0.1453,0,1,medical,Female,Working Age (25-55),1
+67500.0,20700,8,7,8,0.2599,1,0,debt_consolidation,Female,Working Age (25-55),1
+56500.0,11500,2,15,6,0.2141,0,0,debt_consolidation,Male,Senior (>55),0
+110200.0,35000,3,11,7,0.1775,0,2,small_business,Female,Working Age (25-55),0
+47000.0,11400,21,6,8,0.2839,0,0,major_purchase,Male,Working Age (25-55),1
+55100.0,18500,1,10,7,0.1872,0,1,credit_card,Male,Young (<25),1
+58600.0,26100,6,9,11,0.2259,0,1,home_improvement,Female,Working Age (25-55),1
+42600.0,8600,1,19,7,0.2392,0,0,credit_card,Female,Working Age (25-55),0
+110600.0,32700,6,14,4,0.1391,0,0,credit_card,Male,Working Age (25-55),0
+44000.0,17500,1,15,7,0.2042,0,1,credit_card,Female,Working Age (25-55),1
+67000.0,21200,2,7,10,0.2305,0,0,credit_card,Male,Young (<25),0
+83700.0,9700,5,11,7,0.2524,0,0,debt_consolidation,Female,Young (<25),0
+43900.0,15500,5,22,4,0.2973,0,0,debt_consolidation,Male,Working Age (25-55),0
+54100.0,15800,1,8,4,0.04,0,3,debt_consolidation,Female,Working Age (25-55),0
+29300.0,12000,16,13,5,0.2386,0,1,debt_consolidation,Male,Working Age (25-55),0
+42700.0,19200,0,16,5,0.2725,0,0,debt_consolidation,Male,Working Age (25-55),1
+71300.0,16100,9,6,4,0.1157,1,1,medical,Female,Working Age (25-55),1
+71400.0,12700,6,29,13,0.1182,1,0,credit_card,Male,Senior (>55),0
+38700.0,7800,3,4,9,0.0639,0,0,home_improvement,Female,Working Age (25-55),0
+82000.0,29000,1,4,10,0.3564,0,0,debt_consolidation,Male,Young (<25),1
+60400.0,15900,5,4,6,0.1189,0,0,major_purchase,Male,Working Age (25-55),0
+46600.0,14700,1,3,8,0.2077,1,0,debt_consolidation,Male,Young (<25),1
+54700.0,15300,3,18,7,0.4167,0,0,home_improvement,Male,Working Age (25-55),1
+63700.0,19300,17,17,14,0.3275,0,0,credit_card,Female,Working Age (25-55),0
+77300.0,9800,0,9,6,0.4762,0,0,credit_card,Male,Working Age (25-55),1
+64700.0,16600,6,10,2,0.0892,0,0,debt_consolidation,Male,Working Age (25-55),0
+72300.0,25000,19,16,4,0.2423,0,0,debt_consolidation,Female,Working Age (25-55),0
+143000.0,46100,8,17,5,0.1843,0,0,credit_card,Female,Working Age (25-55),0
+139000.0,50000,3,16,7,0.1099,0,0,debt_consolidation,Female,Working Age (25-55),0
+46400.0,7100,8,22,2,0.0907,0,0,debt_consolidation,Female,Working Age (25-55),0
+20200.0,5600,1,3,7,0.3536,0,0,credit_card,Male,Young (<25),1
+19200.0,4500,5,11,9,0.2291,0,0,home_improvement,Male,Working Age (25-55),0
+29800.0,13100,3,16,5,0.126,0,0,debt_consolidation,Male,Working Age (25-55),0
+101900.0,22100,11,20,10,0.18,0,0,debt_consolidation,Male,Working Age (25-55),0
+41600.0,14000,1,7,10,0.1413,0,0,credit_card,Female,Young (<25),0
+36700.0,3900,3,16,6,0.2541,0,0,debt_consolidation,Male,Working Age (25-55),0
+52700.0,9600,7,8,8,0.2987,0,0,home_improvement,Female,Working Age (25-55),0
+70300.0,19900,12,9,6,0.1321,0,1,home_improvement,Male,Working Age (25-55),0
+46800.0,18800,8,13,11,0.1895,0,1,debt_consolidation,Male,Working Age (25-55),1
+35500.0,13200,0,13,9,0.1291,0,2,debt_consolidation,Female,Working Age (25-55),0
+68800.0,12900,28,18,9,0.2244,0,0,debt_consolidation,Female,Working Age (25-55),0
+30100.0,5500,1,17,6,0.231,0,0,small_business,Male,Working Age (25-55),0
+23400.0,4700,3,9,5,0.122,0,0,debt_consolidation,Male,Working Age (25-55),0
+47800.0,19200,1,24,5,0.2901,0,0,home_improvement,Male,Senior (>55),0
+104600.0,25000,2,16,6,0.1485,0,0,credit_card,Female,Working Age (25-55),0
+50300.0,12800,0,13,6,0.1046,0,0,debt_consolidation,Male,Working Age (25-55),0
+51800.0,18100,6,15,8,0.1864,1,0,medical,Male,Working Age (25-55),1
+25300.0,4200,1,3,11,0.1875,0,0,debt_consolidation,Male,Young (<25),0
+63300.0,26900,1,3,6,0.1102,0,0,debt_consolidation,Male,Young (<25),0
+50600.0,8000,0,3,6,0.1986,0,1,debt_consolidation,Female,Young (<25),1
+109200.0,29400,9,10,6,0.1587,0,2,debt_consolidation,Female,Working Age (25-55),0
+34800.0,7300,4,13,4,0.343,0,0,major_purchase,Female,Working Age (25-55),1
+126200.0,15700,5,18,9,0.1545,0,1,home_improvement,Male,Senior (>55),0
+46500.0,8700,1,25,9,0.357,0,1,debt_consolidation,Male,Senior (>55),1
+30800.0,9400,3,17,6,0.2984,0,1,major_purchase,Female,Working Age (25-55),1
+54300.0,20700,4,7,11,0.1691,0,0,small_business,Male,Working Age (25-55),0
+39000.0,11800,0,7,1,0.2432,0,0,home_improvement,Male,Working Age (25-55),1
+131800.0,43500,4,8,21,0.4352,1,0,credit_card,Female,Young (<25),1
+63900.0,24000,5,12,4,0.148,0,1,debt_consolidation,Female,Working Age (25-55),0
+49000.0,11900,4,17,4,0.2838,0,2,small_business,Male,Working Age (25-55),1
+72600.0,10200,17,18,12,0.1877,1,1,small_business,Female,Working Age (25-55),0
+78800.0,33700,1,9,5,0.2585,0,0,credit_card,Male,Working Age (25-55),1
+82900.0,26800,10,21,7,0.3296,0,1,debt_consolidation,Female,Working Age (25-55),1
+19300.0,7900,1,18,6,0.1646,1,0,debt_consolidation,Male,Working Age (25-55),1
+44200.0,10500,15,10,10,0.2044,0,0,credit_card,Female,Working Age (25-55),0
+20400.0,2600,4,22,8,0.3309,1,0,home_improvement,Male,Senior (>55),1
+72700.0,32400,5,16,6,0.2484,0,0,debt_consolidation,Female,Working Age (25-55),0
+90600.0,17500,2,13,8,0.1762,0,0,major_purchase,Male,Working Age (25-55),0
+126400.0,22000,1,6,5,0.3278,1,1,medical,Female,Working Age (25-55),1
+37700.0,10700,0,20,8,0.114,0,0,home_improvement,Male,Senior (>55),0
+51900.0,15300,17,13,6,0.2096,0,1,major_purchase,Female,Working Age (25-55),0
+65000.0,10500,5,8,11,0.1772,0,2,debt_consolidation,Female,Working Age (25-55),0
+80300.0,18600,4,24,9,0.3179,0,1,debt_consolidation,Male,Senior (>55),0
+18000.0,5500,0,26,10,0.3685,0,0,major_purchase,Male,Senior (>55),1

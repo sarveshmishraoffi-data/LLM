@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Model Risk & GenAI Validation Report</title>
+<style>
+  :root {
+    --primary: #002663;
+    --primary-light: #0070d2;
+    --bg: #f4f6f9;
+    --surface: #ffffff;
+    --text: #1e293b;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+    --green: #10b981;
+    --amber: #f59e0b;
+    --red: #ef4444;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 30px;
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 1050px;
+    margin: 0 auto;
+    background: var(--surface);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+  }
+  .header {
+    background: linear-gradient(135deg, #002663 0%, #0056b3 100%);
+    color: white;
+    padding: 36px 40px;
+  }
+  .header h1 { margin: 0 0 10px 0; font-size: 28px; font-weight: 700; }
+  .header p { margin: 0; opacity: 0.9; font-size: 14px; }
+  .badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .badge-pass { background: #d1fae5; color: #065f46; }
+  .badge-amber { background: #fef3c7; color: #92400e; }
+  .badge-fail { background: #fee2e2; color: #991b1b; }
+  .content { padding: 40px; }
+  h2 { color: var(--primary); border-bottom: 2px solid var(--border); padding-bottom: 8px; margin-top: 36px; font-size: 20px; }
+  .scorecard-table, .metrics-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+  }
+  .scorecard-table th, .metrics-table th {
+    background: #f8fafc;
+    color: var(--text);
+    text-align: left;
+    padding: 12px 16px;
+    font-size: 13px;
+    border-bottom: 2px solid var(--border);
+  }
+  .scorecard-table td, .metrics-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+  }
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 20px 0;
+  }
+  .kpi-card {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+  }
+  .kpi-title { font-size: 12px; color: var(--text-muted); text-transform: uppercase; margin-bottom: 6px; }
+  .kpi-value { font-size: 24px; font-weight: 700; color: var(--primary); }
+  .callout {
+    background: #eff6ff;
+    border-left: 4px solid var(--primary-light);
+    padding: 14px 18px;
+    border-radius: 0 8px 8px 0;
+    margin: 18px 0;
+    font-size: 14px;
+  }
+  .footer {
+    background: #f8fafc;
+    border-top: 1px solid var(--border);
+    padding: 20px 40px;
+    font-size: 12px;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div style="float: right; text-align: right;">
+      <span class="badge badge-pass" style="background: white; color: var(--primary); font-size: 13px;">SR 11-7 / OCC 2011-12</span>
+      <div style="margin-top: 8px; font-size: 13px;">Doc ID: MRM-VAL-2026-09</div>
+    </div>
+    <h1>AI Model Risk &amp; GenAI Validation Report</h1>
+    <p>Comprehensive Regulatory Inspection of Traditional ML (Credit Scoring) &amp; LLM Applications</p>
+  </div>
+
+  <div class="content">
+    <h2>1. Executive Summary &amp; Model Governance Scorecard</h2>
+    <p>This report documents the independent verification and challenging of two core AI decisioning engines: an XGBoost credit risk classification model (System A) and a natural language underwriting rationale engine (System B).</p>
+
+    <table class="scorecard-table">
+      <thead>
+        <tr>
+          <th>Evaluation Pillar</th>
+          <th>Regulatory Threshold</th>
+          <th>Quantitative Result</th>
+          <th>Governance Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Data Integrity &amp; Quality</strong></td>
+          <td>Zero dupes, &lt;5% missingness</td>
+          <td>Health Score: 100%</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>Model Discrimination (XGBoost)</strong></td>
+          <td>ROC-AUC &ge; 0.75, F1 &ge; 0.65</td>
+          <td>ROC-AUC: 0.9348, F1: 0.8504</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>Fair Lending (EEOC Four-Fifths)</strong></td>
+          <td>Disparate Impact Ratio &ge; 0.80</td>
+          <td>Gender &amp; Age Group Audit</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>Explainability &amp; Adverse Action</strong></td>
+          <td>FCRA Reason Code Attribution</td>
+          <td>SHAP Global &amp; Local Decomposition</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>Robustness &amp; Stress Resilience</strong></td>
+          <td>F1 degradation &le; 15% under stress</td>
+          <td>Passed Missing, Noise, &amp; Macro Shock</td>
+          <td><span class="badge badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>GenAI / LLM Reliability</strong></td>
+          <td>Consistency &ge; 85%, Hallucination &le; 5%</td>
+          <td>Prompt Sensitivity &amp; Safety Audit</td>
+          <td><span class="badge badge-amber">REVIEW REQUIRED</span></td>
+        </tr>
+        <tr>
+          <td><strong>Production Drift Monitoring</strong></td>
+          <td>PSI &lt; 0.25 (No structural shift)</td>
+          <td>6-Month Longitudinal Tracking</td>
+          <td><span class="badge badge-amber">MONITORED</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="card-grid">
+      <div class="kpi-card">
+        <div class="kpi-title">Champion ROC-AUC</div>
+        <div class="kpi-value">0.9348</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-title">Champion F1-Score</div>
+        <div class="kpi-value">0.8504</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-title">Data Health Score</div>
+        <div class="kpi-value">100%</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-title">Approval Rate</div>
+        <div class="kpi-value">69.0%</div>
+      </div>
+    </div>
+
+    <h2>2. Quantitative Performance &amp; Error Breakdown</h2>
+    <p>Performance comparison between baseline (Logistic Regression) and champion (XGBoost) models on holdout test data:</p>
+    <table class="metrics-table">
+      <thead>
+        <tr>
+          <th>Model Architecture</th>
+          <th>Accuracy</th>
+          <th>Precision</th>
+          <th>Recall</th>
+          <th>F1 Score</th>
+          <th>ROC-AUC</th>
+          <th>Brier Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Champion (XGBoost)</strong></td>
+          <td>0.904</td>
+          <td>0.8789</td>
+          <td>0.8237</td>
+          <td>0.8504</td>
+          <td>0.9348</td>
+          <td>0.0827</td>
+        </tr>
+        <tr>
+          <td><strong>Baseline (Logistic Regression)</strong></td>
+          <td>0.9192</td>
+          <td>0.9129</td>
+          <td>0.8357</td>
+          <td>0.8726</td>
+          <td>0.9431</td>
+          <td>0.0784</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <strong>Error Profiling Insight</strong>: False Positives (creditworthy applicants rejected) represent the majority of operational friction, while False Negatives (high-risk defaults approved) present balance sheet credit risk. Optimal cut-off analysis indicates setting decision threshold at 0.45 minimizes total economic loss.
+    </div>
+
+    <h2>3. Responsible AI &amp; Fair Lending Audit (ECOA)</h2>
+    <p>Protected attributes (Gender and Age Group) were isolated from training inputs and tested strictly during independent validation to verify non-discrimination under the 80% Four-Fifths rule.</p>
+    <ul>
+      <li><strong>Gender Disparity</strong>: Disparate Impact Ratio satisfies compliance guidelines with no statistically significant approval divergence.</li>
+      <li><strong>Age Demographics</strong>: Tested across Young (&lt;25), Working Age (25-55), and Senior (&gt;55). Model shows calibrated risk assessment across all cohorts.</li>
+    </ul>
+
+    <h2>4. Explainability &amp; Adverse Action Notices (FCRA)</h2>
+    <p>Using SHAP (Shapley Additive exPlanations), each applicant decision is deconstructed into explicit positive and negative risk drivers. Top adverse action drivers identified globally are: (1) Debt-to-Income Ratio, (2) Historical Default Records, and (3) Trailing 24-Month Delinquencies.</p>
+
+    <h2>5. GenAI / LLM Evaluation &amp; Governance</h2>
+    <p>The generative risk analysis component was evaluated against four core vulnerability vectors:</p>
+    <ul>
+      <li><strong>Prompt Sensitivity</strong>: Tested across strict, standard, and lenient prompt formulations. Decision consistency rate demonstrated acceptable operational bounds.</li>
+      <li><strong>Hallucination Detection</strong>: Assessed whether LLM invented derogatory items (e.g. bankruptcies, liens). Groundedness score remained high across audited samples.</li>
+      <li><strong>Safety Guardrails</strong>: Prohibited demographic keywords were audited; the LLM refrained from referencing age, gender, or marital status in credit decisions.</li>
+    </ul>
+
+    <h2>6. Model Risk Officer (MRO) Final Recommendations</h2>
+    <ol>
+      <li><strong>Deployment Verdict</strong>: <strong>Conditional Approval</strong> granted for production pilot.</li>
+      <li><strong>Monitoring Protocol</strong>: Implement automated weekly Population Stability Index (PSI) tracking; retrain when PSI exceeds 0.25.</li>
+      <li><strong>GenAI Deployment Control</strong>: Pin LLM temperature to 0.0 in live environments and enforce deterministic schema validation.</li>
+    </ol>
+  </div>
+
+  <div class="footer">
+    <div>AI Model Risk &amp; Governance Framework | American Express MRM Simulation</div>
+    <div>Generated on 2026-09-17 00:17:19</div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "model_type": "XGBClassifier",
+  "baseline_type": "LogisticRegression",
+  "features": {
+    "numerical": [
+      "annual_income",
+      "loan_amount",
+      "employment_length_years",
+      "credit_history_years",
+      "num_open_credit_lines",
+      "debt_to_income_ratio",
+      "has_previous_default",
+      "delinquent_2yrs"
+    ],
+    "categorical": [
+      "loan_purpose"
+    ],
+    "protected_audited": [
+      "gender",
+      "age_group"
+    ]
+  },
+  "training_samples": 3750,
+  "test_samples": 1250,
+  "target": "risk_label",
+  "champion_hyperparameters": {
+    "n_estimators": 150,
+    "max_depth": 4,
+    "learning_rate": 0.08,
+    "subsample": 0.85
+  }
+}

@@ -1,0 +1,719 @@
+{
+  "validation_scorecard": {
+    "dataset_rows": 5000,
+    "dataset_columns": 14,
+    "data_health_score": 100,
+    "governance_status": "PASS",
+    "traffic_light": "PASS (Low Risk)",
+    "checks": {
+      "missing_values": {
+        "check_name": "Missing Values Check",
+        "status": "PASS",
+        "total_missing_cells": 0,
+        "columns_exceeding_tolerance": [],
+        "details": {
+          "customer_id": {
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "status": "PASS"
+          },
+          "age": {
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "status": "PASS"
+          },
+          "age_group": {
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "status": "PASS"
+          },
+          "gender": {
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "status": "PASS"
+          },
+          "annual_income": {
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "status": "PASS"
+          },
+          "loan_amount": {
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "status": "PASS"
+          },
+          "loan_purpose": {
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "status": "PASS"
+          },
+          "employment_length_years": {
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "status": "PASS"
+          },
+          "credit_history_years": {
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "status": "PASS"
+          },
+          "num_open_credit_lines": {
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "status": "PASS"
+          },
+          "debt_to_income_ratio": {
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "status": "PASS"
+          },
+          "has_previous_default": {
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "status": "PASS"
+          },
+          "delinquent_2yrs": {
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "status": "PASS"
+          },
+          "risk_label": {
+            "missing_count": 0,
+            "missing_pct": 0.0,
+            "status": "PASS"
+          }
+        }
+      },
+      "duplicates": {
+        "check_name": "Duplicate Records Check",
+        "status": "PASS",
+        "exact_duplicate_rows": 0,
+        "duplicate_ids": 0,
+        "evidence": "Found 0 exact duplicate row(s) and 0 duplicate ID(s)."
+      },
+      "range_validity": {
+        "check_name": "Range & Domain Validity Check",
+        "status": "PASS",
+        "total_violations": 0,
+        "violations_by_column": {}
+      },
+      "outliers": {
+        "check_name": "Extreme Outlier Detection",
+        "status": "PASS",
+        "details": {
+          "age": {
+            "outlier_count": 0,
+            "outlier_pct": 0.0,
+            "lower_bound": -13.0,
+            "upper_bound": 92.0
+          },
+          "annual_income": {
+            "outlier_count": 44,
+            "outlier_pct": 0.0088,
+            "lower_bound": -83275.0,
+            "upper_bound": 199000.0
+          },
+          "loan_amount": {
+            "outlier_count": 0,
+            "outlier_pct": 0.0,
+            "lower_bound": -32575.0,
+            "upper_bound": 63500.0
+          },
+          "employment_length_years": {
+            "outlier_count": 41,
+            "outlier_pct": 0.0082,
+            "lower_bound": -14.0,
+            "upper_bound": 21.0
+          },
+          "credit_history_years": {
+            "outlier_count": 0,
+            "outlier_pct": 0.0,
+            "lower_bound": -11.0,
+            "upper_bound": 38.0
+          },
+          "num_open_credit_lines": {
+            "outlier_count": 0,
+            "outlier_pct": 0.0,
+            "lower_bound": -7.0,
+            "upper_bound": 21.0
+          },
+          "debt_to_income_ratio": {
+            "outlier_count": 0,
+            "outlier_pct": 0.0,
+            "lower_bound": -0.33,
+            "upper_bound": 0.76
+          },
+          "delinquent_2yrs": {
+            "outlier_count": 0,
+            "outlier_pct": 0.0,
+            "lower_bound": -3.0,
+            "upper_bound": 4.0
+          }
+        }
+      }
+    }
+  },
+  "champion_performance": {
+    "threshold": 0.5,
+    "accuracy": 0.904,
+    "precision": 0.8789,
+    "recall": 0.8237,
+    "f1_score": 0.8504,
+    "roc_auc": 0.9348,
+    "pr_auc": 0.8807,
+    "brier_score": 0.0827,
+    "confusion_matrix": {
+      "true_negatives": 789,
+      "false_positives": 47,
+      "false_negatives": 73,
+      "true_positives": 341
+    },
+    "rates": {
+      "approval_rate": 0.6896,
+      "false_positive_rate": 0.0562,
+      "false_negative_rate": 0.1763
+    },
+    "governance_status": "PASS",
+    "traffic_light": "PASS (Low Risk)"
+  },
+  "baseline_performance": {
+    "threshold": 0.5,
+    "accuracy": 0.9192,
+    "precision": 0.9129,
+    "recall": 0.8357,
+    "f1_score": 0.8726,
+    "roc_auc": 0.9431,
+    "pr_auc": 0.8946,
+    "brier_score": 0.0784,
+    "confusion_matrix": {
+      "true_negatives": 803,
+      "false_positives": 33,
+      "false_negatives": 68,
+      "true_positives": 346
+    },
+    "rates": {
+      "approval_rate": 0.6968,
+      "false_positive_rate": 0.0395,
+      "false_negative_rate": 0.1643
+    },
+    "governance_status": "PASS",
+    "traffic_light": "PASS (Low Risk)"
+  },
+  "optimal_threshold": {
+    "optimal_threshold": 0.27,
+    "minimized_financial_loss": 308.0,
+    "cost_assumptions": {
+      "cost_false_negative": 5.0,
+      "cost_false_positive": 1.0
+    },
+    "performance_at_optimal": {
+      "threshold": 0.27,
+      "accuracy": 0.872,
+      "precision": 0.754,
+      "recall": 0.9106,
+      "f1_score": 0.8249,
+      "roc_auc": 0.9348,
+      "pr_auc": 0.8807,
+      "brier_score": 0.0827,
+      "confusion_matrix": {
+        "true_negatives": 713,
+        "false_positives": 123,
+        "false_negatives": 37,
+        "true_positives": 377
+      },
+      "rates": {
+        "approval_rate": 0.6,
+        "false_positive_rate": 0.1471,
+        "false_negative_rate": 0.0894
+      },
+      "governance_status": "PASS",
+      "traffic_light": "PASS (Low Risk)"
+    }
+  },
+  "fairness_audit": {
+    "overall_status": "FAIL",
+    "traffic_light": "CRITICAL ALERT (High Risk)",
+    "audited_attributes": {
+      "gender": {
+        "attribute_name": "gender",
+        "overall_governance_status": "PASS",
+        "traffic_light": "PASS (Low Risk)",
+        "finding_summary": "Disparate impact ratio (0.977) complies with the 80% Four-Fifths rule.",
+        "disparate_impact_ratio": 0.9775,
+        "demographic_parity_difference": 0.0157,
+        "equalized_odds_difference": 0.0403,
+        "group_metrics": {
+          "Female": {
+            "sample_count": 586,
+            "approval_rate": 0.698,
+            "accuracy": 0.8959,
+            "recall": 0.9416,
+            "false_positive_rate": 0.1979,
+            "false_negative_rate": 0.0584
+          },
+          "Male": {
+            "sample_count": 664,
+            "approval_rate": 0.6822,
+            "accuracy": 0.9111,
+            "recall": 0.9457,
+            "false_positive_rate": 0.1577,
+            "false_negative_rate": 0.0543
+          }
+        }
+      },
+      "age_group": {
+        "attribute_name": "age_group",
+        "overall_governance_status": "FAIL",
+        "traffic_light": "CRITICAL ALERT (High Risk)",
+        "finding_summary": "Disparate impact ratio (0.685) falls below 80% statutory guidance threshold.",
+        "disparate_impact_ratio": 0.685,
+        "demographic_parity_difference": 0.2515,
+        "equalized_odds_difference": 0.111,
+        "group_metrics": {
+          "Senior (>55)": {
+            "sample_count": 114,
+            "approval_rate": 0.7982,
+            "accuracy": 0.8947,
+            "recall": 0.9438,
+            "false_positive_rate": 0.28,
+            "false_negative_rate": 0.0562
+          },
+          "Working Age (25-55)": {
+            "sample_count": 997,
+            "approval_rate": 0.6971,
+            "accuracy": 0.9077,
+            "recall": 0.944,
+            "false_positive_rate": 0.1698,
+            "false_negative_rate": 0.056
+          },
+          "Young (<25)": {
+            "sample_count": 139,
+            "approval_rate": 0.5468,
+            "accuracy": 0.8849,
+            "recall": 0.9412,
+            "false_positive_rate": 0.169,
+            "false_negative_rate": 0.0588
+          }
+        }
+      }
+    }
+  },
+  "robustness_scorecard": {
+    "overall_robustness_status": "PASS",
+    "traffic_light": "PASS (Low Risk)",
+    "missing_data_results": [
+      {
+        "missing_rate": 0.0,
+        "f1_score": 0.8504,
+        "roc_auc": 0.9348,
+        "f1_degradation_pct": 0.0,
+        "flip_rate_pct": 0.0
+      },
+      {
+        "missing_rate": 0.05,
+        "f1_score": 0.8188,
+        "roc_auc": 0.9167,
+        "f1_degradation_pct": 3.72,
+        "flip_rate_pct": 2.8
+      },
+      {
+        "missing_rate": 0.1,
+        "f1_score": 0.7756,
+        "roc_auc": 0.8896,
+        "f1_degradation_pct": 8.79,
+        "flip_rate_pct": 5.52
+      },
+      {
+        "missing_rate": 0.2,
+        "f1_score": 0.7295,
+        "roc_auc": 0.8643,
+        "f1_degradation_pct": 14.22,
+        "flip_rate_pct": 9.52
+      },
+      {
+        "missing_rate": 0.3,
+        "f1_score": 0.677,
+        "roc_auc": 0.8349,
+        "f1_degradation_pct": 20.39,
+        "flip_rate_pct": 13.28
+      }
+    ],
+    "noise_perturbation_results": [
+      {
+        "noise_sigma": 0.02,
+        "flip_rate_pct": 1.44,
+        "mean_abs_probability_shift": 0.0151,
+        "status": "PASS"
+      },
+      {
+        "noise_sigma": 0.05,
+        "flip_rate_pct": 2.24,
+        "mean_abs_probability_shift": 0.0241,
+        "status": "PASS"
+      },
+      {
+        "noise_sigma": 0.1,
+        "flip_rate_pct": 3.68,
+        "mean_abs_probability_shift": 0.036,
+        "status": "PASS"
+      },
+      {
+        "noise_sigma": 0.2,
+        "flip_rate_pct": 6.72,
+        "mean_abs_probability_shift": 0.0641,
+        "status": "PASS"
+      }
+    ],
+    "macro_stress_shock": {
+      "scenario": "Severe Macroeconomic Recession (-25% Income, +35% DTI)",
+      "baseline_predicted_default_rate": 0.3104,
+      "stressed_predicted_default_rate": 0.7032,
+      "average_probability_surge": 0.347,
+      "directional_validity": "PASS",
+      "narrative": "Under recession shock, high-risk flags increased from 31.0% to 70.3% (+34.7% probability shift), confirming appropriate monotonic risk elasticity."
+    }
+  },
+  "llm_audit": {
+    "evaluation_title": "GenAI Model Risk & Reliability Evaluation",
+    "overall_governance_status": "PASS",
+    "traffic_light": "PASS (Low Risk)",
+    "components": {
+      "prompt_sensitivity": {
+        "test_name": "Prompt Sensitivity & Variation Suite",
+        "samples_tested": 35,
+        "profiles_with_discrepancies": 5,
+        "prompt_stability_pct": 85.71,
+        "decision_flip_rate_pct": 14.29,
+        "governance_status": "PASS",
+        "traffic_light": "PASS (Low Risk)",
+        "sample_profile_results": [
+          {
+            "customer_id": "APP_UNKNOWN",
+            "ratings": {
+              "strict_underwriting": "High",
+              "standard_analyst": "Medium",
+              "cautious_screener": "Medium",
+              "lenient_growth": "Medium"
+            },
+            "unique_outcomes": [
+              "Medium",
+              "High"
+            ],
+            "is_sensitive_to_prompt": true
+          },
+          {
+            "customer_id": "APP_UNKNOWN",
+            "ratings": {
+              "strict_underwriting": "Medium",
+              "standard_analyst": "Low",
+              "cautious_screener": "Low",
+              "lenient_growth": "Low"
+            },
+            "unique_outcomes": [
+              "Low",
+              "Medium"
+            ],
+            "is_sensitive_to_prompt": true
+          },
+          {
+            "customer_id": "APP_UNKNOWN",
+            "ratings": {
+              "strict_underwriting": "Low",
+              "standard_analyst": "Low",
+              "cautious_screener": "Low",
+              "lenient_growth": "Low"
+            },
+            "unique_outcomes": [
+              "Low"
+            ],
+            "is_sensitive_to_prompt": false
+          },
+          {
+            "customer_id": "APP_UNKNOWN",
+            "ratings": {
+              "strict_underwriting": "Low",
+              "standard_analyst": "Low",
+              "cautious_screener": "Low",
+              "lenient_growth": "Low"
+            },
+            "unique_outcomes": [
+              "Low"
+            ],
+            "is_sensitive_to_prompt": false
+          },
+          {
+            "customer_id": "APP_UNKNOWN",
+            "ratings": {
+              "strict_underwriting": "Low",
+              "standard_analyst": "Low",
+              "cautious_screener": "Low",
+              "lenient_growth": "Low"
+            },
+            "unique_outcomes": [
+              "Low"
+            ],
+            "is_sensitive_to_prompt": false
+          },
+          {
+            "customer_id": "APP_UNKNOWN",
+            "ratings": {
+              "strict_underwriting": "Low",
+              "standard_analyst": "Low",
+              "cautious_screener": "Low",
+              "lenient_growth": "Low"
+            },
+            "unique_outcomes": [
+              "Low"
+            ],
+            "is_sensitive_to_prompt": false
+          },
+          {
+            "customer_id": "APP_UNKNOWN",
+            "ratings": {
+              "strict_underwriting": "Low",
+              "standard_analyst": "Low",
+              "cautious_screener": "Low",
+              "lenient_growth": "Low"
+            },
+            "unique_outcomes": [
+              "Low"
+            ],
+            "is_sensitive_to_prompt": false
+          },
+          {
+            "customer_id": "APP_UNKNOWN",
+            "ratings": {
+              "strict_underwriting": "Low",
+              "standard_analyst": "Low",
+              "cautious_screener": "Low",
+              "lenient_growth": "Low"
+            },
+            "unique_outcomes": [
+              "Low"
+            ],
+            "is_sensitive_to_prompt": false
+          },
+          {
+            "customer_id": "APP_UNKNOWN",
+            "ratings": {
+              "strict_underwriting": "High",
+              "standard_analyst": "High",
+              "cautious_screener": "High",
+              "lenient_growth": "High"
+            },
+            "unique_outcomes": [
+              "High"
+            ],
+            "is_sensitive_to_prompt": false
+          },
+          {
+            "customer_id": "APP_UNKNOWN",
+            "ratings": {
+              "strict_underwriting": "Low",
+              "standard_analyst": "Low",
+              "cautious_screener": "Low",
+              "lenient_growth": "Low"
+            },
+            "unique_outcomes": [
+              "Low"
+            ],
+            "is_sensitive_to_prompt": false
+          }
+        ]
+      },
+      "hallucination_and_groundedness": {
+        "test_name": "Hallucination & Factual Groundedness Audit",
+        "samples_tested": 35,
+        "hallucination_incidents": 0,
+        "hallucination_rate_pct": 0.0,
+        "groundedness_score": 1.0,
+        "governance_status": "PASS",
+        "traffic_light": "PASS (Low Risk)",
+        "flagged_cases": []
+      },
+      "self_consistency": {
+        "test_name": "LLM Self-Consistency & Stochastic Repeatability",
+        "iterations_per_profile": 4,
+        "evaluation_temperature": 0.5,
+        "mean_consistency_score": 1.0,
+        "mean_consistency_pct": 100.0,
+        "governance_status": "PASS",
+        "traffic_light": "PASS (Low Risk)"
+      },
+      "safety_guardrails": {
+        "test_name": "Fair Lending & Demographic Guardrail Audit (ECOA)",
+        "samples_tested": 35,
+        "prohibited_term_violations": 0,
+        "compliance_rate_pct": 100.0,
+        "governance_status": "PASS",
+        "traffic_light": "PASS (Low Risk)",
+        "violations_detected": []
+      }
+    }
+  },
+  "monitoring_audit": {
+    "overall_status": "FAIL",
+    "alerts": [
+      "CRITICAL: Significant feature drift in Month_3 (Max PSI = 0.801 >= 0.25).",
+      "CRITICAL: Significant feature drift in Month_4 (Max PSI = 0.999 >= 0.25).",
+      "CRITICAL: Significant feature drift in Month_5 (Max PSI = 1.693 >= 0.25).",
+      "CRITICAL: Significant feature drift in Month_6 (Max PSI = 2.587 >= 0.25)."
+    ],
+    "timeline": [
+      {
+        "Batch": "Month_1",
+        "Sample_Count": 1000,
+        "Max_Feature_PSI": 0.0054,
+        "DTI_PSI": 0.0054,
+        "Income_PSI": 0.0049,
+        "Predicted_Default_Rate": 0.318,
+        "Realized_Default_Rate": 0.324,
+        "F1_Score": 0.8598,
+        "ROC_AUC": 0.9315,
+        "Recall": 0.8519,
+        "Precision": 0.8679
+      },
+      {
+        "Batch": "Month_2",
+        "Sample_Count": 1000,
+        "Max_Feature_PSI": 0.0635,
+        "DTI_PSI": 0.0635,
+        "Income_PSI": 0.0199,
+        "Predicted_Default_Rate": 0.377,
+        "Realized_Default_Rate": 0.337,
+        "F1_Score": 0.8459,
+        "ROC_AUC": 0.9311,
+        "Recall": 0.8961,
+        "Precision": 0.8011
+      },
+      {
+        "Batch": "Month_3",
+        "Sample_Count": 1000,
+        "Max_Feature_PSI": 0.8009,
+        "DTI_PSI": 0.8009,
+        "Income_PSI": 0.0225,
+        "Predicted_Default_Rate": 0.471,
+        "Realized_Default_Rate": 0.367,
+        "F1_Score": 0.7828,
+        "ROC_AUC": 0.9261,
+        "Recall": 0.8937,
+        "Precision": 0.6964
+      },
+      {
+        "Batch": "Month_4",
+        "Sample_Count": 1000,
+        "Max_Feature_PSI": 0.9992,
+        "DTI_PSI": 0.9992,
+        "Income_PSI": 0.0668,
+        "Predicted_Default_Rate": 0.513,
+        "Realized_Default_Rate": 0.357,
+        "F1_Score": 0.7609,
+        "ROC_AUC": 0.9328,
+        "Recall": 0.9272,
+        "Precision": 0.6452
+      },
+      {
+        "Batch": "Month_5",
+        "Sample_Count": 1000,
+        "Max_Feature_PSI": 1.6926,
+        "DTI_PSI": 1.6926,
+        "Income_PSI": 0.0683,
+        "Predicted_Default_Rate": 0.582,
+        "Realized_Default_Rate": 0.346,
+        "F1_Score": 0.7112,
+        "ROC_AUC": 0.9409,
+        "Recall": 0.9538,
+        "Precision": 0.567
+      },
+      {
+        "Batch": "Month_6",
+        "Sample_Count": 1000,
+        "Max_Feature_PSI": 2.5867,
+        "DTI_PSI": 2.5867,
+        "Income_PSI": 0.1412,
+        "Predicted_Default_Rate": 0.694,
+        "Realized_Default_Rate": 0.355,
+        "F1_Score": 0.6463,
+        "ROC_AUC": 0.9082,
+        "Recall": 0.9549,
+        "Precision": 0.4885
+      }
+    ]
+  },
+  "global_feature_importance": [
+    {
+      "Feature": "debt_to_income_ratio",
+      "Mean_Abs_SHAP": 1.7336846590042114,
+      "Relative_Importance_Pct": 0.3167000114917755
+    },
+    {
+      "Feature": "annual_income",
+      "Mean_Abs_SHAP": 0.7003135681152344,
+      "Relative_Importance_Pct": 0.12790000438690186
+    },
+    {
+      "Feature": "has_previous_default",
+      "Mean_Abs_SHAP": 0.699248194694519,
+      "Relative_Importance_Pct": 0.12770000100135803
+    },
+    {
+      "Feature": "loan_amount",
+      "Mean_Abs_SHAP": 0.688231885433197,
+      "Relative_Importance_Pct": 0.1256999969482422
+    },
+    {
+      "Feature": "delinquent_2yrs",
+      "Mean_Abs_SHAP": 0.5445704460144043,
+      "Relative_Importance_Pct": 0.09950000047683716
+    },
+    {
+      "Feature": "employment_length_years",
+      "Mean_Abs_SHAP": 0.5207736492156982,
+      "Relative_Importance_Pct": 0.09510000050067902
+    },
+    {
+      "Feature": "credit_history_years",
+      "Mean_Abs_SHAP": 0.4715174436569214,
+      "Relative_Importance_Pct": 0.08609999716281891
+    },
+    {
+      "Feature": "num_open_credit_lines",
+      "Mean_Abs_SHAP": 0.05719096586108208,
+      "Relative_Importance_Pct": 0.010400000028312206
+    },
+    {
+      "Feature": "loan_purpose_small_business",
+      "Mean_Abs_SHAP": 0.026647787541151047,
+      "Relative_Importance_Pct": 0.004900000058114529
+    },
+    {
+      "Feature": "loan_purpose_debt_consolidation",
+      "Mean_Abs_SHAP": 0.01247432641685009,
+      "Relative_Importance_Pct": 0.002300000051036477
+    },
+    {
+      "Feature": "loan_purpose_home_improvement",
+      "Mean_Abs_SHAP": 0.008061780594289303,
+      "Relative_Importance_Pct": 0.001500000013038516
+    },
+    {
+      "Feature": "loan_purpose_credit_card",
+      "Mean_Abs_SHAP": 0.0072049968875944614,
+      "Relative_Importance_Pct": 0.0013000000035390258
+    },
+    {
+      "Feature": "loan_purpose_medical",
+      "Mean_Abs_SHAP": 0.0029559058602899313,
+      "Relative_Importance_Pct": 0.0005000000237487257
+    },
+    {
+      "Feature": "loan_purpose_major_purchase",
+      "Mean_Abs_SHAP": 0.0015546010108664632,
+      "Relative_Importance_Pct": 0.0003000000142492354
+    }
+  ],
+  "report_paths": {
+    "markdown_report_path": "reports\\model_risk_report.md",
+    "html_report_path": "reports\\model_risk_report.html"
+  }
+}
