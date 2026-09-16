@@ -1,6 +1,19 @@
+---
+title: AI Model Risk & GenAI Evaluation Platform
+emoji: 🛡️
+colorFrom: blue
+colorTo: indigo
+sdk: streamlit
+sdk_version: 1.64.0
+app_file: app.py
+pinned: false
+license: mit
+---
+
 # AI Model Risk & GenAI Evaluation Framework
 > **An enterprise-grade Python framework to independently audit, challenge, and govern traditional ML models and Generative AI applications for financial services deployment.**
 
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Live%20Spaces-yellow)](https://huggingface.co/spaces/sarveshmishraoffi-data/LLM)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Framework: Scikit--Learn](https://img.shields.io/badge/ML-5%20Algorithm%20Zoo-orange)](https://scikit-learn.org/)
