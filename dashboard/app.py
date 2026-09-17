@@ -220,8 +220,10 @@ elif selected_tab == "📤 Online Model Checker (Live)":
                     st.markdown("#### ⚙️ Configure Target & Sensitive Columns")
                     col_t, col_s = st.columns(2)
                     with col_t:
-                        candidate_targets = [c for c in eval_df.columns if any(k in c.lower() for k in ["target", "default", "label", "y", "class"])]
-                        default_t_idx = eval_df.columns.get_loc(candidate_targets[0]) if candidate_targets else len(eval_df.columns) - 1
+                        # Prioritize genuine credit risk target columns
+                        target_priority = ["risk_label", "is_default", "default", "target", "class", "label"]
+                        found_targets = [c for c in eval_df.columns if c.lower() in target_priority or any(p in c.lower() for p in ["is_default", "risk_label", "default"])]
+                        default_t_idx = eval_df.columns.get_loc(found_targets[0]) if found_targets else len(eval_df.columns) - 1
                         target_col = st.selectbox("Target Column (Ground Truth)", eval_df.columns, index=default_t_idx)
                     with col_s:
                         candidate_sens = [c for c in eval_df.columns if any(k in c.lower() for k in ["gender", "sex", "age", "race", "ethnicity"])]
@@ -231,7 +233,7 @@ elif selected_tab == "📤 Online Model Checker (Live)":
                         
                     if st.button("🚀 Run Live Audit on My Model", type="primary", use_container_width=True):
                         with st.spinner("Executing 360° model safety audit..."):
-                            y_true = eval_df[target_col].values
+                            y_true = pd.to_numeric(eval_df[target_col], errors="coerce").fillna(0).values.astype(int)
                             X_df = eval_df.drop(columns=[target_col], errors="ignore")
                             
                             if hasattr(custom_model, "feature_names_in_"):
@@ -241,6 +243,11 @@ elif selected_tab == "📤 Online Model Checker (Live)":
                             else:
                                 X = X_df.select_dtypes(include=[np.number])
                                 
+                            # Convert non-numeric if any
+                            for c in X.columns:
+                                if X[c].dtype == object:
+                                    X[c] = pd.to_numeric(X[c], errors="coerce").fillna(0)
+                                    
                             y_pred = custom_model.predict(X)
                             if hasattr(custom_model, "predict_proba"):
                                 y_prob = custom_model.predict_proba(X)[:, 1]
@@ -252,7 +259,7 @@ elif selected_tab == "📤 Online Model Checker (Live)":
                             
                             perf = PerformanceEvaluator().evaluate(y_true, y_prob, y_pred)
                             roc_auc = perf.get("roc_auc", 0.0)
-                            gini = perf.get("gini", 0.0)
+                            gini = perf.get("gini_coefficient", perf.get("gini", 0.0))
                             ks = perf.get("ks_statistic", 0.0)
                             brier = perf.get("brier_score", 0.0)
                             
@@ -261,8 +268,13 @@ elif selected_tab == "📤 Online Model Checker (Live)":
                             if sensitive_col != "None" and sensitive_col in eval_df.columns:
                                 try:
                                     auditor = FairnessAuditor()
-                                    fair_res = auditor.audit_bias(eval_df, y_true, y_pred, y_prob, sensitive_features=[sensitive_col])
-                                    disp_ratio = fair_res.get("evaluations", {}).get(sensitive_col, {}).get("selection_rate_ratio", 1.0)
+                                    fair_res = auditor.audit_attribute(
+                                        pd.Series(y_true),
+                                        pd.Series(y_pred),
+                                        eval_df[sensitive_col],
+                                        attribute_name=sensitive_col
+                                    )
+                                    disp_ratio = fair_res.get("disparate_impact_ratio", 1.0)
                                 except Exception:
                                     disp_ratio = 1.0
                                     
@@ -273,6 +285,7 @@ elif selected_tab == "📤 Online Model Checker (Live)":
                                 noisy_pred = custom_model.predict(noisy_X)
                                 stability = (y_pred == noisy_pred).mean() * 100.0
                             else:
+
                                 stability = 95.0
                                 
                             # Display scorecard

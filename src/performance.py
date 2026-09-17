@@ -34,6 +34,18 @@ class PerformanceEvaluator:
     def __init__(self, default_threshold: float = 0.5):
         self.default_threshold = default_threshold
 
+    def evaluate(
+        self,
+        y_true: np.ndarray,
+        y_prob: np.ndarray,
+        y_pred: Optional[np.ndarray] = None,
+        threshold: Optional[float] = None
+    ) -> Dict[str, Any]:
+        """Compute performance metrics and return dictionary."""
+        metrics = self.evaluate_model(y_true, y_prob, threshold=threshold)
+        metrics["gini"] = metrics.get("gini_coefficient", 0.0)
+        return metrics
+
     @staticmethod
     def compute_expected_calibration_error(y_true: np.ndarray, y_prob: np.ndarray, n_bins: int = 10) -> float:
         """Compute Expected Calibration Error (ECE) across confidence bins."""
