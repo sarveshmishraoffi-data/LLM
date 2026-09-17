@@ -448,20 +448,55 @@ elif selected_tab == "📤 Online Model Checker (Live)":
             num_lines = st.slider("Open Credit Lines", 1, 25, 6)
             prev_def = st.selectbox("Previous Default Record", [0, 1], format_func=lambda x: "Yes (High Risk)" if x == 1 else "No (Clean)")
             
-        risk_score = (dti * 0.8) + (loan_amt / income * 40.0) + (prev_def * 35.0) - (cred_hist * 0.8) - (emp_len * 0.5)
-        default_prob = max(0.01, min(0.99, 1.0 / (1.0 + np.exp(- (risk_score - 30) / 12.0))))
-        
-        st.markdown("---")
-        res_c1, res_c2, res_c3 = st.columns(3)
-        res_c1.metric("Predicted Default Probability", f"{default_prob * 100:.1f}%")
-        if default_prob < 0.25:
-            res_c2.success("✅ **RECOMMENDATION: APPROVE LOAN**")
-        elif default_prob < 0.45:
-            res_c2.warning("🟡 **RECOMMENDATION: MANUAL REVIEW**")
+        # Real ML model inference if sample model is available
+        default_prob = 0.20
+        if os.path.exists("samples/sample_credit_model.joblib"):
+            try:
+                live_model = joblib.load("samples/sample_credit_model.joblib")
+                applicant_row = pd.DataFrame([{
+                    "annual_income": float(income),
+                    "loan_amount": float(loan_amt),
+                    "debt_to_income_ratio": float(dti),
+                    "credit_history_years": float(cred_hist),
+                    "delinquent_2yrs": int(prev_def)
+                }])
+                default_prob = float(live_model.predict_proba(applicant_row)[0, 1])
+            except Exception:
+                risk_score = (dti * 0.8) + (loan_amt / income * 40.0) + (prev_def * 35.0) - (cred_hist * 0.8) - (emp_len * 0.5)
+                default_prob = max(0.01, min(0.99, 1.0 / (1.0 + np.exp(- (risk_score - 30) / 12.0))))
         else:
-            res_c2.error("❌ **RECOMMENDATION: REJECT LOAN**")
+            risk_score = (dti * 0.8) + (loan_amt / income * 40.0) + (prev_def * 35.0) - (cred_hist * 0.8) - (emp_len * 0.5)
+            default_prob = max(0.01, min(0.99, 1.0 / (1.0 + np.exp(- (risk_score - 30) / 12.0))))
+
+        st.markdown("---")
+        st.subheader("🎯 Real-Time Underwriting Assessment")
+        
+        # Risk Meter Progress Bar
+        st.progress(min(1.0, max(0.0, default_prob)), text=f"Default Probability Gauge: {default_prob * 100:.1f}%")
+        
+        res_c1, res_c2, res_c3 = st.columns(3)
+        res_c1.metric("Predicted Default Probability", f"{default_prob * 100:.1f}%", delta="-Low Risk" if default_prob < 0.25 else "+Elevated Risk", delta_color="inverse")
+        if default_prob < 0.25:
+            res_c2.success("✅ **UNDERWRITING VERDICT: APPROVE LOAN**\n\nApplicant risk profile is well within statutory threshold.")
+        elif default_prob < 0.45:
+            res_c2.warning("🟡 **UNDERWRITING VERDICT: CONDITIONAL REVIEW**\n\nRequires secondary underwriter manual review.")
+        else:
+            res_c2.error("❌ **UNDERWRITING VERDICT: ADVERSE ACTION (REJECT)**\n\nDefault probability exceeds institutional risk tolerance.")
             
-        res_c3.info(f"**Primary Risk Driver**: {'Previous Default' if prev_def == 1 else 'High DTI Ratio' if dti > 35 else 'Debt-to-Income Proportion'}")
+        # Top 3 FCRA Adverse Action Reason Codes
+        reasons = []
+        if prev_def == 1:
+            reasons.append("1. Derogatory public record or previous delinquent accounts.")
+        if dti > 35.0:
+            reasons.append(f"2. High debt-to-income ratio ({dti:.1f}% exceeds 35% guideline).")
+        if (loan_amt / income) > 0.35:
+            reasons.append(f"3. High requested loan amount relative to gross annual income.")
+        if cred_hist < 3.0:
+            reasons.append(f"4. Insufficient length of established credit history ({cred_hist:.1f} years).")
+        if not reasons:
+            reasons = ["1. Satisfactory debt service capacity.", "2. Favorable credit bureau history."]
+            
+        res_c3.markdown("**FCRA Adverse Action Reason Codes:**\n" + "\n".join(reasons[:3]))
 
 
 # ==========================================

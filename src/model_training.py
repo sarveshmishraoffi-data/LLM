@@ -179,7 +179,9 @@ class CreditModelTrainer:
             ("preprocessor", self.build_preprocessor()),
             ("classifier", MLPClassifier(
                 hidden_layer_sizes=(64, 32),
-                max_iter=350,
+                max_iter=600,
+                early_stopping=True,
+                n_iter_no_change=20,
                 activation="relu",
                 alpha=0.01,
                 random_state=42
