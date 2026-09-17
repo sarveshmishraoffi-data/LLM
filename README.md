@@ -13,6 +13,7 @@ license: mit
 # AI Model Risk & GenAI Evaluation Framework
 > **An enterprise-grade Python framework to independently audit, challenge, and govern traditional ML models and Generative AI applications for financial services deployment.**
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://sarveshmishraoffi-data-llm-app-ghgtnp.streamlit.app/)
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Live%20Spaces-yellow)](https://huggingface.co/spaces/sarveshmishraoffi-data/LLM)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
@@ -22,6 +23,8 @@ license: mit
 [![Tests: Pytest](https://img.shields.io/badge/Tests-11%2F11%20Passing-brightgreen)](https://docs.pytest.org/)
 [![Web App: FastAPI](https://img.shields.io/badge/Web%20App-FastAPI%20%2B%20Tailwind-009688)](https://fastapi.tiangolo.com/)
 [![Dashboard: Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B)](https://streamlit.io/)
+
+> 🌐 **Live Production App**: **[https://sarveshmishraoffi-data-llm-app-ghgtnp.streamlit.app/](https://sarveshmishraoffi-data-llm-app-ghgtnp.streamlit.app/)**
 
 ---
 
@@ -38,6 +41,36 @@ In Tier-1 financial institutions (e.g., **American Express**, Federal Reserve **
 ### The Fundamental Distinction
 > **Normal ML Project**: *"I trained an XGBoost model that predicts credit default."*  
 > **This Framework**: *"I developed an independent Model Risk Management (MRM) framework to audit, challenge, stress-test, and govern both an ML credit classifier and a Generative AI underwriting assistant across performance, fairness, explainability, robustness, hallucination, and ongoing drift."*
+
+---
+
+## 🧭 Product Guide: What This Platform Does & How to Use It
+
+### 1. The Core Purpose (In Plain English)
+This platform acts as an **Independent Model Risk Inspector & Auditor (Watchdog)** for financial institutions. Instead of just generating credit predictions, it challenges models to ensure they do not produce unlawful discrimination, severe financial losses during a crisis, or hallucinated AI underwriting advice.
+
+### 2. Who Uses This Product?
+| Target Persona | Key Responsibility | How They Use This Platform |
+| :--- | :--- | :--- |
+| **Chief Risk Officer (CRO)** | Approves/blocks model deployment | Inspects the **Executive Scorecard** for traffic-light flags and the **Overall Model Risk Rating (B+)**. |
+| **Fair Lending / Compliance Officer** | Ensures ECOA / FCRA adherence | Audits **Disparate Impact Ratios** across protected classes and verifies Adverse Action reason codes. |
+| **Model Validation Quant / Auditor** | Challenges model assumptions (SR 11-7) | Analyzes **Stress-Testing curves**, noise stability, and benchmarking against baseline models. |
+| **ML Engineer / Data Scientist** | Builds & tunes algorithms | Compares 5 candidate algorithms in the **Algorithm Zoo** and inspects SHAP feature attributions. |
+| **GenAI / LLM Governance Lead** | Monitors generative assistants | Audits LLM underwriting memos for **hallucinations (0% target)**, prompt fragility, and safety guardrails. |
+
+### 3. Step-by-Step Live Dashboard Walkthrough
+When opening the **[Live Platform](https://sarveshmishraoffi-data-llm-app-ghgtnp.streamlit.app/)**, navigate via the left sidebar:
+
+1. **🚦 Tab 1: Executive Scorecard**: View high-level certification status, traffic-light ratings, and champion model performance.
+2. **🏆 Tab 2: Algorithm Zoo**: Benchmark all 5 models (XGBoost, LightGBM, Random Forest, Neural Net, Logistic Regression) across 10+ financial metrics.
+3. **📋 Tab 3: Data Quality & Validation**: Inspect schema bounds, missingness stress, and distribution drift.
+4. **🎯 Tab 4: ML Discrimination & Errors**: Examine confusion matrices, optimal decision threshold tuning, and error slices.
+5. **⚖️ Tab 5: Fair Lending & Bias Audit**: Review EEOC 80% Four-Fifths compliance bar charts and demographic parity across Age and Gender.
+6. **🔍 Tab 6: Explainability (SHAP)**: Inspect global feature importance and individual applicant waterfall reason codes.
+7. **🛡️ Tab 7: Robustness & Stress Testing**: Simulate macroeconomic shocks and evaluate model degradation under missing/perturbed data.
+8. **🤖 Tab 8: GenAI / LLM Evaluation**: Validate AI underwriting memos against ground truth for hallucination rate and prompt consistency.
+9. **📈 Tab 9: Drift & Production Monitoring**: Track 6-month Population Stability Index (PSI) and receive automated threshold alerts.
+10. **📄 Tab 10: Audit Risk Report**: Download the full formal SR 11-7 Model Risk Audit Report in Markdown/JSON.
 
 ---
 
