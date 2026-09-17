@@ -16,11 +16,103 @@ import altair as alt
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 st.set_page_config(
-    page_title="AI Model Risk & GenAI Governance Dashboard",
+    page_title="AI Model Risk & GenAI Governance Platform",
     page_icon="🛡️",
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+# Custom Luxury Dark Theme & Enterprise Styling
+st.markdown("""
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+    
+    html, body, [class*="css"] {
+        font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+    }
+    
+    /* Top Hero Header */
+    .hero-container {
+        background: linear-gradient(135deg, rgba(30, 58, 138, 0.25) 0%, rgba(15, 23, 42, 0.85) 100%);
+        border: 1px solid rgba(59, 130, 246, 0.25);
+        border-radius: 16px;
+        padding: 20px 24px;
+        margin-bottom: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    
+    .status-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(16, 185, 129, 0.12);
+        border: 1px solid rgba(16, 185, 129, 0.35);
+        color: #34d399;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        padding: 5px 14px;
+        border-radius: 9999px;
+    }
+    
+    .status-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #10b981;
+        box-shadow: 0 0 8px #10b981;
+    }
+    
+    /* Enterprise Metric Cards */
+    [data-testid="stMetric"] {
+        background: linear-gradient(180deg, rgba(30, 41, 59, 0.75) 0%, rgba(15, 23, 42, 0.95) 100%);
+        border: 1px solid rgba(148, 163, 184, 0.15);
+        border-radius: 14px;
+        padding: 16px 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+        transition: all 0.2s ease-in-out;
+    }
+    
+    [data-testid="stMetric"]:hover {
+        border-color: rgba(59, 130, 246, 0.45);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(59, 130, 246, 0.18);
+    }
+    
+    /* Buttons */
+    .stButton > button {
+        background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+        color: white;
+        font-weight: 600;
+        border-radius: 10px;
+        border: none;
+        padding: 8px 20px;
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+        transition: all 0.2s ease;
+    }
+    
+    .stButton > button:hover {
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        box-shadow: 0 6px 18px rgba(37, 99, 235, 0.4);
+        transform: translateY(-1px);
+    }
+    
+    /* Info Callouts */
+    .human-card {
+        background: rgba(30, 41, 59, 0.5);
+        border: 1px solid rgba(148, 163, 184, 0.15);
+        border-radius: 12px;
+        padding: 16px 20px;
+        margin-top: 12px;
+        margin-bottom: 16px;
+    }
+</style>
+""", unsafe_allow_html=True)
 
 # Load cached audit summary and data
 @st.cache_data
@@ -74,11 +166,33 @@ st.sidebar.markdown("**Regulatory Scope**: SR 11-7, ECOA, FCRA")
 # TAB 1: EXECUTIVE SCORECARD
 # ==========================================
 if selected_tab == "🚦 Executive Scorecard":
-    st.title("🛡️ AI Model Risk & GenAI Evaluation Scorecard")
-    st.markdown(
-        "Independent verification and challenging framework assessing whether credit risk models "
-        "and generative risk-reasoning applications meet regulatory standards of reliability, fairness, and robustness."
-    )
+    st.markdown("""
+    <div class="hero-container">
+        <div>
+            <h2 style="margin: 0; font-size: 1.5rem; font-weight: 800; color: #f8fafc;">
+                🛡️ AI Model Risk & GenAI Governance Platform
+            </h2>
+            <p style="margin: 4px 0 0 0; font-size: 0.85rem; color: #94a3b8;">
+                Independent Model Validation, Fair Lending (ECOA) Auditing, and LLM Hallucination Verification
+            </p>
+        </div>
+        <div style="display: flex; gap: 8px; align-items: center;">
+            <span class="status-badge"><span class="status-dot"></span> System Live & Audited</span>
+            <span style="background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3); color: #60a5fa; font-size: 11px; font-weight: 700; padding: 5px 12px; border-radius: 9999px;">SR 11-7 / OCC 2011-12</span>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    with st.expander("💡 What is this platform and why does it matter? (Click for 30-second summary)"):
+        st.markdown("""
+        **The Core Mission**: When a financial institution deploys Machine Learning or ChatGPT-like LLMs for credit decisions, it cannot rely on blind trust. Regulators require strict verification:
+        * **1. Accuracy**: Does the model truly distinguish high-risk from low-risk borrowers? *(Benchmark of 5 ML Models)*
+        * **2. Anti-Discrimination**: Does the algorithm treat all applicants fairly under **ECOA Fair Lending rules**?
+        * **3. Crisis Resilience**: Does the model survive unexpected macroeconomic shocks or missing data?
+        * **4. GenAI Trust**: Does the AI underwriting memo provide factually grounded rationale with **0% hallucination**?
+        
+        👉 *Use the navigation sidebar on the left to explore each audit dimension or upload your own model!*
+        """)
     
     # KPI Row
     col1, col2, col3, col4, col5 = st.columns(5)

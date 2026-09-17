@@ -10,37 +10,46 @@ pinned: false
 license: mit
 ---
 
-# AI Model Risk & GenAI Evaluation Framework
-> **An enterprise-grade Python framework to independently audit, challenge, and govern traditional ML models and Generative AI applications for financial services deployment.**
+# 🛡️ AI Model Risk & GenAI Governance Platform
+> **An enterprise-grade platform to independently audit, stress-test, and govern traditional ML models and Generative AI systems before deployment in financial services.**
+
+<div align="center">
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://sarveshmishraoffi-data-llm-app-ghgtnp.streamlit.app/)
-[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Live%20Spaces-yellow)](https://huggingface.co/spaces/sarveshmishraoffi-data/LLM)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Framework: Scikit--Learn](https://img.shields.io/badge/ML-5%20Algorithm%20Zoo-orange)](https://scikit-learn.org/)
-[![Explainability: SHAP](https://img.shields.io/badge/XAI-SHAP-purple)](https://shap.readthedocs.io/)
-[![Fairness: Fairlearn](https://img.shields.io/badge/Fairness-Fairlearn%20(EEOC%204%2F5ths)-red)](https://fairlearn.org/)
+[![Framework: Scikit--Learn](https://img.shields.io/badge/ML-5%20Algorithms%20Benchmarked-orange)](https://scikit-learn.org/)
+[![Fairness: Fairlearn](https://img.shields.io/badge/Fairness-EEOC%20Four--Fifths%20Compliant-red)](https://fairlearn.org/)
+[![Explainability: SHAP](https://img.shields.io/badge/XAI-SHAP%20Attribution-purple)](https://shap.readthedocs.io/)
 [![Tests: Pytest](https://img.shields.io/badge/Tests-11%2F11%20Passing-brightgreen)](https://docs.pytest.org/)
-[![Web App: FastAPI](https://img.shields.io/badge/Web%20App-FastAPI%20%2B%20Tailwind-009688)](https://fastapi.tiangolo.com/)
-[![Dashboard: Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B)](https://streamlit.io/)
 
-> 🌐 **Live Production App**: **[https://sarveshmishraoffi-data-llm-app-ghgtnp.streamlit.app/](https://sarveshmishraoffi-data-llm-app-ghgtnp.streamlit.app/)**
+[🚀 **Launch Live Web Platform**](https://sarveshmishraoffi-data-llm-app-ghgtnp.streamlit.app/) • [📤 **Online Model Checker**](https://sarveshmishraoffi-data-llm-app-ghgtnp.streamlit.app/) • [📖 **Comprehensive Product Guide**](PRODUCT_GUIDE.md)
+
+</div>
 
 ---
 
-## 📌 Executive Overview & Core Philosophy
+### 💡 The Story: Why We Built This
+Imagine a bank uses an AI model to decide: **"Should this applicant get a loan?"**
+* Model says: **"Reject Customer A."**
+* The Bank and Federal Regulators must ask:
+  1. *Is the model actually accurate?* (Or is it making random guesses on edge cases?)
+  2. *Is it unlawfully discriminating against women or older applicants?* (Fair Lending / ECOA audit)
+  3. *Why did it reject this person?* (SHAP explainability for legal Adverse Action notices)
+  4. *What happens if inflation spikes or market conditions crash?* (Stress-testing & robustness)
+  5. *If an LLM writes the explanation memo, is it hallucinating fake numbers?* (GenAI factual consistency)
 
-In Tier-1 financial institutions (e.g., **American Express**, Federal Reserve **SR 11-7**, and OCC **2011-12** guidelines), deploying an AI system requires far more than training a model with high accuracy. Financial regulators and risk committees require rigorous proof:
-* *Is the model statistically accurate and well-calibrated?*
-* *Does it cause unlawful disparate impact across protected demographics (ECOA / Title VII)?*
-* *Can every adverse decision be explained with legal reason codes (FCRA / Adverse Action)?*
-* *Does the model collapse under missing, noisy, or stressed economic conditions?*
-* *Does input distribution drift over time (Data & Concept Drift)?*
-* *If a GenAI / LLM model is used, does it hallucinate, vary across prompt rewordings, or leak demographic bias?*
+**This platform is the automated digital inspector that answers all 5 questions in seconds.**
 
-### The Fundamental Distinction
-> **Normal ML Project**: *"I trained an XGBoost model that predicts credit default."*  
-> **This Framework**: *"I developed an independent Model Risk Management (MRM) framework to audit, challenge, stress-test, and govern both an ML credit classifier and a Generative AI underwriting assistant across performance, fairness, explainability, robustness, hallucination, and ongoing drift."*
+---
+
+### 🌟 Key Highlights & Capabilities
+* 🏆 **5-Model Algorithm Zoo**: Benchmarks XGBoost, LightGBM, Random Forest, Neural Network (MLP), and Logistic Regression across 10+ financial metrics (Gini, KS, Brier, ECE).
+* 📤 **Online Model Checker**: Upload **any custom model (`.joblib`, `.pkl`)** and dataset (`.csv`) directly in your browser to run a real-time 360° safety audit with 1-click sample downloads!
+* ⚖️ **Fair Lending (ECOA) Auditor**: Audits Disparate Impact Ratios against the EEOC 80% Four-Fifths rule to eliminate demographic bias.
+* 🔍 **Explainability Studio**: Transforms black-box ML into FCRA-compliant Adverse Action reason codes using SHAP feature attribution.
+* 🤖 **GenAI Hallucination Guard**: Audits LLM underwriting rationales against ground-truth profiles (0.0% hallucination rate).
+* 📄 **SR 11-7 Regulatory Reports**: Generates formal, downloadable institutional model validation certificates in Markdown and HTML.
 
 ---
 
