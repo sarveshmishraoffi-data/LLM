@@ -171,6 +171,30 @@ elif selected_tab == "📤 Online Model Checker (Live)":
     tab_upload, tab_single = st.tabs(["📁 Audit Uploaded Model", "🎛️ Live Applicant Risk Simulator"])
     
     with tab_upload:
+        st.info("💡 **Don't have a model file handy?** Download our pre-trained public credit model and evaluation dataset below with 1 click, then upload them to test the live audit!")
+        col_dl1, col_dl2 = st.columns(2)
+        with col_dl1:
+            if os.path.exists("samples/sample_credit_model.joblib"):
+                with open("samples/sample_credit_model.joblib", "rb") as f:
+                    st.download_button(
+                        "📥 Download Sample Model (.joblib)",
+                        data=f.read(),
+                        file_name="sample_credit_model.joblib",
+                        mime="application/octet-stream",
+                        use_container_width=True
+                    )
+        with col_dl2:
+            if os.path.exists("samples/sample_credit_test.csv"):
+                with open("samples/sample_credit_test.csv", "r", encoding="utf-8") as f:
+                    st.download_button(
+                        "📥 Download Sample Dataset (.csv)",
+                        data=f.read(),
+                        file_name="sample_credit_test.csv",
+                        mime="text/csv",
+                        use_container_width=True
+                    )
+        st.markdown("---")
+
         col_m, col_d = st.columns(2)
         with col_m:
             model_file = st.file_uploader("1. Upload Model (.joblib or .pkl)", type=["joblib", "pkl"], help="Scikit-learn, XGBoost, LightGBM, or CatBoost model file")
